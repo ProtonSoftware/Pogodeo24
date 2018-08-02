@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace Pogodeo.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller // TODO: Delete
     {
         public IActionResult Index()
         {

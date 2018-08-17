@@ -1,12 +1,12 @@
-﻿using System.Net.Http;
-using System.Web.Http;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
-namespace Pogodeo.Controllers
+namespace Pogodeo
 {
     /// <summary>
     /// The main API controller for weather informations
     /// </summary>
-    public class WeatherApiController : ApiController
+    public class WeatherApiController : Controller
     {
         /// <summary>
         /// API call for getting general weather informations about specified city
@@ -15,7 +15,7 @@ namespace Pogodeo.Controllers
         /// <returns>JSON with weather info, or error if city was invalid</returns>
         public HttpResponseMessage GetWeatherInfoForCity(string city)
         {
-            return Request.CreateResponse("");
+            return new HttpResponseMessage();
         }
     }
 }

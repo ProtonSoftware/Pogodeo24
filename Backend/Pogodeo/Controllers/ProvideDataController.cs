@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Pogodeo.Controllers
+namespace Pogodeo
 {
     /// <summary>
     /// The controller for initial page that accepts data from user

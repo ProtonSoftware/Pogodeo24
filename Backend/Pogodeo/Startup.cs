@@ -30,7 +30,7 @@ namespace Pogodeo
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Error");
             }
 
             app.UseStaticFiles();
@@ -39,7 +39,7 @@ namespace Pogodeo
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=ProvideData}/{action=Index}/{id?}");
             });
         }
     }

@@ -1,6 +1,6 @@
 using System;
 
-namespace Pogodeo.Models
+namespace Pogodeo
 {
     public class ErrorViewModel
     {

@@ -4,15 +4,24 @@
     ViewData["Title"] = "Provide data";
 }
 
-<div class="container" style="height:100vh">
-    <div class="row">
-        <div class="col text-center">
-            @using (Html.BeginForm("Index", "ShowWeather", FormMethod.Post, new { enctype = "multipart/form-data" }))
+<div id="provideData"></div>
+
+<template id="provideDataTemplate">
+
+    <div class="container-fluid">
+        <div class="text-center">
+            @using (Html.BeginForm("Index", "ShowWeather", FormMethod.Post, new { enctype = "multipart/form-data", @ref = "InputForm" }))
             {
-                <div>Wprowadz swoje miasto</div>
-                @Html.EditorFor(model => model.CityName);
-                <b-button role="button" class="btn btn-primary">Wyszukaj</b-button>
+                <h2 class="mb-4">Wprowadz swoje miasto</h2>
+                @Html.EditorFor(model => model.CityName, new { @class = "input-lg" });
+                @Html.ValidationMessageFor(model => model.CityName);
+                <button role="button" class="btn btn-primary" @@click="SubmitForm">Wyszukaj</button>
             }
         </div>
     </div>
-</div>
+
+</template>
+
+@section Scripts {
+    <script src="~/js/ProvideData.js" asp-append-version="true"></script>
+}

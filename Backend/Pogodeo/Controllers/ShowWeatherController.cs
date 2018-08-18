@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Pogodeo
 {
@@ -9,7 +10,27 @@ namespace Pogodeo
     {
         public IActionResult Index(ProvideDataViewModel viewModel)
         {
-            return View();
+            // TODO: Get real data from APIs
+            var apiData = new ShowWeatherViewModel
+            {
+                CityName = viewModel.CityName,
+                WeatherInformationsList = new List<WeatherInformationViewModel>
+                {
+                    new WeatherInformationViewModel
+                    {
+                        WeatherProviderAPIName = "Onet",
+                        Celsius = 20
+                    },
+                    new WeatherInformationViewModel
+                    {
+                        WeatherProviderAPIName = "WP",
+                        Celsius = 21
+                    }
+                }
+            };
+
+            // Show the page to the user
+            return View(apiData);
         }
     }
 }

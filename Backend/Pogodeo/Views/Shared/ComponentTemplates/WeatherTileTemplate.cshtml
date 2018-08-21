@@ -1,0 +1,9 @@
+﻿<template id="weatherTileTemplate">
+    <div class="card">
+        <img class="card-img-top" v-bind:src="logoPath" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ weatherData.Name }}</h5>
+            <p class="card-text">Po poludniu: {{ weatherData.Value }} *C</p>
+        </div>
+    </div>
+</template>

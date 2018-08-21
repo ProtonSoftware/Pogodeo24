@@ -4,14 +4,25 @@
     ViewData["Title"] = "Show weather";
 }
 
-<div class="container">
-    <h2>Wybrane miasto to: @Model.CityName</h2>
+<div id="showWeather"></div>
 
-    <h3 class="mt-6">Pogoda:</h3>
+<template id="showWeatherTemplate">
+    <div class="wrapper text-center" style="top:35%">
+        <h2>Wybrane miasto to: @Model.CityName</h2>
 
-    @foreach (var weather in Model.WeatherInformationsList)
-    {
-        <div>Kto: @weather.WeatherProviderAPIName</div>
-        <div>Ile: @weather.Celsius</div>
-    }
-</div>
+        <div class="card-deck mt-5" style="margin-left: 200px; margin-right: 200px;">
+
+            @foreach (var weather in Model.WeatherInformationsList)
+            {
+                <weather-tile v-bind:weather="@weather.ToJson()"></weather-tile>
+            }
+
+        </div>
+    </div>
+</template>
+
+@section Scripts {
+    <script src="~/js/ShowWeather.js" asp-append-version="true"></script>
+}
+
+@Html.Partial("ComponentTemplates/WeatherTileTemplate")

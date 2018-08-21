@@ -8,7 +8,7 @@
 
 <template id="provideDataTemplate">
 
-    <div class="container-fluid">
+    <div class="wrapper">
         <div class="text-center">
             @using (Html.BeginForm("Index", "ShowWeather", FormMethod.Post, new { enctype = "multipart/form-data", @ref = "InputForm" }))
             {

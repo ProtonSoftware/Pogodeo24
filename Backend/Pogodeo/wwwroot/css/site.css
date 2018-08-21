@@ -1,10 +1,6 @@
-﻿* {
-    box-sizing: border-box;
-}
-
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.body {
+    margin: 0;
+    padding: 0;
 }
 
 .main-wrapper {
@@ -18,4 +14,13 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.wrapper {
+    position: absolute;
+    top: 45%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }

@@ -17,4 +17,9 @@
     <None Include="wwwroot\lib\vue\vue.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
+    <ProjectReference Include="..\Pogodeo.Services\Pogodeo.Services.csproj" />
+  </ItemGroup>
+
 </Project>

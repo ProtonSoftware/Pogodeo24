@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pogodeo.Services;
+using Pogodeo.Services.ExternalApiServices;
 using System.Collections.Generic;
 
 namespace Pogodeo
@@ -8,8 +10,19 @@ namespace Pogodeo
     /// </summary>
     public class ShowWeatherController : Controller
     {
+        private readonly ITestService _service;
+        private readonly IOpenCageGeocoder _geo;
+
+        public ShowWeatherController(ITestService service, IOpenCageGeocoder geo)
+        {
+            _service = service;
+            _geo = geo;
+        }
+
         public IActionResult Index(ProvideDataViewModel viewModel)
         {
+            var a = _geo.GetAddressLocation(viewModel.CityName);
+
             // TODO: Get real data from APIs
             var apiData = new ShowWeatherViewModel
             {

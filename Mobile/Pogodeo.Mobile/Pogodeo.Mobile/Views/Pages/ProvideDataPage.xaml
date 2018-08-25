@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Pogodeo.Mobile"
+             x:Class="Pogodeo.Mobile.ProvideDataPage">
+
+    <Grid>
+
+        <Frame VerticalOptions="Center"
+               HorizontalOptions="Center"
+               WidthRequest="300"
+               BackgroundColor="White">
+
+            <StackLayout>
+
+                <Label Text="Wpisz miasto aby wyszukać pogodę" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       Margin="10" />
+
+                <Grid>
+
+                    <Entry MinimumWidthRequest="100"
+                           Text="{Binding CityName}"></Entry>
+
+                    <Button Text="Wyszukaj"
+                            Command="{Binding ChangePageWithDataCommand}"
+                            Grid.Column="1" />
+                    
+                </Grid>
+            </StackLayout>
+
+        </Frame>
+
+    </Grid>
+
+
+</ContentPage>

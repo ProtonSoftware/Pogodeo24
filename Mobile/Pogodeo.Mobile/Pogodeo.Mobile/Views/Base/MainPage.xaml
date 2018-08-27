@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:views="clr-namespace:Pogodeo.Mobile.Views"
+            xmlns:local="clr-namespace:Pogodeo.Mobile"
             x:Class="Pogodeo.Mobile.MainPage">
 
     <MasterDetailPage.Master>
-        <views:MenuPage />
+        <local:MenuPage />
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
@@ -16,7 +16,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:ItemsPage />
+                <local:ProvideDataPage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

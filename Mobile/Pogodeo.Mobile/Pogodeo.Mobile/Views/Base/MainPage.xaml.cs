@@ -1,6 +1,4 @@
 ﻿using Pogodeo.Mobile.Models;
-using Pogodeo.Mobile.Views;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -28,10 +26,10 @@ namespace Pogodeo.Mobile
                 switch (id)
                 {
                     case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                        MenuPages.Add(id, new NavigationPage(new ProvideDataPage()));
                         break;
                     case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        MenuPages.Add(id, new NavigationPage(new ShowWeatherPage()));
                         break;
                 }
             }

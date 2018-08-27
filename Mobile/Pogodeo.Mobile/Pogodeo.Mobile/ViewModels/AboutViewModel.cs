@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 using Xamarin.Forms;
 
-namespace Pogodeo.Mobile.ViewModels
+namespace Pogodeo.Mobile
 {
     public class AboutViewModel : BaseViewModel
     {
@@ -11,7 +11,7 @@ namespace Pogodeo.Mobile.ViewModels
         {
             Title = "About";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://pogodeo24.pl")));
         }
 
         public ICommand OpenWebCommand { get; }

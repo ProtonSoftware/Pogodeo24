@@ -1,9 +1,8 @@
-﻿using System;
-
+﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Pogodeo.Mobile.Views
+namespace Pogodeo.Mobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
@@ -11,6 +10,8 @@ namespace Pogodeo.Mobile.Views
         public AboutPage()
         {
             InitializeComponent();
+
+            BindingContext = new AboutViewModel();
         }
     }
 }

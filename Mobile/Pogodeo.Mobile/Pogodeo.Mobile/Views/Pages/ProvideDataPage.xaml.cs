@@ -1,8 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using Xamarin.Forms.Xaml;
 
 namespace Pogodeo.Mobile
 {
-    public partial class ProvideDataPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProvideDataPage : BasePage
 	{
 		public ProvideDataPage()
 		{

@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Pogodeo.Mobile.Models;
 using Pogodeo.Mobile.Services;
 
-namespace Pogodeo.Mobile.ViewModels
+namespace Pogodeo.Mobile
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

@@ -1,0 +1,561 @@
+[2018-08-27 01:44:47] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:44:49] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:44:50] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:44:50] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:44:50] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:44:50] No migrations were applied. The database is already up to date.
+[2018-08-27 01:44:51] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:44:52] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:44:57] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:44:58] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5910.879ms
+[2018-08-27 01:44:58] Request finished in 6307.0984ms 200 text/html; charset=utf-8
+[2018-08-27 01:45:03] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary9dw5rGpZTUYIUTB2 411
+[2018-08-27 01:45:03] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:45:03] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 317.6272ms
+[2018-08-27 01:45:03] An unhandled exception has occurred while executing the request
+[2018-08-27 01:45:03] Request finished in 706.2848ms 500 text/html; charset=utf-8
+[2018-08-27 01:45:44] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:45:45] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:45:45] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:45:45] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:45:45] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:45:45] No migrations were applied. The database is already up to date.
+[2018-08-27 01:45:46] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:45:47] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:45:51] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:45:51] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4639.9184ms
+[2018-08-27 01:45:51] Request finished in 5028.7415ms 200 text/html; charset=utf-8
+[2018-08-27 01:45:56] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryGUW6Uv7wy69rmj0e 416
+[2018-08-27 01:45:56] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:45:58] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1322.8449ms
+[2018-08-27 01:45:58] An unhandled exception has occurred while executing the request
+[2018-08-27 01:45:58] Request finished in 1825.8148ms 500 text/html; charset=utf-8
+[2018-08-27 01:48:27] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:48:28] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:48:28] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:48:28] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:48:28] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:48:28] No migrations were applied. The database is already up to date.
+[2018-08-27 01:48:29] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:48:30] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:48:34] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:48:34] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4852.3842ms
+[2018-08-27 01:48:35] Request finished in 5251.0283ms 200 text/html; charset=utf-8
+[2018-08-27 01:48:39] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryCs6xjhdzfuGQ0JIH 411
+[2018-08-27 01:48:39] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:48:47] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 7640.4168ms
+[2018-08-27 01:48:47] An unhandled exception has occurred while executing the request
+[2018-08-27 01:48:47] Request finished in 8146.229ms 500 text/html; charset=utf-8
+[2018-08-27 01:49:19] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:49:21] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:49:21] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:49:21] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:49:21] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:49:21] No migrations were applied. The database is already up to date.
+[2018-08-27 01:49:22] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:49:22] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:49:26] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:49:27] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4662.2062ms
+[2018-08-27 01:49:27] Request finished in 5059.3528ms 200 text/html; charset=utf-8
+[2018-08-27 01:49:29] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarysVWg8wG7BgwuxhPc 413
+[2018-08-27 01:49:29] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:49:32] Request starting HTTP/1.1 GET http://localhost:51754/api/GetWeatherFor?city=dasdas  
+[2018-08-27 01:49:32] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dasdas) - ModelState is Valid
+[2018-08-27 01:49:32] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 01:49:32] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 785.2221ms
+[2018-08-27 01:49:32] Request finished in 859.8718ms 200 application/json; charset=utf-8
+[2018-08-27 01:50:15] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 45223.4908ms
+[2018-08-27 01:50:15] An unhandled exception has occurred while executing the request
+[2018-08-27 01:50:15] Request finished in 45626.7707ms 500 text/html; charset=utf-8
+[2018-08-27 01:54:29] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:54:30] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:54:30] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:54:30] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:54:30] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:54:30] No migrations were applied. The database is already up to date.
+[2018-08-27 01:54:32] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:54:32] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:54:36] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:54:37] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5017.1784ms
+[2018-08-27 01:54:37] Request finished in 5401.5433ms 200 text/html; charset=utf-8
+[2018-08-27 01:54:42] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarydYp9BqE1h6186Su4 413
+[2018-08-27 01:54:42] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:54:44] Request starting HTTP/1.1 GET http://localhost:51754/api/GetWeatherFor?city=XASxas  
+[2018-08-27 01:54:44] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (XASxas) - ModelState is Valid
+[2018-08-27 01:54:44] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 01:54:44] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 708.1673ms
+[2018-08-27 01:54:44] Request finished in 780.8163ms 200 application/json; charset=utf-8
+[2018-08-27 01:55:47] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 01:55:49] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 01:55:49] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:55:49] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 01:55:49] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 01:55:49] No migrations were applied. The database is already up to date.
+[2018-08-27 01:55:51] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 01:55:51] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 01:55:55] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 01:55:56] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4919.5002ms
+[2018-08-27 01:55:56] Request finished in 5283.8083ms 200 text/html; charset=utf-8
+[2018-08-27 01:55:59] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryuJnbok7tzerzxlno 410
+[2018-08-27 01:55:59] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 01:55:59] Request starting HTTP/1.1 GET http://localhost:51754/api/GetWeatherFor?city=cas  
+[2018-08-27 01:55:59] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (cas) - ModelState is Valid
+[2018-08-27 01:56:00] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 01:56:00] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 861.9556ms
+[2018-08-27 01:56:00] Request finished in 957.4352ms 200 application/json; charset=utf-8
+[2018-08-27 01:56:36] Request starting HTTP/1.1 GET http://localhost:51754/api/GetWeatherFor?city=cas  
+[2018-08-27 01:56:36] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (cas) - ModelState is Valid
+[2018-08-27 01:56:36] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 01:56:37] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 37946.2313ms
+[2018-08-27 01:56:37] An unhandled exception has occurred while executing the request
+[2018-08-27 01:56:37] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 01:56:37] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 714.9769ms
+[2018-08-27 01:56:37] Request finished in 814.4424ms 200 application/json; charset=utf-8
+[2018-08-27 01:56:37] Request finished in 38410.7179ms 500 text/html; charset=utf-8
+[2018-08-27 02:01:27] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:01:28] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:01:28] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:01:29] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:01:29] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:01:29] No migrations were applied. The database is already up to date.
+[2018-08-27 02:01:30] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:01:30] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:01:35] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:01:35] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4930.8828ms
+[2018-08-27 02:01:35] Request finished in 5337.786ms 200 text/html; charset=utf-8
+[2018-08-27 02:01:40] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarymt81NEpysU01L3NG 413
+[2018-08-27 02:01:40] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:01:40] Request starting HTTP/1.1 GET http://localhost:51754/api/GetWeatherFor?city=dsadsa  
+[2018-08-27 02:01:40] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dsadsa) - ModelState is Valid
+[2018-08-27 02:01:41] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:01:41] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 593.8823ms
+[2018-08-27 02:01:41] Request finished in 627.438ms 200 application/json; charset=utf-8
+[2018-08-27 02:02:01] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:02:01] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 20993.5082ms
+[2018-08-27 02:02:01] Request finished in 21099.8422ms 200 text/html; charset=utf-8
+[2018-08-27 02:02:01] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 02:02:01] Request finished in 28.0755ms 404 
+[2018-08-27 02:12:03] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:12:05] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:12:05] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:12:05] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:12:05] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:12:06] No migrations were applied. The database is already up to date.
+[2018-08-27 02:12:07] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:12:07] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:12:25] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:12:26] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:12:26] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:12:26] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:12:27] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:12:27] No migrations were applied. The database is already up to date.
+[2018-08-27 02:12:28] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:12:28] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:12:33] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:12:33] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4964.8379ms
+[2018-08-27 02:12:33] Request finished in 5415.2094ms 200 text/html; charset=utf-8
+[2018-08-27 02:12:39] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/js/bootstrap.js.map  
+[2018-08-27 02:12:39] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/css/bootstrap.css.map  
+[2018-08-27 02:12:39] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js.map'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map'
+[2018-08-27 02:12:39] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+[2018-08-27 02:12:39] Request finished in 180.295ms 200 text/plain
+[2018-08-27 02:12:39] Request finished in 210.9545ms 200 text/plain
+[2018-08-27 02:46:33] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:46:35] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:46:35] Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:46:35] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:46:35] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:46:35] No migrations were applied. The database is already up to date.
+[2018-08-27 02:46:36] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:46:37] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:46:41] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:46:42] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5342.2208ms
+[2018-08-27 02:46:42] Request finished in 5714.6346ms 200 text/html; charset=utf-8
+[2018-08-27 02:46:49] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryCD4RSRR5R8Lsg1D3 413
+[2018-08-27 02:46:49] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:46:49] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:46:49] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 650.3411ms
+[2018-08-27 02:46:50] An unhandled exception has occurred while executing the request
+[2018-08-27 02:46:50] Request finished in 1072.4659ms 500 text/html; charset=utf-8
+[2018-08-27 02:47:04] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:47:04] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:47:04] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:47:04] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 92.1203ms
+[2018-08-27 02:47:04] Request finished in 179.3045ms 200 text/html; charset=utf-8
+[2018-08-27 02:47:06] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryZxw2mETnLAovmlBR 413
+[2018-08-27 02:47:06] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:47:34] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:47:35] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:47:36] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:47:36] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:47:36] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:47:36] No migrations were applied. The database is already up to date.
+[2018-08-27 02:47:37] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:47:37] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:47:42] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:47:42] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4894.5412ms
+[2018-08-27 02:47:42] Request finished in 5280.9574ms 200 text/html; charset=utf-8
+[2018-08-27 02:47:46] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryjttVQpirrrp1HdRn 413
+[2018-08-27 02:47:46] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:48:35] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:48:36] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:48:37] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:48:37] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:48:37] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:48:37] No migrations were applied. The database is already up to date.
+[2018-08-27 02:48:38] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:48:38] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:48:43] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:48:43] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4964.3652ms
+[2018-08-27 02:48:43] Request finished in 5324.6903ms 200 text/html; charset=utf-8
+[2018-08-27 02:48:49] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryLYqNBrzpO1nUzxqH 410
+[2018-08-27 02:48:49] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:48:49] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 5
+[2018-08-27 02:48:49] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:48:50] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:48:50] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 500.6997ms
+[2018-08-27 02:48:50] Request finished in 599.5694ms 200 application/json; charset=utf-8
+[2018-08-27 02:49:15] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryZtiNv2krpMorL7MF 410
+[2018-08-27 02:49:15] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:49:16] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 5
+[2018-08-27 02:49:16] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:49:16] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:49:16] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 241.6499ms
+[2018-08-27 02:49:16] Request finished in 389.1174ms 200 application/json; charset=utf-8
+[2018-08-27 02:49:17] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:49:17] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:49:18] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 2122.4362ms
+[2018-08-27 02:49:18] Request finished in 2322.8411ms 200 text/html; charset=utf-8
+[2018-08-27 02:49:18] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 28562.5143ms
+[2018-08-27 02:49:18] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 02:49:18] Request finished in 28864.5098ms 200 text/html; charset=utf-8
+[2018-08-27 02:49:18] Request finished in 119.1001ms 0 
+[2018-08-27 02:49:21] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:49:21] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:49:21] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:49:21] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 35.4884ms
+[2018-08-27 02:49:21] Request finished in 122.5113ms 200 text/html; charset=utf-8
+[2018-08-27 02:49:45] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryK1dDZ0IAYKWHcTPD 415
+[2018-08-27 02:49:45] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:49:47] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 10
+[2018-08-27 02:49:47] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:49:47] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:49:47] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 484.7611ms
+[2018-08-27 02:49:47] Request finished in 528.4578ms 200 application/json; charset=utf-8
+[2018-08-27 02:49:57] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:49:58] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 12141.5837ms
+[2018-08-27 02:49:58] Request finished in 12270.3859ms 200 text/html; charset=utf-8
+[2018-08-27 02:49:58] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 02:49:58] Request finished in 34.9307ms 404 
+[2018-08-27 02:50:03] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:50:03] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:50:03] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:50:03] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 40.5794ms
+[2018-08-27 02:50:03] Request finished in 183.6266ms 200 text/html; charset=utf-8
+[2018-08-27 02:50:04] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryX4NdtywMneIspZHS 411
+[2018-08-27 02:50:04] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:50:08] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 6
+[2018-08-27 02:50:08] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:50:09] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:50:09] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 305.8261ms
+[2018-08-27 02:50:09] Request finished in 374.6781ms 200 application/json; charset=utf-8
+[2018-08-27 02:52:16] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:52:18] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:52:19] Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:52:19] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:52:19] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:52:19] No migrations were applied. The database is already up to date.
+[2018-08-27 02:52:20] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:52:20] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:52:26] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:52:27] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 6356.9574ms
+[2018-08-27 02:52:27] Request finished in 6832.3025ms 200 text/html; charset=utf-8
+[2018-08-27 02:52:33] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryS0mUiUvMkhfKXHGl 413
+[2018-08-27 02:52:33] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:52:36] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-27 02:52:36] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:53:16] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:53:17] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:53:17] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:53:17] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:53:17] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:53:18] No migrations were applied. The database is already up to date.
+[2018-08-27 02:53:19] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:53:19] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:53:24] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:53:25] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5476.5346ms
+[2018-08-27 02:53:25] Request finished in 5887.5379ms 200 text/html; charset=utf-8
+[2018-08-27 02:53:32] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryAojOBZc6UUt6xSxM 414
+[2018-08-27 02:53:32] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:53:32] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 22
+[2018-08-27 02:53:32] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:54:32] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:54:33] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:54:34] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:54:34] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:54:34] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:54:34] No migrations were applied. The database is already up to date.
+[2018-08-27 02:54:35] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:54:35] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:54:40] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:54:41] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5431.834ms
+[2018-08-27 02:54:41] Request finished in 5785.5957ms 200 text/html; charset=utf-8
+[2018-08-27 02:54:45] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarygGfDNsDT7ixsyvxO 413
+[2018-08-27 02:54:45] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:54:45] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 17
+[2018-08-27 02:54:45] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 02:54:51] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 02:54:51] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 6250.0974ms
+[2018-08-27 02:54:51] Request finished in 6322.1397ms 200 application/json; charset=utf-8
+[2018-08-27 02:54:52] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 02:54:52] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 7230.8155ms
+[2018-08-27 02:54:52] Request finished in 7365.7945ms 200 text/html; charset=utf-8
+[2018-08-27 02:54:52] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 02:54:52] Request finished in 43.2921ms 404 
+[2018-08-27 02:58:16] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 02:58:17] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 02:58:18] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:58:18] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 02:58:18] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 02:58:18] No migrations were applied. The database is already up to date.
+[2018-08-27 02:58:19] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 02:58:19] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 02:58:24] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 02:58:24] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4977.7472ms
+[2018-08-27 02:58:24] Request finished in 5379.8856ms 200 text/html; charset=utf-8
+[2018-08-27 02:58:28] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarytiVPFlRB8sKnL0VF 416
+[2018-08-27 02:58:28] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 02:58:29] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 20
+[2018-08-27 02:58:29] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (System.Object) - ModelState is Valid
+[2018-08-27 03:00:00] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:00:02] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:00:02] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:00:02] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:00:02] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:00:02] No migrations were applied. The database is already up to date.
+[2018-08-27 03:00:04] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:00:04] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:00:08] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:00:09] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5033.0624ms
+[2018-08-27 03:00:09] Request finished in 5416.6173ms 200 text/html; charset=utf-8
+[2018-08-27 03:00:21] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryV9loQA4pO1Ht3tbe 413
+[2018-08-27 03:00:21] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:00:21] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 17
+[2018-08-27 03:00:21] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (System.Object) - ModelState is Valid
+[2018-08-27 03:00:32] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 03:00:32] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 10539.3233ms
+[2018-08-27 03:00:32] Request finished in 10607.328ms 200 application/json; charset=utf-8
+[2018-08-27 03:00:32] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 03:00:32] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 11581.143ms
+[2018-08-27 03:00:33] Request finished in 11688.3438ms 200 text/html; charset=utf-8
+[2018-08-27 03:00:33] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 03:00:33] Request finished in 21.07ms 404 
+[2018-08-27 03:03:09] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:03:10] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:03:10] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:03:11] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:03:11] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:03:11] No migrations were applied. The database is already up to date.
+[2018-08-27 03:03:12] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:03:12] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:03:17] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:03:18] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5814.1265ms
+[2018-08-27 03:03:18] Request finished in 6257.1741ms 200 text/html; charset=utf-8
+[2018-08-27 03:03:21] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryHGgxkrzK8qz0gysI 413
+[2018-08-27 03:03:21] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:03:22] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 21
+[2018-08-27 03:03:22] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (System.Object) - ModelState is Valid
+[2018-08-27 03:03:41] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 03:03:41] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 19234.859ms
+[2018-08-27 03:03:41] Request finished in 19308.3481ms 200 application/json; charset=utf-8
+[2018-08-27 03:06:37] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:06:39] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:06:39] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:06:39] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:06:39] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:06:39] No migrations were applied. The database is already up to date.
+[2018-08-27 03:06:40] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:06:41] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:06:45] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:06:46] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5261.4263ms
+[2018-08-27 03:06:46] Request finished in 5633.1251ms 200 text/html; charset=utf-8
+[2018-08-27 03:06:51] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryISUBpjXFEINAjSUv 413
+[2018-08-27 03:06:51] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:06:51] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor text/plain; charset=utf-8 6
+[2018-08-27 03:06:51] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (System.Object) - ModelState is Valid
+[2018-08-27 03:07:13] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:07:15] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:07:15] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:07:15] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:07:15] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:07:15] No migrations were applied. The database is already up to date.
+[2018-08-27 03:07:16] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:07:17] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:07:21] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:07:22] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5090.1725ms
+[2018-08-27 03:07:22] Request finished in 5448.5751ms 200 text/html; charset=utf-8
+[2018-08-27 03:07:26] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryFiPmPKLO9AsvLplS 413
+[2018-08-27 03:07:26] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:07:26] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor text/plain; charset=utf-8 6
+[2018-08-27 03:07:26] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Valid
+[2018-08-27 03:08:17] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:08:18] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:08:18] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:08:18] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:08:18] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:08:18] No migrations were applied. The database is already up to date.
+[2018-08-27 03:08:20] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:08:20] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:08:24] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:08:25] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5035.5118ms
+[2018-08-27 03:08:25] Request finished in 5417.9613ms 200 text/html; charset=utf-8
+[2018-08-27 03:08:29] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryOARE1f60PjZHXOBi 413
+[2018-08-27 03:08:29] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:08:29] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 21
+[2018-08-27 03:08:29] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Invalid
+[2018-08-27 03:08:59] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:09:01] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:09:01] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:09:01] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:09:01] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:09:01] No migrations were applied. The database is already up to date.
+[2018-08-27 03:09:02] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:09:03] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-27 03:09:08] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-27 03:09:08] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5686.5706ms
+[2018-08-27 03:09:08] Request finished in 6104.8537ms 200 text/html; charset=utf-8
+[2018-08-27 03:09:12] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary0JH4pYlNKU6wFMEV 413
+[2018-08-27 03:09:12] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-27 03:09:13] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-27 03:09:13] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dasdsa) - ModelState is Valid
+[2018-08-27 03:09:19] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-27 03:09:19] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 6274.6581ms
+[2018-08-27 03:09:19] Request finished in 6331.2038ms 200 application/json; charset=utf-8
+[2018-08-27 03:09:19] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-27 03:09:20] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 7352.9126ms
+[2018-08-27 03:09:20] Request finished in 7542.1828ms 200 text/html; charset=utf-8
+[2018-08-27 03:09:20] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-27 03:09:20] Request finished in 33.6601ms 404 
+[2018-08-27 03:16:11] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-27 03:16:13] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-27 03:16:13] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:16:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-27 03:16:13] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-27 03:16:13] No migrations were applied. The database is already up to date.
+[2018-08-27 03:16:15] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-27 03:16:15] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid

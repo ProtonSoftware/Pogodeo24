@@ -1,9 +1,15 @@
 ﻿<template id="weatherTileTemplate">
     <div class="card">
-        <img class="card-img-top" v-bind:src="logoPath" alt="Card image cap">
+        <img class="card-img-top" v-bind:src="logoPath" alt="{{ weatherData.Name }}">
         <div class="card-body">
-            <h5 class="card-title">{{ weatherData.Name }}</h5>
-            <p class="card-text">Po poludniu: {{ weatherData.Value }} *C</p>
+            <div class="row">
+                <div class="col">
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" />
+                </div>
+                <div class="col m-auto">
+                    <h3>{{ weatherData.Value }} *C</h3>
+                </div>
+            </div>
         </div>
     </div>
 </template>

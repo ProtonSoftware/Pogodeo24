@@ -14,13 +14,21 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    height: 100vh;
 }
 
 .wrapper {
-    position: absolute;
-    top: 45%;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
+}
+
+.weather-container {
+    padding: 30px;
+    background-color: #fff;
+    opacity: 0.8;
+    width: 70vw;
+}
+
+.card-img-top {
+    height: 60px;
 }

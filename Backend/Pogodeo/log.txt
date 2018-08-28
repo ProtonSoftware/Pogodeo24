@@ -559,3 +559,1087 @@ ORDER BY [MigrationId];
 [2018-08-27 03:16:13] No migrations were applied. The database is already up to date.
 [2018-08-27 03:16:15] Request starting HTTP/1.1 GET http://localhost:51754/  
 [2018-08-27 03:16:15] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:18:57] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-28 02:18:59] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-28 02:19:00] Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-28 02:19:00] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-28 02:19:00] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-28 02:19:00] No migrations were applied. The database is already up to date.
+[2018-08-28 02:19:01] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:19:01] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:19:07] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:19:08] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:19:08] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 6485.8632ms
+[2018-08-28 02:19:08] Request starting HTTP/1.1 GET http://localhost:51754/js/Main.js?v=zG752POEJC5JV7bTxn1qZZizbLYSu1KTeYJ_K7B_QHI  
+[2018-08-28 02:19:08] Request starting HTTP/1.1 GET http://localhost:51754/js/ProvideData.js?v=i6LM_X1kYtS54CXdRqZv2wV_qpHXNkhGJ66oE_LpR5w  
+[2018-08-28 02:19:08] The file /js/Main.js was not modified
+[2018-08-28 02:19:08] The file /css/site.css was not modified
+[2018-08-28 02:19:08] The file /js/ProvideData.js was not modified
+[2018-08-28 02:19:08] Request finished in 7215.6121ms 200 text/html; charset=utf-8
+[2018-08-28 02:19:08] Request finished in 422.5911ms 304 text/css
+[2018-08-28 02:19:08] Request finished in 371.764ms 304 application/javascript
+[2018-08-28 02:19:09] Request starting HTTP/1.1 GET http://localhost:51754/js/_Components/WeatherTile.js?v=YmCYmzAE6rAcmlMhq2ChP3NV8mpJBfKtPiBze4jGcYc  
+[2018-08-28 02:19:09] Request finished in 495.8429ms 304 application/javascript
+[2018-08-28 02:19:09] The file /js/_Components/WeatherTile.js was not modified
+[2018-08-28 02:19:09] Request finished in 184.9868ms 304 application/javascript
+[2018-08-28 02:19:09] Request starting HTTP/1.1 GET http://localhost:51754/images/Wallpapers/pogodeo-main.jpg  
+[2018-08-28 02:19:09] The file /images/Wallpapers/pogodeo-main.jpg was not modified
+[2018-08-28 02:19:09] Request finished in 401.8257ms 304 image/jpeg
+[2018-08-28 02:19:58] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:19:58] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:19:58] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:19:59] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 71.3796ms
+[2018-08-28 02:19:59] Request finished in 198.283ms 200 text/html; charset=utf-8
+[2018-08-28 02:19:59] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:19:59] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:19:59] Request finished in 71.8788ms 200 image/x-icon
+[2018-08-28 02:20:00] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:00] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:00] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:00] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 48.2304ms
+[2018-08-28 02:20:00] Request finished in 179.0506ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:00] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:00] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:00] Request finished in 49.076ms 200 image/x-icon
+[2018-08-28 02:20:11] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:11] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:11] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:11] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 59.741ms
+[2018-08-28 02:20:11] Request finished in 151.7845ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:11] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:11] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:11] Request finished in 45.7638ms 200 image/x-icon
+[2018-08-28 02:20:12] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:12] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:13] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:13] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 82.8966ms
+[2018-08-28 02:20:13] Request finished in 251.9833ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:13] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:13] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:13] Request finished in 70.1683ms 200 image/x-icon
+[2018-08-28 02:20:13] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:13] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:13] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:13] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 46.5075ms
+[2018-08-28 02:20:13] Request finished in 130.6854ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:14] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:14] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:14] Request finished in 44.7129ms 200 image/x-icon
+[2018-08-28 02:20:19] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:19] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:19] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:19] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 107.3518ms
+[2018-08-28 02:20:19] Request finished in 261.3636ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:19] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:19] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:19] Request finished in 75.4133ms 200 image/x-icon
+[2018-08-28 02:20:20] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:20] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:20] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:20] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 67.1547ms
+[2018-08-28 02:20:20] Request finished in 143.8519ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:20] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:20] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:20] Request finished in 70.001ms 200 image/x-icon
+[2018-08-28 02:20:21] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:21] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:21] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:21] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 44.0234ms
+[2018-08-28 02:20:21] Request finished in 124.4876ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:21] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:21] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:21] Request finished in 137.3572ms 200 image/x-icon
+[2018-08-28 02:20:25] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:25] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:25] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:25] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 52.2564ms
+[2018-08-28 02:20:25] Request finished in 139.1876ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:25] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:25] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:25] Request finished in 68.5657ms 200 image/x-icon
+[2018-08-28 02:20:26] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:26] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:26] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:26] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 41.94ms
+[2018-08-28 02:20:26] Request finished in 119.511ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:26] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:26] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:26] Request finished in 60.6813ms 200 image/x-icon
+[2018-08-28 02:20:35] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/js/bootstrap.js.map  
+[2018-08-28 02:20:35] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/css/bootstrap.css.map  
+[2018-08-28 02:20:36] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js.map'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map'
+[2018-08-28 02:20:36] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+[2018-08-28 02:20:36] Request finished in 294.8057ms 200 text/plain
+[2018-08-28 02:20:36] Request finished in 309.9955ms 200 text/plain
+[2018-08-28 02:20:46] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:46] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:46] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:47] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 73.0922ms
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/js/bootstrap.js  
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/lib/vue/vue.js  
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/lib/bootstrap/dist/css/bootstrap.css  
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/lib/jquery/dist/jquery.js  
+[2018-08-28 02:20:47] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+[2018-08-28 02:20:47] Request finished in 595.0924ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:47] Sending file. Request path: '/lib/vue/vue.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\vue\vue.js'
+[2018-08-28 02:20:47] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\jquery\dist\jquery.js'
+[2018-08-28 02:20:47] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:20:47] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+[2018-08-28 02:20:47] Request finished in 712.2308ms 200 text/css
+[2018-08-28 02:20:47] Request finished in 669.4165ms 200 application/javascript
+[2018-08-28 02:20:47] Request starting HTTP/1.1 GET http://localhost:51754/js/ProvideData.js?v=i6LM_X1kYtS54CXdRqZv2wV_qpHXNkhGJ66oE_LpR5w  
+[2018-08-28 02:20:47] Request finished in 847.1918ms 200 application/javascript
+[2018-08-28 02:20:48] Request finished in 863.8016ms 200 application/javascript
+[2018-08-28 02:20:48] Request finished in 949.2091ms 200 text/css
+[2018-08-28 02:20:48] Request starting HTTP/1.1 GET http://localhost:51754/js/_Components/WeatherTile.js?v=YmCYmzAE6rAcmlMhq2ChP3NV8mpJBfKtPiBze4jGcYc  
+[2018-08-28 02:20:48] Sending file. Request path: '/js/ProvideData.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\ProvideData.js'
+[2018-08-28 02:20:48] Request starting HTTP/1.1 GET http://localhost:51754/js/Main.js?v=zG752POEJC5JV7bTxn1qZZizbLYSu1KTeYJ_K7B_QHI  
+[2018-08-28 02:20:48] Sending file. Request path: '/js/_Components/WeatherTile.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\_Components\WeatherTile.js'
+[2018-08-28 02:20:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Wallpapers/pogodeo-main.jpg  
+[2018-08-28 02:20:48] Request finished in 494.0915ms 200 application/javascript
+[2018-08-28 02:20:48] Request finished in 803.2921ms 200 application/javascript
+[2018-08-28 02:20:48] Sending file. Request path: '/js/Main.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\Main.js'
+[2018-08-28 02:20:48] Sending file. Request path: '/images/Wallpapers/pogodeo-main.jpg'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\images\Wallpapers\pogodeo-main.jpg'
+[2018-08-28 02:20:48] Request finished in 524.3477ms 200 application/javascript
+[2018-08-28 02:20:48] Request finished in 288.352ms 200 image/jpeg
+[2018-08-28 02:20:48] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:49] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:49] Request finished in 74.9623ms 200 image/x-icon
+[2018-08-28 02:20:56] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:20:56] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:20:56] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:20:56] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 46.487ms
+[2018-08-28 02:20:56] Request finished in 83.1078ms 200 text/html; charset=utf-8
+[2018-08-28 02:20:56] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:20:56] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:20:56] Request finished in 45.5082ms 200 text/css
+[2018-08-28 02:20:56] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:20:56] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:20:56] Request finished in 106.9683ms 200 image/x-icon
+[2018-08-28 02:21:04] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:21:04] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:21:04] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:21:04] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 46.368ms
+[2018-08-28 02:21:04] Request finished in 132.9941ms 200 text/html; charset=utf-8
+[2018-08-28 02:21:04] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:21:04] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:21:04] Request finished in 98.4494ms 200 text/css
+[2018-08-28 02:21:04] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:21:04] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:21:04] Request finished in 39.3463ms 200 image/x-icon
+[2018-08-28 02:21:10] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:21:10] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:21:10] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:21:10] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 26.2766ms
+[2018-08-28 02:21:10] Request finished in 170.4315ms 200 text/html; charset=utf-8
+[2018-08-28 02:21:10] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:21:10] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:21:10] Request finished in 176.2013ms 200 text/css
+[2018-08-28 02:21:10] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:21:10] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:21:10] Request finished in 55.6467ms 200 image/x-icon
+[2018-08-28 02:21:11] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:21:11] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:21:11] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:21:11] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 55.9334ms
+[2018-08-28 02:21:11] Request finished in 146.6803ms 200 text/html; charset=utf-8
+[2018-08-28 02:21:11] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:21:11] The file /css/site.css was not modified
+[2018-08-28 02:21:11] Request finished in 113.5078ms 304 text/css
+[2018-08-28 02:21:11] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:21:11] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:21:11] Request finished in 30.4081ms 200 image/x-icon
+[2018-08-28 02:21:34] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:21:34] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:21:34] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:21:34] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 55.7883ms
+[2018-08-28 02:21:34] Request finished in 148.1612ms 200 text/html; charset=utf-8
+[2018-08-28 02:21:34] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:21:34] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:21:34] Request finished in 179.7828ms 200 text/css
+[2018-08-28 02:21:34] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:21:34] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:21:34] Request finished in 62.4076ms 200 image/x-icon
+[2018-08-28 02:21:46] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:21:46] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:21:46] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:21:46] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:21:47] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:21:47] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 575.9304ms
+[2018-08-28 02:21:47] Request finished in 659.0826ms 200 application/json; charset=utf-8
+[2018-08-28 02:21:47] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:21:48] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1703.3211ms
+[2018-08-28 02:21:48] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:21:48] Request finished in 1875.2627ms 200 text/html; charset=utf-8
+[2018-08-28 02:21:48] The file /css/site.css was not modified
+[2018-08-28 02:21:48] Request finished in 219.5118ms 304 text/css
+[2018-08-28 02:21:48] Request starting HTTP/1.1 GET http://localhost:51754/js/ShowWeather.js?v=sHN_ROmMikAccAXRiVPQRfAEzaNYPaJzG_0_hMRrrm8  
+[2018-08-28 02:21:48] The file /js/ShowWeather.js was not modified
+[2018-08-28 02:21:48] Request finished in 307.0365ms 304 application/javascript
+[2018-08-28 02:21:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:21:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/WP.png  
+[2018-08-28 02:21:48] Request finished in 112.8315ms 404 
+[2018-08-28 02:21:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/Onet.png  
+[2018-08-28 02:21:48] The file /images/Logos/Onet.png was not modified
+[2018-08-28 02:21:48] The file /images/Logos/WP.png was not modified
+[2018-08-28 02:21:49] Request finished in 459.8097ms 304 image/png
+[2018-08-28 02:21:49] Request finished in 355.1577ms 304 image/png
+[2018-08-28 02:24:05] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:24:05] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:24:05] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:24:06] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:24:06] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:24:06] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 274.6956ms
+[2018-08-28 02:24:06] Request finished in 329.3657ms 200 application/json; charset=utf-8
+[2018-08-28 02:24:06] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:24:06] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 666.6026ms
+[2018-08-28 02:24:06] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:24:06] Request finished in 841.0039ms 200 text/html; charset=utf-8
+[2018-08-28 02:24:06] The file /css/site.css was not modified
+[2018-08-28 02:24:06] Request finished in 121.2885ms 304 text/css
+[2018-08-28 02:24:06] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:24:06] Request finished in 17.3013ms 404 
+[2018-08-28 02:24:06] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:24:06] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:24:07] Request finished in 34.813ms 200 image/x-icon
+[2018-08-28 02:24:45] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:24:45] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:24:45] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:24:45] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:24:45] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:24:45] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 270.67ms
+[2018-08-28 02:24:45] Request finished in 350.7968ms 200 application/json; charset=utf-8
+[2018-08-28 02:24:46] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:24:46] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 721.6883ms
+[2018-08-28 02:24:46] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:24:46] Request finished in 791.5848ms 200 text/html; charset=utf-8
+[2018-08-28 02:24:46] The file /css/site.css was not modified
+[2018-08-28 02:24:46] Request finished in 163.9018ms 304 text/css
+[2018-08-28 02:24:46] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:24:46] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:24:46] Request finished in 103.9897ms 0 
+[2018-08-28 02:24:46] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:24:46] Request finished in 127.3045ms 200 image/x-icon
+[2018-08-28 02:29:53] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:29:53] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:29:53] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:29:53] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:29:53] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:29:53] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 473.1938ms
+[2018-08-28 02:29:53] Request finished in 563.1035ms 200 application/json; charset=utf-8
+[2018-08-28 02:29:54] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:29:54] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1032.3067ms
+[2018-08-28 02:29:54] Request finished in 1110.4746ms 200 text/html; charset=utf-8
+[2018-08-28 02:29:54] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:29:54] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:29:54] Request finished in 150.4264ms 200 text/css
+[2018-08-28 02:29:54] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:29:54] Request finished in 21.9827ms 404 
+[2018-08-28 02:29:54] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:29:54] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:29:54] Request finished in 65.6605ms 200 image/x-icon
+[2018-08-28 02:33:17] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:33:17] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:33:17] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:33:18] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:33:18] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:33:18] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 450.2464ms
+[2018-08-28 02:33:18] Request finished in 662.5634ms 200 application/json; charset=utf-8
+[2018-08-28 02:33:18] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:33:18] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 969.9221ms
+[2018-08-28 02:33:18] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:33:18] Request finished in 1050.2165ms 200 text/html; charset=utf-8
+[2018-08-28 02:33:18] The file /css/site.css was not modified
+[2018-08-28 02:33:19] Request finished in 150.2536ms 304 text/css
+[2018-08-28 02:33:19] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:33:19] Request finished in 46.7029ms 404 
+[2018-08-28 02:33:19] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:33:19] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:33:19] Request finished in 32.4471ms 200 image/x-icon
+[2018-08-28 02:33:41] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:33:41] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:33:41] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:33:41] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:33:41] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:33:41] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 425.2761ms
+[2018-08-28 02:33:41] Request finished in 510.7575ms 200 application/json; charset=utf-8
+[2018-08-28 02:33:41] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:33:41] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 765.9712ms
+[2018-08-28 02:33:42] Request finished in 831.1769ms 200 text/html; charset=utf-8
+[2018-08-28 02:33:42] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:33:42] The file /css/site.css was not modified
+[2018-08-28 02:33:42] Request finished in 67.4018ms 304 text/css
+[2018-08-28 02:33:42] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:33:42] Request finished in 12.2692ms 404 
+[2018-08-28 02:33:42] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:33:42] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:33:42] Request finished in 91.4961ms 200 image/x-icon
+[2018-08-28 02:34:00] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:34:00] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:34:00] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:34:00] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:34:01] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:34:01] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 436.5683ms
+[2018-08-28 02:34:01] Request finished in 547.5694ms 200 application/json; charset=utf-8
+[2018-08-28 02:34:01] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:34:01] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 896.9493ms
+[2018-08-28 02:34:01] Request finished in 961.1255ms 200 text/html; charset=utf-8
+[2018-08-28 02:34:01] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:34:01] Request finished in 10.5804ms 404 
+[2018-08-28 02:34:01] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:34:01] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:34:01] Request finished in 56.3366ms 200 image/x-icon
+[2018-08-28 02:34:13] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:34:13] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:34:13] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:34:13] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:34:14] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:34:14] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 458.7366ms
+[2018-08-28 02:34:14] Request finished in 526.9405ms 200 application/json; charset=utf-8
+[2018-08-28 02:34:14] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:34:14] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 873.4664ms
+[2018-08-28 02:34:14] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:34:14] Request finished in 984.0328ms 200 text/html; charset=utf-8
+[2018-08-28 02:34:14] The file /css/site.css was not modified
+[2018-08-28 02:34:14] Request finished in 147.7717ms 304 text/css
+[2018-08-28 02:34:14] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:34:14] Request finished in 32.1177ms 404 
+[2018-08-28 02:34:15] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:34:15] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:34:15] Request finished in 65.4075ms 200 image/x-icon
+[2018-08-28 02:34:40] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarySuVK03dwdrGWIrv1 413
+[2018-08-28 02:34:40] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:34:40] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:34:40] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdsa) - ModelState is Valid
+[2018-08-28 02:34:40] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:34:40] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 424.6852ms
+[2018-08-28 02:34:40] Request finished in 504.3464ms 200 application/json; charset=utf-8
+[2018-08-28 02:34:41] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:34:41] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 834.1563ms
+[2018-08-28 02:34:41] Request finished in 871.4073ms 200 text/html; charset=utf-8
+[2018-08-28 02:34:41] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:34:41] The file /css/site.css was not modified
+[2018-08-28 02:34:41] Request finished in 50.4652ms 304 text/css
+[2018-08-28 02:34:41] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:34:41] Request finished in 11.2029ms 404 
+[2018-08-28 02:34:41] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:34:41] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:34:41] Request finished in 79.2477ms 200 image/x-icon
+[2018-08-28 02:35:56] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-28 02:35:58] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-28 02:35:58] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-28 02:35:58] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-28 02:35:58] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-28 02:35:58] No migrations were applied. The database is already up to date.
+[2018-08-28 02:35:59] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 02:36:00] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 02:36:04] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 02:36:04] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4703.057ms
+[2018-08-28 02:36:04] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:36:04] Request finished in 5122.475ms 200 text/html; charset=utf-8
+[2018-08-28 02:36:04] The file /css/site.css was not modified
+[2018-08-28 02:36:04] Request finished in 80.8576ms 304 text/css
+[2018-08-28 02:36:24] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:36:24] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:36:24] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:36:24] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:36:25] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:36:25] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 493.815ms
+[2018-08-28 02:36:25] Request finished in 564.0512ms 200 application/json; charset=utf-8
+[2018-08-28 02:36:25] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:36:25] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1573.8542ms
+[2018-08-28 02:36:26] Request finished in 1697.2019ms 200 text/html; charset=utf-8
+[2018-08-28 02:36:26] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:36:26] Request finished in 13.3798ms 404 
+[2018-08-28 02:39:31] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:39:31] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:39:31] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:39:31] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:39:32] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:39:32] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 453.7002ms
+[2018-08-28 02:39:32] Request finished in 504.721ms 200 application/json; charset=utf-8
+[2018-08-28 02:39:32] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:39:32] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 887.2494ms
+[2018-08-28 02:39:32] Request finished in 954.0812ms 200 text/html; charset=utf-8
+[2018-08-28 02:39:32] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:39:32] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 02:39:32] Request finished in 132.3426ms 200 text/css
+[2018-08-28 02:39:32] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:39:32] Request finished in 64.6677ms 404 
+[2018-08-28 02:39:32] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:39:32] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:39:32] Request finished in 70.5813ms 200 image/x-icon
+[2018-08-28 02:40:05] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:40:05] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:40:05] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:40:05] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:40:05] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:40:06] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 492.8998ms
+[2018-08-28 02:40:06] Request finished in 548.2491ms 200 application/json; charset=utf-8
+[2018-08-28 02:40:06] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:40:06] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 917.0013ms
+[2018-08-28 02:40:06] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:40:06] The file /css/site.css was not modified
+[2018-08-28 02:40:06] Request finished in 1268.7334ms 200 text/html; charset=utf-8
+[2018-08-28 02:40:06] Request finished in 360.7773ms 304 text/css
+[2018-08-28 02:40:06] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:40:06] Request finished in 22.4315ms 404 
+[2018-08-28 02:40:06] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:40:06] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:40:06] Request finished in 72.0814ms 200 image/x-icon
+[2018-08-28 02:40:26] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:40:26] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:40:26] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:40:26] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:40:26] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:40:26] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 305.7356ms
+[2018-08-28 02:40:27] Request finished in 366.0825ms 200 application/json; charset=utf-8
+[2018-08-28 02:40:27] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:40:27] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 654.6252ms
+[2018-08-28 02:40:27] Request finished in 851.1394ms 200 text/html; charset=utf-8
+[2018-08-28 02:40:27] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:40:27] The file /css/site.css was not modified
+[2018-08-28 02:40:27] Request finished in 154.1397ms 304 text/css
+[2018-08-28 02:40:27] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:40:27] Request finished in 10.1034ms 404 
+[2018-08-28 02:40:27] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:40:27] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:40:27] Request finished in 75.5042ms 200 image/x-icon
+[2018-08-28 02:40:39] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:40:39] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:40:39] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:40:39] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:40:39] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:40:40] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 350.3082ms
+[2018-08-28 02:40:40] Request finished in 446.2208ms 200 application/json; charset=utf-8
+[2018-08-28 02:40:40] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:40:40] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 800.1258ms
+[2018-08-28 02:40:40] Request finished in 881.2262ms 200 text/html; charset=utf-8
+[2018-08-28 02:40:40] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:40:40] Request finished in 11.5264ms 404 
+[2018-08-28 02:40:40] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:40:40] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:40:40] Request finished in 91.5929ms 200 image/x-icon
+[2018-08-28 02:44:21] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:44:21] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:44:21] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:44:21] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:44:21] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:44:21] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 379.6936ms
+[2018-08-28 02:44:21] Request finished in 429.3674ms 200 application/json; charset=utf-8
+[2018-08-28 02:44:21] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:44:21] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 784.8153ms
+[2018-08-28 02:44:21] Request finished in 860.9975ms 200 text/html; charset=utf-8
+[2018-08-28 02:44:21] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:44:22] The file /css/site.css was not modified
+[2018-08-28 02:44:22] Request finished in 149.6426ms 304 text/css
+[2018-08-28 02:44:22] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:44:22] Request finished in 24.2581ms 404 
+[2018-08-28 02:44:22] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:44:22] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:44:22] Request finished in 99.0673ms 200 image/x-icon
+[2018-08-28 02:44:42] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:44:42] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:44:42] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:44:42] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:44:43] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:44:43] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 361.803ms
+[2018-08-28 02:44:43] Request finished in 446.932ms 200 application/json; charset=utf-8
+[2018-08-28 02:44:43] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:44:43] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 767.4154ms
+[2018-08-28 02:44:43] Request finished in 834.2988ms 200 text/html; charset=utf-8
+[2018-08-28 02:44:43] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:44:43] Request finished in 12.2368ms 404 
+[2018-08-28 02:44:43] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:44:44] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:44:44] Request finished in 74.3129ms 200 image/x-icon
+[2018-08-28 02:45:22] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:45:22] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:45:22] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:45:22] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:45:22] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:45:22] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 325.4361ms
+[2018-08-28 02:45:23] Request finished in 395.435ms 200 application/json; charset=utf-8
+[2018-08-28 02:45:23] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:45:23] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 745.2416ms
+[2018-08-28 02:45:23] Request finished in 804.7718ms 200 text/html; charset=utf-8
+[2018-08-28 02:45:23] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:45:23] The file /css/site.css was not modified
+[2018-08-28 02:45:23] Request finished in 174.1218ms 304 text/css
+[2018-08-28 02:45:23] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:45:23] Request finished in 28.4113ms 404 
+[2018-08-28 02:45:23] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:45:23] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:45:23] Request finished in 104.0768ms 200 image/x-icon
+[2018-08-28 02:45:46] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:45:46] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:45:46] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:45:46] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:45:47] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:45:47] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 995.9761ms
+[2018-08-28 02:45:47] Request finished in 1069.5283ms 200 application/json; charset=utf-8
+[2018-08-28 02:45:47] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:45:47] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1370.1632ms
+[2018-08-28 02:45:47] Request finished in 1414.8714ms 200 text/html; charset=utf-8
+[2018-08-28 02:45:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:45:48] Request finished in 37.1451ms 404 
+[2018-08-28 02:45:48] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:45:48] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:45:48] Request finished in 58.4149ms 200 image/x-icon
+[2018-08-28 02:46:18] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:46:18] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:46:18] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:46:18] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:46:19] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:46:19] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 369.9524ms
+[2018-08-28 02:46:19] Request finished in 417.8598ms 200 application/json; charset=utf-8
+[2018-08-28 02:46:19] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:46:19] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 840.413ms
+[2018-08-28 02:46:19] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:46:19] The file /css/site.css was not modified
+[2018-08-28 02:46:19] Request finished in 966.0765ms 200 text/html; charset=utf-8
+[2018-08-28 02:46:19] Request finished in 199.4141ms 304 text/css
+[2018-08-28 02:46:19] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:46:19] Request finished in 20.6604ms 404 
+[2018-08-28 02:46:19] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:46:19] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:46:19] Request finished in 100.1634ms 200 image/x-icon
+[2018-08-28 02:49:59] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:49:59] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:49:59] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:49:59] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:49:59] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:49:59] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 434.4332ms
+[2018-08-28 02:49:59] Request finished in 535.06ms 200 application/json; charset=utf-8
+[2018-08-28 02:50:00] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:50:00] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 861.6452ms
+[2018-08-28 02:50:00] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:50:00] The file /css/site.css was not modified
+[2018-08-28 02:50:00] Request finished in 1196.2291ms 200 text/html; charset=utf-8
+[2018-08-28 02:50:00] Request finished in 344.0567ms 304 text/css
+[2018-08-28 02:50:00] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:50:00] Request finished in 44.852ms 404 
+[2018-08-28 02:50:00] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:50:00] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:50:00] Request finished in 69.0329ms 200 image/x-icon
+[2018-08-28 02:50:18] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:50:18] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:50:18] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:50:18] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:50:18] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:50:19] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 332.5998ms
+[2018-08-28 02:50:19] Request finished in 441.0171ms 200 application/json; charset=utf-8
+[2018-08-28 02:50:19] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:50:19] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 724.087ms
+[2018-08-28 02:50:19] Request finished in 830.1751ms 200 text/html; charset=utf-8
+[2018-08-28 02:50:19] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:50:19] Request finished in 16.4906ms 404 
+[2018-08-28 02:50:19] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:50:19] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:50:19] Request finished in 123.6185ms 200 image/x-icon
+[2018-08-28 02:51:52] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:51:52] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:51:52] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:51:52] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:51:52] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:51:52] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 331.3399ms
+[2018-08-28 02:51:52] Request finished in 432.8588ms 200 application/json; charset=utf-8
+[2018-08-28 02:51:53] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:51:53] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 831.3152ms
+[2018-08-28 02:51:53] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:51:53] Request finished in 923.1893ms 200 text/html; charset=utf-8
+[2018-08-28 02:51:53] The file /css/site.css was not modified
+[2018-08-28 02:51:53] Request finished in 149.2484ms 304 text/css
+[2018-08-28 02:51:53] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:51:53] Request finished in 77.2484ms 0 
+[2018-08-28 02:51:53] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:51:53] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:51:53] Request finished in 126.397ms 200 image/x-icon
+[2018-08-28 02:54:09] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:54:09] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:54:09] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:54:09] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:54:09] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:54:09] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 316.1134ms
+[2018-08-28 02:54:09] Request finished in 370.1883ms 200 application/json; charset=utf-8
+[2018-08-28 02:54:09] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:54:09] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 684.9373ms
+[2018-08-28 02:54:09] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:54:09] Request finished in 866.4994ms 200 text/html; charset=utf-8
+[2018-08-28 02:54:09] The file /css/site.css was not modified
+[2018-08-28 02:54:10] Request finished in 177.5236ms 304 text/css
+[2018-08-28 02:54:10] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:54:10] Request finished in 20.7116ms 404 
+[2018-08-28 02:54:10] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:54:10] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:54:10] Request finished in 58.571ms 200 image/x-icon
+[2018-08-28 02:54:26] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:54:26] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:54:26] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:54:26] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:54:26] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:54:27] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 367.2068ms
+[2018-08-28 02:54:27] Request finished in 424.3008ms 200 application/json; charset=utf-8
+[2018-08-28 02:54:27] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:54:27] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 743.0604ms
+[2018-08-28 02:54:27] Request finished in 822.3803ms 200 text/html; charset=utf-8
+[2018-08-28 02:54:27] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:54:27] Request finished in 17.8978ms 404 
+[2018-08-28 02:54:27] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:54:27] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:54:27] Request finished in 57.8658ms 200 image/x-icon
+[2018-08-28 02:54:41] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:54:41] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:54:41] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:54:41] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:54:42] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:54:42] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 304.2594ms
+[2018-08-28 02:54:42] Request finished in 402.6201ms 200 application/json; charset=utf-8
+[2018-08-28 02:54:42] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:54:42] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 754.5629ms
+[2018-08-28 02:54:42] Request finished in 824.6941ms 200 text/html; charset=utf-8
+[2018-08-28 02:54:42] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:54:42] Request finished in 10.7054ms 404 
+[2018-08-28 02:54:42] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:54:42] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:54:42] Request finished in 53.1835ms 200 image/x-icon
+[2018-08-28 02:57:30] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:57:30] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:57:30] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:57:30] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:57:31] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:57:31] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 522.2276ms
+[2018-08-28 02:57:31] Request finished in 570.2984ms 200 application/json; charset=utf-8
+[2018-08-28 02:57:31] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:57:31] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 858.1717ms
+[2018-08-28 02:57:31] Request finished in 925.0094ms 200 text/html; charset=utf-8
+[2018-08-28 02:57:31] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 02:57:31] The file /css/site.css was not modified
+[2018-08-28 02:57:31] Request finished in 163.5174ms 304 text/css
+[2018-08-28 02:57:31] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:57:31] Request finished in 24.7372ms 404 
+[2018-08-28 02:57:31] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:57:31] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:57:32] Request finished in 77.3934ms 200 image/x-icon
+[2018-08-28 02:58:23] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:58:23] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:58:23] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:58:23] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:58:24] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:58:24] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 429.7493ms
+[2018-08-28 02:58:24] Request finished in 514.6867ms 200 application/json; charset=utf-8
+[2018-08-28 02:58:24] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:58:24] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 683.1513ms
+[2018-08-28 02:58:24] Request finished in 786.3987ms 200 text/html; charset=utf-8
+[2018-08-28 02:58:24] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:58:24] Request finished in 17.7548ms 404 
+[2018-08-28 02:58:24] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:58:24] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:58:24] Request finished in 43.2989ms 200 image/x-icon
+[2018-08-28 02:58:34] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:58:34] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:58:34] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:58:34] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:58:34] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:58:34] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 536.9348ms
+[2018-08-28 02:58:34] Request finished in 654.0881ms 200 application/json; charset=utf-8
+[2018-08-28 02:58:34] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:58:35] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 767.5101ms
+[2018-08-28 02:58:35] Request finished in 954.926ms 200 text/html; charset=utf-8
+[2018-08-28 02:58:35] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:58:35] Request finished in 14.4721ms 404 
+[2018-08-28 02:58:35] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:58:35] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:58:35] Request finished in 67.8596ms 200 image/x-icon
+[2018-08-28 02:58:56] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary2U1T4dbgeVJYIInI 413
+[2018-08-28 02:58:56] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 02:58:56] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 8
+[2018-08-28 02:58:56] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (DASdas) - ModelState is Valid
+[2018-08-28 02:58:56] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 02:58:56] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 522.5028ms
+[2018-08-28 02:58:57] Request finished in 588.7628ms 200 application/json; charset=utf-8
+[2018-08-28 02:58:57] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 02:58:57] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 736.078ms
+[2018-08-28 02:58:57] Request finished in 779.3297ms 200 text/html; charset=utf-8
+[2018-08-28 02:58:57] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 02:58:57] Request finished in 23.6454ms 404 
+[2018-08-28 02:58:57] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 02:58:57] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 02:58:57] Request finished in 48.887ms 200 image/x-icon
+[2018-08-28 03:00:56] Request starting HTTP/1.1 GET http://localhost:51754/ShowWeather  
+[2018-08-28 03:00:56] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Invalid
+[2018-08-28 03:00:56] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 0
+[2018-08-28 03:00:56] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Invalid
+[2018-08-28 03:00:57] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:00:57] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 380.0068ms
+[2018-08-28 03:00:57] Request finished in 434.8189ms 200 application/json; charset=utf-8
+[2018-08-28 03:00:57] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:00:57] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 768.1979ms
+[2018-08-28 03:00:57] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:00:57] Request finished in 857.7066ms 200 text/html; charset=utf-8
+[2018-08-28 03:00:57] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:00:57] Request finished in 217.9374ms 200 text/css
+[2018-08-28 03:00:57] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:00:57] Request finished in 13.658ms 404 
+[2018-08-28 03:01:14] Request starting HTTP/1.1 GET http://localhost:51754/ShowWeather  
+[2018-08-28 03:01:14] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Invalid
+[2018-08-28 03:01:14] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 0
+[2018-08-28 03:01:15] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Invalid
+[2018-08-28 03:01:15] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:01:15] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 374.8236ms
+[2018-08-28 03:01:15] Request finished in 457.4011ms 200 application/json; charset=utf-8
+[2018-08-28 03:01:15] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:01:15] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 845.2032ms
+[2018-08-28 03:01:15] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:01:15] The file /css/site.css was not modified
+[2018-08-28 03:01:16] Request finished in 179.2819ms 304 text/css
+[2018-08-28 03:01:16] Request finished in 1066.1435ms 200 text/html; charset=utf-8
+[2018-08-28 03:01:16] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:01:16] Request finished in 44.6805ms 404 
+[2018-08-28 03:01:16] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:01:16] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:01:16] Request finished in 29.4937ms 200 image/x-icon
+[2018-08-28 03:01:25] Request starting HTTP/1.1 GET http://localhost:51754/ShowWeather  
+[2018-08-28 03:01:25] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Invalid
+[2018-08-28 03:01:25] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 0
+[2018-08-28 03:01:25] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Invalid
+[2018-08-28 03:01:25] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:01:25] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 349.7728ms
+[2018-08-28 03:01:25] Request finished in 428.7219ms 200 application/json; charset=utf-8
+[2018-08-28 03:01:26] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:01:26] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 772.7833ms
+[2018-08-28 03:01:26] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:01:26] Request finished in 923.2588ms 200 text/html; charset=utf-8
+[2018-08-28 03:01:26] The file /css/site.css was not modified
+[2018-08-28 03:01:26] Request finished in 123.6061ms 304 text/css
+[2018-08-28 03:01:26] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:01:26] Request finished in 21.0077ms 404 
+[2018-08-28 03:01:26] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:01:26] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:01:26] Request finished in 88.9523ms 200 image/x-icon
+[2018-08-28 03:02:00] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 03:02:00] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 03:02:00] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 03:02:00] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 71.1458ms
+[2018-08-28 03:02:00] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:02:00] The file /css/site.css was not modified
+[2018-08-28 03:02:00] Request finished in 283.86ms 200 text/html; charset=utf-8
+[2018-08-28 03:02:00] Request finished in 238.2348ms 304 text/css
+[2018-08-28 03:02:03] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:02:03] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:02:03] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:02:03] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:02:03] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:02:03] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 406.2715ms
+[2018-08-28 03:02:03] Request finished in 475.5332ms 200 application/json; charset=utf-8
+[2018-08-28 03:02:03] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:02:03] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 567.4662ms
+[2018-08-28 03:02:03] Request finished in 626.6167ms 200 text/html; charset=utf-8
+[2018-08-28 03:02:04] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:02:04] Request finished in 13.3516ms 404 
+[2018-08-28 03:02:30] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:02:30] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:02:30] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:02:30] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:02:31] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:02:31] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 316.3502ms
+[2018-08-28 03:02:31] Request finished in 427.5946ms 200 application/json; charset=utf-8
+[2018-08-28 03:02:31] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:02:31] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 733.6793ms
+[2018-08-28 03:02:31] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:02:31] The file /css/site.css was not modified
+[2018-08-28 03:02:31] Request finished in 165.8636ms 304 text/css
+[2018-08-28 03:02:31] Request finished in 899.8259ms 200 text/html; charset=utf-8
+[2018-08-28 03:02:31] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:02:31] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:02:31] Request finished in 28.7296ms 200 image/x-icon
+[2018-08-28 03:03:14] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:03:14] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:03:14] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:03:14] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:03:14] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:03:15] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 443.9586ms
+[2018-08-28 03:03:15] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:03:15] Request finished in 534.155ms 200 application/json; charset=utf-8
+[2018-08-28 03:03:15] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 657.8888ms
+[2018-08-28 03:03:15] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:03:15] Request finished in 751.7806ms 200 text/html; charset=utf-8
+[2018-08-28 03:03:15] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:03:15] Request finished in 159.1308ms 200 text/css
+[2018-08-28 03:03:15] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:03:15] Request finished in 9.6819ms 404 
+[2018-08-28 03:03:15] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:03:15] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:03:15] Request finished in 40.0836ms 200 image/x-icon
+[2018-08-28 03:03:24] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:03:24] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:03:24] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:03:24] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:03:25] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:03:25] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 275.6983ms
+[2018-08-28 03:03:25] Request finished in 375.057ms 200 application/json; charset=utf-8
+[2018-08-28 03:03:25] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:03:25] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 474.0113ms
+[2018-08-28 03:03:25] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:03:25] Request finished in 596.48ms 200 text/html; charset=utf-8
+[2018-08-28 03:03:25] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:03:25] Request finished in 198.0108ms 200 text/css
+[2018-08-28 03:03:25] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:03:25] Request finished in 23.159ms 404 
+[2018-08-28 03:03:25] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:03:25] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:03:25] Request finished in 48.8704ms 200 image/x-icon
+[2018-08-28 03:05:17] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:05:17] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:05:17] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:05:17] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:05:17] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:05:17] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 285.5577ms
+[2018-08-28 03:05:17] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:05:17] Request finished in 376.6656ms 200 application/json; charset=utf-8
+[2018-08-28 03:05:17] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 452.5866ms
+[2018-08-28 03:05:17] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:05:17] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:05:17] Request finished in 626.173ms 200 text/html; charset=utf-8
+[2018-08-28 03:05:17] Request finished in 228.3528ms 200 text/css
+[2018-08-28 03:05:17] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:05:17] Request finished in 11.9419ms 404 
+[2018-08-28 03:05:18] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:05:18] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:05:18] Request finished in 55.9257ms 200 image/x-icon
+[2018-08-28 03:05:25] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:05:25] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:05:25] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:05:25] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:05:25] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:05:26] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 288.2884ms
+[2018-08-28 03:05:26] Request finished in 359.6881ms 200 application/json; charset=utf-8
+[2018-08-28 03:05:26] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:05:26] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 504.794ms
+[2018-08-28 03:05:26] Request finished in 578.4345ms 200 text/html; charset=utf-8
+[2018-08-28 03:05:26] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:05:26] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:05:26] Request finished in 123.2759ms 200 text/css
+[2018-08-28 03:05:26] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:05:26] Request finished in 18.5749ms 404 
+[2018-08-28 03:05:26] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:05:26] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:05:26] Request finished in 54.9021ms 200 image/x-icon
+[2018-08-28 03:07:06] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:07:06] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:07:06] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:07:06] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:07:07] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:07:07] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 1326.9811ms
+[2018-08-28 03:07:07] Request finished in 1442.0403ms 200 application/json; charset=utf-8
+[2018-08-28 03:07:08] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:07:08] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1747.7303ms
+[2018-08-28 03:07:08] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:07:08] Request finished in 1847.04ms 200 text/html; charset=utf-8
+[2018-08-28 03:07:08] The file /css/site.css was not modified
+[2018-08-28 03:07:08] Request finished in 200.8119ms 304 text/css
+[2018-08-28 03:07:08] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:07:08] Request finished in 243.7866ms 0 
+[2018-08-28 03:07:08] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:07:09] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:07:09] Request finished in 48.0251ms 200 image/x-icon
+[2018-08-28 03:07:42] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:07:42] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:07:42] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:07:42] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:07:43] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:07:43] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 374.1303ms
+[2018-08-28 03:07:43] Request finished in 445.7911ms 200 application/json; charset=utf-8
+[2018-08-28 03:07:43] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:07:43] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 700.5952ms
+[2018-08-28 03:07:43] Request finished in 742.9649ms 200 text/html; charset=utf-8
+[2018-08-28 03:07:43] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:07:43] The file /css/site.css was not modified
+[2018-08-28 03:07:43] Request finished in 51.2337ms 304 text/css
+[2018-08-28 03:07:43] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:07:43] Request finished in 12.9429ms 404 
+[2018-08-28 03:07:43] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:07:43] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:07:43] Request finished in 41.9618ms 200 image/x-icon
+[2018-08-28 03:08:36] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:08:36] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:08:36] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:08:36] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:08:36] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:08:36] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 479.3659ms
+[2018-08-28 03:08:36] Request finished in 522.5804ms 200 application/json; charset=utf-8
+[2018-08-28 03:08:36] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:08:37] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 783.6343ms
+[2018-08-28 03:08:37] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:08:37] Request finished in 954.976ms 200 text/html; charset=utf-8
+[2018-08-28 03:08:37] The file /css/site.css was not modified
+[2018-08-28 03:08:37] Request finished in 158.1632ms 304 text/css
+[2018-08-28 03:08:37] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:08:37] Request finished in 35.5515ms 404 
+[2018-08-28 03:08:37] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:08:37] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:08:37] Request finished in 58.8134ms 200 image/x-icon
+[2018-08-28 03:08:54] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:08:54] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:08:54] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:08:54] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:08:55] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:08:55] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 1413.9605ms
+[2018-08-28 03:08:55] Request finished in 1466.7191ms 200 application/json; charset=utf-8
+[2018-08-28 03:08:56] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:08:56] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1832.9774ms
+[2018-08-28 03:08:56] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:08:56] Request finished in 1979.6488ms 200 text/html; charset=utf-8
+[2018-08-28 03:08:56] The file /css/site.css was not modified
+[2018-08-28 03:08:56] Request finished in 222.9051ms 304 text/css
+[2018-08-28 03:08:56] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:08:56] Request finished in 13.0389ms 404 
+[2018-08-28 03:08:56] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:08:56] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:08:56] Request finished in 87.9961ms 200 image/x-icon
+[2018-08-28 03:09:27] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:09:27] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:09:27] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:09:27] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:09:27] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:09:27] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 431.2345ms
+[2018-08-28 03:09:27] Request finished in 503.4269ms 200 application/json; charset=utf-8
+[2018-08-28 03:09:27] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:09:27] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 772.8034ms
+[2018-08-28 03:09:27] Request finished in 834.9073ms 200 text/html; charset=utf-8
+[2018-08-28 03:09:27] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:09:27] The file /css/site.css was not modified
+[2018-08-28 03:09:27] Request finished in 51.54ms 304 text/css
+[2018-08-28 03:09:28] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:09:28] Request finished in 31.6202ms 404 
+[2018-08-28 03:09:28] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:09:28] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:09:28] Request finished in 76.7458ms 200 image/x-icon
+[2018-08-28 03:09:41] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:09:41] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:09:41] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:09:41] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:09:42] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:09:42] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 434.2711ms
+[2018-08-28 03:09:42] Request finished in 482.9525ms 200 application/json; charset=utf-8
+[2018-08-28 03:09:42] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:09:42] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 767.6573ms
+[2018-08-28 03:09:42] Request finished in 850.8603ms 200 text/html; charset=utf-8
+[2018-08-28 03:09:42] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:09:42] Request finished in 40.4134ms 404 
+[2018-08-28 03:09:42] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:09:42] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:09:43] Request finished in 64.6033ms 200 image/x-icon
+[2018-08-28 03:10:04] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:10:04] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:10:04] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:10:04] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:10:04] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:10:04] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 386.5028ms
+[2018-08-28 03:10:04] Request finished in 498.24ms 200 application/json; charset=utf-8
+[2018-08-28 03:10:04] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:10:05] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 796.5602ms
+[2018-08-28 03:10:05] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:10:05] The file /css/site.css was not modified
+[2018-08-28 03:10:05] Request finished in 919.4231ms 200 text/html; charset=utf-8
+[2018-08-28 03:10:05] Request finished in 88.9489ms 304 text/css
+[2018-08-28 03:10:05] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:10:05] Request finished in 16.0674ms 404 
+[2018-08-28 03:10:05] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:10:05] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:10:05] Request finished in 129.0436ms 200 image/x-icon
+[2018-08-28 03:10:48] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:10:48] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:10:48] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:10:48] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:10:48] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:10:48] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 443.5025ms
+[2018-08-28 03:10:48] Request finished in 498.4627ms 200 application/json; charset=utf-8
+[2018-08-28 03:10:48] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:10:49] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 781.1733ms
+[2018-08-28 03:10:49] Request finished in 857.1549ms 200 text/html; charset=utf-8
+[2018-08-28 03:10:49] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:10:49] The file /css/site.css was not modified
+[2018-08-28 03:10:49] Request finished in 255.5942ms 304 text/css
+[2018-08-28 03:10:49] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:10:49] Request finished in 35.9513ms 404 
+[2018-08-28 03:10:49] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:10:49] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:10:49] Request finished in 119.1773ms 200 image/x-icon
+[2018-08-28 03:11:41] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:11:41] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:11:41] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:11:41] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:11:42] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:11:42] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 1553.2979ms
+[2018-08-28 03:11:42] Request finished in 1674.4221ms 200 application/json; charset=utf-8
+[2018-08-28 03:11:43] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:11:43] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 2170.8445ms
+[2018-08-28 03:11:43] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:11:43] Request finished in 2324.1582ms 200 text/html; charset=utf-8
+[2018-08-28 03:11:43] The file /css/site.css was not modified
+[2018-08-28 03:11:43] Request finished in 196.6028ms 304 text/css
+[2018-08-28 03:11:43] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:11:43] Request finished in 14.0049ms 404 
+[2018-08-28 03:11:43] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:11:43] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:11:43] Request finished in 98.3462ms 200 image/x-icon
+[2018-08-28 03:11:49] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary7YfyrDQcneg92otE 416
+[2018-08-28 03:11:49] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:11:49] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:11:49] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (dASdasdsa) - ModelState is Valid
+[2018-08-28 03:11:50] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:11:50] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 370.3505ms
+[2018-08-28 03:11:50] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:11:50] Request finished in 439.4355ms 200 application/json; charset=utf-8
+[2018-08-28 03:11:50] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 811.6966ms
+[2018-08-28 03:11:50] Request finished in 931.2371ms 200 text/html; charset=utf-8
+[2018-08-28 03:11:50] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:11:50] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:11:50] Request finished in 59.3416ms 200 image/x-icon
+[2018-08-28 03:12:01] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-28 03:12:01] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-28 03:12:01] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-28 03:12:01] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 58.9559ms
+[2018-08-28 03:12:01] Request finished in 175.627ms 200 text/html; charset=utf-8
+[2018-08-28 03:12:05] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryHe03ervEjszP1ZF4 416
+[2018-08-28 03:12:05] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:12:05] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:12:05] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Przemyśl) - ModelState is Valid
+[2018-08-28 03:12:06] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:12:06] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 529.8414ms
+[2018-08-28 03:12:06] Request finished in 605.5684ms 200 application/json; charset=utf-8
+[2018-08-28 03:12:06] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:12:06] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 808.1873ms
+[2018-08-28 03:12:06] Request finished in 854.816ms 200 text/html; charset=utf-8
+[2018-08-28 03:12:06] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:12:06] Request finished in 14.603ms 404 
+[2018-08-28 03:26:57] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryHe03ervEjszP1ZF4 416
+[2018-08-28 03:26:58] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-28 03:26:58] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 11
+[2018-08-28 03:26:58] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Przemyśl) - ModelState is Valid
+[2018-08-28 03:26:58] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-28 03:26:58] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 828.535ms
+[2018-08-28 03:26:58] Request finished in 911.9697ms 200 application/json; charset=utf-8
+[2018-08-28 03:26:59] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-28 03:26:59] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1045.9592ms
+[2018-08-28 03:26:59] Request finished in 1094.5224ms 200 text/html; charset=utf-8
+[2018-08-28 03:26:59] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-28 03:26:59] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-28 03:26:59] Request finished in 45.4442ms 200 text/css
+[2018-08-28 03:26:59] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-28 03:26:59] Request finished in 14.9973ms 404 
+[2018-08-28 03:26:59] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
+[2018-08-28 03:26:59] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
+[2018-08-28 03:26:59] Request finished in 63.5942ms 200 image/x-icon

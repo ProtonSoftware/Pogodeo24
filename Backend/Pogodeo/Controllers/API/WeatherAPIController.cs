@@ -72,6 +72,16 @@ namespace Pogodeo
                     {
                         WeatherProviderAPIName = "WP",
                         Celsius = 21,
+                    },
+                    new WeatherInformationViewModel
+                    {
+                        WeatherProviderAPIName = "Onet",
+                        Celsius = 18,
+                    },
+                    new WeatherInformationViewModel
+                    {
+                        WeatherProviderAPIName = "WP",
+                        Celsius = 11,
                     }
                 }
             };

@@ -7,15 +7,45 @@
 <div id="showWeather"></div>
 
 <template id="showWeatherTemplate">
-    <div class="wrapper text-center" style="top:35%">
-        <h2>Wybrane miasto to: @Model.CityName</h2>
+    <div class="wrapper">
+        <div class="weather-container container">
+            <div class="row">
+                <div class="col-5">
+                    <h3>@Model.CityName</h3>
+                    <h5>Wtorek 14:31</h5>
+                    <h5>Pochmurno</h5>
+                    <div class="btn-group mt-5" role="group">
+                        <button type="button" class="btn btn-primary">Dzisiaj</button>
+                        <button type="button" class="btn btn-secondary">Jutro</button>
+                        <button type="button" class="btn btn-secondary">7 dni</button>
+                    </div>
+                </div>
+                <div class="col-7 m-auto">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" height="150" />
+                        </div>
+                        <div class="col m-auto">
+                            <h1>21 *C</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <img src="https://i.imgur.com/cpFVg7t.png" width="100%"/>
+            </div>
+            <div class="row mt-5">
+                <h5>Dane ze źródeł</h5>
+            </div>
 
-        <div class="card-deck mt-5" style="margin-left: 200px; margin-right: 200px;">
+            <div class="row card-deck mt-2">
 
-            @foreach (var weather in Model.WeatherInformationsList)
-            {
-                <weather-tile v-bind:weather="@weather.ToJson()"></weather-tile>
-            }
+                @foreach (var weather in Model.WeatherInformationsList)
+                {
+                    <weather-tile v-bind:weather="@weather.ToJson()"></weather-tile>
+                }
+
+            </div>
 
         </div>
     </div>

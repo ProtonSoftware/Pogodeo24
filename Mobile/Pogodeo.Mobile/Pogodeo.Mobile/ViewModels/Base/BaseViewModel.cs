@@ -5,15 +5,10 @@ using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
 
-using Pogodeo.Mobile.Models;
-using Pogodeo.Mobile.Services;
-
 namespace Pogodeo.Mobile
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
-
         bool isBusy = false;
         public bool IsBusy
         {
@@ -41,16 +36,28 @@ namespace Pogodeo.Mobile
             return true;
         }
 
-        #region INotifyPropertyChanged
+        #region INotifyPropertyChanged Implementation
+
+        /// <summary>
+        /// The event that is fired whenever any property in view model changes
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Fired automatically whenever any property changes
+        /// Fires the <see cref="PropertyChanged"/> event
+        /// </summary>
+        /// <param name="propertyName">The name of a property that has changed</param>
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
-            var changed = PropertyChanged;
-            if (changed == null)
+            // Make sure that event exists
+            if (PropertyChanged == null)
                 return;
 
-            changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            // Fire the event
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         #endregion
     }
 }

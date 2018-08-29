@@ -1,4 +1,4 @@
-﻿namespace Pogodeo.DataAccess
+﻿namespace Pogodeo.Core
 {
     /// <summary>
     /// 

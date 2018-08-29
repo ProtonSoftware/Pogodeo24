@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace Pogodeo.DataAccess
+namespace Pogodeo.Core
 {
     /// <summary>
     /// 

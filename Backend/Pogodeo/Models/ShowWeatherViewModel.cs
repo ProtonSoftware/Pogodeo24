@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Pogodeo.Core;
 
 namespace Pogodeo
 {
@@ -13,8 +13,8 @@ namespace Pogodeo
         public string CityName { get; set; }
 
         /// <summary>
-        /// The list of informations about weather from external APIs
+        /// The response from API that should be shown in this page
         /// </summary>
-        public List<WeatherInformationViewModel> WeatherInformationsList { get; set; }
+        public APIWeatherResponse APIResponse { get; set; }
     }
 }

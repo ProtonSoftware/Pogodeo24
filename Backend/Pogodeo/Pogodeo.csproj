@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.Core\Pogodeo.Core.csproj" />
     <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
     <ProjectReference Include="..\Pogodeo.Services\Pogodeo.Services.csproj" />
   </ItemGroup>

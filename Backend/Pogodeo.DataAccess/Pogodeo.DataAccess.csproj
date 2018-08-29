@@ -17,4 +17,8 @@
     <Folder Include="Mapper\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.Core\Pogodeo.Core.csproj" />
+  </ItemGroup>
+
 </Project>

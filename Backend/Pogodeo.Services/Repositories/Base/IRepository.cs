@@ -1,4 +1,5 @@
-﻿using Pogodeo.DataAccess;
+﻿using Pogodeo.Core;
+using Pogodeo.DataAccess;
 using System.Linq;
 
 namespace Pogodeo.Services
@@ -14,6 +15,5 @@ namespace Pogodeo.Services
         T GetById(K id);
         IQueryable<T> GetAll();
         OperationResult SaveChanges();
-
     }
 }

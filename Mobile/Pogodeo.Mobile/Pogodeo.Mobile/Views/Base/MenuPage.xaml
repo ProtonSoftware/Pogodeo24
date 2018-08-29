@@ -4,13 +4,16 @@
              x:Class="Pogodeo.Mobile.MenuPage"
              Title="Menu">
     <StackLayout VerticalOptions="FillAndExpand">
-        <ListView x:Name="ListViewMenu"
-                    HasUnevenRows="True">
+        <ListView ItemsSource="{Binding Items}"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
-                            <Label Text="{Binding Title}" FontSize="20"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding MenuItemSelectCommand}" />
+                            </Grid.GestureRecognizers>
+                            <Label Text="{Binding Title}" FontSize="20"  />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

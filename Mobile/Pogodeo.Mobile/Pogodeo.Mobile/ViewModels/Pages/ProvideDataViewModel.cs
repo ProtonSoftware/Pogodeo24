@@ -5,7 +5,7 @@ namespace Pogodeo.Mobile
     /// <summary>
     /// The view model for initial provide data page
     /// </summary>
-    public class ProvideDataViewModel
+    public class ProvideDataViewModel : BaseViewModel
     {
         #region Public Properties
 
@@ -34,6 +34,8 @@ namespace Pogodeo.Mobile
         {
             // Create commands
             ChangePageWithDataCommand = new RelayCommand(ChangePage);
+
+            Title = "Provide data";
         }
 
         #endregion
@@ -45,7 +47,7 @@ namespace Pogodeo.Mobile
         /// </summary>
         private void ChangePage()
         {
-            DI.Application.GoToPage(ApplicationPage.ShowWeather);
+            DI.Application.GoToPage(ApplicationPage.ShowWeather, new ShowWeatherViewModel(CityName));
         }
 
         #endregion

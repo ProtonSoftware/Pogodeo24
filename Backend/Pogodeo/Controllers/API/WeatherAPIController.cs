@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pogodeo.Core;
 using Pogodeo.Services;
 using Pogodeo.Services.ExternalApiServices;
 using System.Collections.Generic;
@@ -8,7 +9,6 @@ namespace Pogodeo
     /// <summary>
     /// Main weather API controller for this application that returns data to the frontend
     /// </summary>
-    [Route("api")]
     public class WeatherAPIController : Controller
     {
         #region Private Members
@@ -39,7 +39,7 @@ namespace Pogodeo
         /// <param name="city">The name of a city to get info for</param>
         /// <returns>JSON</returns>
         [HttpPost]
-        [Route("GetWeatherFor")]
+        [Route(ApiRoutes.GetWeatherForCity)]
         public IActionResult GetWeatherForCity([FromBody]string city)
         {
             // Check if we have info about this city in database
@@ -58,27 +58,26 @@ namespace Pogodeo
             // Get weather from YYY
 
             // Create response object
-            var response = new ShowWeatherViewModel
+            var response = new APIWeatherResponse
             {
-                CityName = city,
-                WeatherInformationsList = new List<WeatherInformationViewModel>
+                WeatherInformationsList = new List<WeatherInformationAPIModel>
                 {
-                    new WeatherInformationViewModel
+                    new WeatherInformationAPIModel
                     {
                         WeatherProviderAPIName = "Onet",
                         Celsius = 20,
                     },
-                    new WeatherInformationViewModel
+                    new WeatherInformationAPIModel
                     {
                         WeatherProviderAPIName = "WP",
                         Celsius = 21,
                     },
-                    new WeatherInformationViewModel
+                    new WeatherInformationAPIModel
                     {
                         WeatherProviderAPIName = "Onet",
                         Celsius = 18,
                     },
-                    new WeatherInformationViewModel
+                    new WeatherInformationAPIModel
                     {
                         WeatherProviderAPIName = "WP",
                         Celsius = 11,

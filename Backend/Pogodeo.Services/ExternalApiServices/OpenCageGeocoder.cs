@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Pogodeo.Core;
 using Pogodeo.DataAccess;
 using System;
 using System.IO;

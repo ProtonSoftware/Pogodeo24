@@ -13,6 +13,11 @@
         /// <summary>
         /// Show weather page
         /// </summary>
-        ShowWeather
+        ShowWeather,
+
+        /// <summary>
+        /// About page
+        /// </summary>
+        About
     }
 }

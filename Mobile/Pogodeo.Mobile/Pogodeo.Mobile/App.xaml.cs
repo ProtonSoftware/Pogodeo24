@@ -20,7 +20,7 @@ namespace Pogodeo.Mobile
             InitializeComponent();
 
             // Setup main page to host our pages
-            MainPage = new MainPage();
+            MainPage = new PageHost();
 
             // Setup our Dependency Injection for this application
             DI.InitialSetup();

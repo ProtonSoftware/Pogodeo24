@@ -1,9 +1,9 @@
-﻿namespace Pogodeo
+﻿namespace Pogodeo.Core
 {
     /// <summary>
     /// The view model for single information box from external API
     /// </summary>
-    public class WeatherInformationViewModel
+    public class WeatherInformationAPIModel
     {
         /// <summary>
         /// The name of the API that provided information

@@ -1643,3 +1643,98 @@ ORDER BY [MigrationId];
 [2018-08-28 03:26:59] Request starting HTTP/1.1 GET http://localhost:51754/favicon.ico  
 [2018-08-28 03:26:59] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\favicon.ico'
 [2018-08-28 03:26:59] Request finished in 63.5942ms 200 image/x-icon
+[2018-08-29 02:48:58] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-29 02:49:00] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-29 02:49:00] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-29 02:49:00] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-29 02:49:00] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-29 02:49:00] No migrations were applied. The database is already up to date.
+[2018-08-29 02:49:02] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-29 02:49:02] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-29 02:49:07] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-29 02:49:08] Request starting HTTP/1.1 GET http://localhost:51754/js/ProvideData.js?v=i6LM_X1kYtS54CXdRqZv2wV_qpHXNkhGJ66oE_LpR5w  
+[2018-08-29 02:49:08] Request starting HTTP/1.1 GET http://localhost:51754/js/Main.js?v=UWS2w0_CC79YmDvFqUYlUsh0SyS4_VEZ4vZGWc5Bdik  
+[2018-08-29 02:49:08] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5390.0531ms
+[2018-08-29 02:49:08] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-29 02:49:08] Sending file. Request path: '/js/Main.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\Main.js'
+[2018-08-29 02:49:08] The file /js/ProvideData.js was not modified
+[2018-08-29 02:49:08] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\css\site.css'
+[2018-08-29 02:49:08] Request finished in 297.4254ms 304 application/javascript
+[2018-08-29 02:49:08] Request finished in 299.694ms 200 application/javascript
+[2018-08-29 02:49:08] Request finished in 416.3187ms 200 text/css
+[2018-08-29 02:49:08] Request finished in 6152.497ms 200 text/html; charset=utf-8
+[2018-08-29 02:49:08] Request starting HTTP/1.1 GET http://localhost:51754/js/_Components/WeatherTile.js?v=YmCYmzAE6rAcmlMhq2ChP3NV8mpJBfKtPiBze4jGcYc  
+[2018-08-29 02:49:08] The file /js/_Components/WeatherTile.js was not modified
+[2018-08-29 02:49:08] Request finished in 82.9248ms 304 application/javascript
+[2018-08-29 02:49:12] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryxC5RqzYCMhtTCeyR 414
+[2018-08-29 02:49:12] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-29 02:49:13] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 9
+[2018-08-29 02:49:13] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (tutyrut) - ModelState is Valid
+[2018-08-29 02:49:13] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-29 02:49:13] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 597.4822ms
+[2018-08-29 02:49:13] Request finished in 712.7313ms 200 application/json; charset=utf-8
+[2018-08-29 02:49:14] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1507.0225ms
+[2018-08-29 02:49:14] An unhandled exception has occurred while executing the request
+[2018-08-29 02:49:14] Request finished in 1816.1245ms 500 text/html; charset=utf-8
+[2018-08-29 02:49:46] Request starting HTTP/1.1 GET http://localhost:51754/ShowWeather  
+[2018-08-29 02:49:46] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Invalid
+[2018-08-29 02:49:46] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 0
+[2018-08-29 02:49:46] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments () - ModelState is Invalid
+[2018-08-29 02:49:47] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-29 02:49:47] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 352.1928ms
+[2018-08-29 02:49:47] Request finished in 398.9913ms 200 application/json; charset=utf-8
+[2018-08-29 02:49:47] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-29 02:49:47] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1012.4347ms
+[2018-08-29 02:49:47] Request starting HTTP/1.1 GET http://localhost:51754/js/ShowWeather.js?v=sHN_ROmMikAccAXRiVPQRfAEzaNYPaJzG_0_hMRrrm8  
+[2018-08-29 02:49:48] Request finished in 1144.2282ms 200 text/html; charset=utf-8
+[2018-08-29 02:49:48] The file /js/ShowWeather.js was not modified
+[2018-08-29 02:49:48] Request finished in 183.3053ms 304 application/javascript
+[2018-08-29 02:49:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-29 02:49:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/WP.png  
+[2018-08-29 02:49:48] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/Onet.png  
+[2018-08-29 02:49:48] Request finished in 148.5034ms 404 
+[2018-08-29 02:49:48] The file /images/Logos/Onet.png was not modified
+[2018-08-29 02:49:48] Request finished in 311.4397ms 304 image/png
+[2018-08-29 02:49:48] The file /images/Logos/WP.png was not modified
+[2018-08-29 02:49:48] Request finished in 326.8753ms 304 image/png
+[2018-08-29 02:50:06] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-08-29 02:50:07] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-08-29 02:50:07] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-29 02:50:07] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-08-29 02:50:07] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-08-29 02:50:08] No migrations were applied. The database is already up to date.
+[2018-08-29 02:50:09] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-29 02:50:09] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-29 02:50:15] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-29 02:50:16] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 6310.9474ms
+[2018-08-29 02:50:16] Request starting HTTP/1.1 GET http://localhost:51754/css/site.css  
+[2018-08-29 02:50:16] Request finished in 6797.3218ms 200 text/html; charset=utf-8
+[2018-08-29 02:50:16] The file /css/site.css was not modified
+[2018-08-29 02:50:16] Request finished in 152.7522ms 304 text/css
+[2018-08-29 02:50:20] Request starting HTTP/1.1 POST http://localhost:51754/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryb5XVfrN1wNprat4w 415
+[2018-08-29 02:50:21] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-08-29 02:50:21] Request starting HTTP/1.1 POST http://localhost:51754/api/GetWeatherFor application/json 10
+[2018-08-29 02:50:21] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (gdgsdgdf) - ModelState is Valid
+[2018-08-29 02:50:21] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-08-29 02:50:21] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 507.6744ms
+[2018-08-29 02:50:21] Request finished in 553.8666ms 200 application/json; charset=utf-8
+[2018-08-29 02:50:22] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-08-29 02:50:22] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1794.9499ms
+[2018-08-29 02:50:22] Request finished in 1913.2992ms 200 text/html; charset=utf-8
+[2018-08-29 02:50:22] Request starting HTTP/1.1 GET http://localhost:51754/images/Logos/.png  
+[2018-08-29 02:50:22] Request finished in 16.9326ms 404 
+[2018-08-29 02:50:34] Request starting HTTP/1.1 GET http://localhost:51754/  
+[2018-08-29 02:50:34] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-08-29 02:50:34] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-08-29 02:50:34] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 46.9405ms
+[2018-08-29 02:50:34] Request finished in 166.1499ms 200 text/html; charset=utf-8

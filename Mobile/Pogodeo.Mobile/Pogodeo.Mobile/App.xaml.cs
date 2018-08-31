@@ -1,23 +1,34 @@
-﻿using Pogodeo.Mobile.Views;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Pogodeo.Mobile
 {
+    /// <summary>
+    /// Main entry point for this application
+    /// </summary>
     public partial class App : Application
     {
+        #region Constructor
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public App()
         {
+            // Do default thing
             InitializeComponent();
 
-
-            MainPage = new MainPage();
+            // Setup main page to host our pages
+            MainPage = new PageHost();
 
             // Setup our Dependency Injection for this application
             DI.InitialSetup();
         }
+
+        #endregion
+
+        #region Lifecycle Methods
 
         protected override void OnStart()
         {
@@ -33,5 +44,7 @@ namespace Pogodeo.Mobile
         {
             // Handle when your app resumes
         }
+
+        #endregion
     }
 }

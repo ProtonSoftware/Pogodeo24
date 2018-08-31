@@ -6,9 +6,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.Core\Pogodeo.Core.csproj" />
     <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
   </ItemGroup>
 

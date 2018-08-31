@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Pogodeo.Services;
-using Pogodeo.Services.ExternalApiServices;
-using System.Collections.Generic;
+﻿using Dna;
+using Microsoft.AspNetCore.Mvc;
+using Pogodeo.Core;
+using System.Threading.Tasks;
 
 namespace Pogodeo
 {
@@ -10,40 +10,34 @@ namespace Pogodeo
     /// </summary>
     public class ShowWeatherController : Controller
     {
-        private readonly ITestService _service;
-        private readonly IOpenCageGeocoder _geo;
-
-        public ShowWeatherController(ITestService service, IOpenCageGeocoder geo)
+        public async Task<IActionResult> Index(ProvideDataViewModel viewModel)
         {
-            _service = service;
-            _geo = geo;
-        }
-
-        public IActionResult Index(ProvideDataViewModel viewModel)
-        {
-            var a = _geo.GetAddressLocation(viewModel.CityName);
-
-            // TODO: Get real data from APIs
-            var apiData = new ShowWeatherViewModel
+            // Get data from our API
+            var apiData = new ShowWeatherViewModel();
+            
+            // Send a request
+            var apiResult = await WebRequests.PostAsync<APIWeatherResponse>(GetAPIRoute(), viewModel.CityName);
+                
+            // If we got a data...
+            if (apiResult.Successful)
             {
-                CityName = viewModel.CityName,
-                WeatherInformationsList = new List<WeatherInformationViewModel>
-                {
-                    new WeatherInformationViewModel
-                    {
-                        WeatherProviderAPIName = "Onet",
-                        Celsius = 20
-                    },
-                    new WeatherInformationViewModel
-                    {
-                        WeatherProviderAPIName = "WP",
-                        Celsius = 21
-                    }
-                }
-            };
+                // Deserialize json to suitable view model
+                apiData.CityName = viewModel.CityName;
+                apiData.APIResponse = apiResult.ServerResponse;
+            }
 
             // Show the page to the user
             return View(apiData);
         }
+
+        #region Private Helpers
+
+        /// <summary>
+        /// Gets the url for API call
+        /// </summary>
+        /// <returns>URL</returns>
+        private string GetAPIRoute() => Request.Scheme + "://" + Request.Host + ApiRoutes.GetWeatherForCity;
+
+        #endregion
     }
 }

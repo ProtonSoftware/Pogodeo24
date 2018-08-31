@@ -1,26 +1,25 @@
-﻿using Xamarin.Forms;
+﻿using Xamarin.Forms.Xaml;
 
 namespace Pogodeo.Mobile
 {
-    public partial class ShowWeatherPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ShowWeatherPage : BasePage
 	{
-		public ShowWeatherPage()
+        #region Constructor
+
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="viewModel">The required view model with data for this page</param>
+        public ShowWeatherPage(ShowWeatherViewModel viewModel)
 		{
+            // Do default things
 			InitializeComponent();
+
+            // Set specified view model
+            BindingContext = viewModel;
 		}
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            this.Animate("", (s) => Layout(new Rectangle(((1 - s) * Width), Y, Width, Height)), 16, 600, Easing.Linear, null, null);
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-
-            this.Animate("", (s) => Layout(new Rectangle((s * Width) * -1, Y, Width, Height)), 16, 600, Easing.Linear, null, null);
-        }
+        #endregion
     }
 }

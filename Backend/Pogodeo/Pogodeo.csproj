@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dna.Framework" Version="1.0.7.6" />
+    <PackageReference Include="Dna.Framework.AspNet" Version="1.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
 
@@ -18,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.Core\Pogodeo.Core.csproj" />
     <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
     <ProjectReference Include="..\Pogodeo.Services\Pogodeo.Services.csproj" />
   </ItemGroup>

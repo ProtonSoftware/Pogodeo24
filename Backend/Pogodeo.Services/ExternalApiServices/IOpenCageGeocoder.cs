@@ -1,4 +1,4 @@
-﻿using Pogodeo.DataAccess;
+﻿using Pogodeo.Core;
 using System.Net;
 
 namespace Pogodeo.Services.ExternalApiServices

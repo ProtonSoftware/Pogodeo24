@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Pogodeo.Core;
 using Pogodeo.DataAccess;
 using System;
 using System.IO;
@@ -31,8 +32,8 @@ namespace Pogodeo.Services.ExternalApiServices
         public OperationResult<HttpWebResponse> GetAddressLocation(string address)
         {
             var url = BuildUrl(address);
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            var response = (HttpWebResponse)request.GetResponse();
             return new OperationResult<HttpWebResponse>(true, response);
         }
 

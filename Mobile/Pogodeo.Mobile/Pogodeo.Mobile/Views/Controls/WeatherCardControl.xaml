@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pogodeo.Mobile.WeatherCardControl">
+    
+    <ContentView.Content>
+        <Frame WidthRequest="300"
+               HorizontalOptions="Center"
+               Padding="0"
+               BackgroundColor="{StaticResource WhitePure}">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <FlexLayout Grid.Column="0"
+                            Direction="Column"
+                            Margin="8"
+                            JustifyContent="SpaceBetween">
+
+                    <Label Text="{Binding Name}"
+                           FontSize="Large"
+                           TextColor="{StaticResource RedPrimary}" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="sun" HeightRequest="64" Scale="2.5" />
+                        <Label Text="{Binding ValueTemperature, StringFormat='{0}*C'}" FontSize="40" />
+                    </StackLayout>
+
+                </FlexLayout>
+
+                <Grid Grid.Column="1"
+                      BackgroundColor="{StaticResource RedPrimary}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Image Source="cloud_rain"
+                           HeightRequest="30"
+                           Scale="2" />
+                    <Label Grid.Column="1" 
+                           Text="{Binding ValueRain, StringFormat='{0}mm'}"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource WhitePure}" />
+
+                    <Image Grid.Row="1" 
+                           Source="cloud_rain_alt" 
+                           HeightRequest="30" 
+                           Scale="2" />
+                    <Label Grid.Column="1"
+                           Grid.Row="1"
+                           Text="{Binding ValueHumidity, StringFormat='{0}%'}"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource WhitePure}" />
+                    
+                    <Image Grid.Row="2"
+                           Source="wind" 
+                           HeightRequest="30" 
+                           Scale="2" />
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="{Binding ValueWind, StringFormat='{0}km/h'}"
+                           VerticalTextAlignment="Center"
+                           TextColor="{StaticResource WhitePure}" />
+
+                </Grid>
+
+            </Grid>
+
+        </Frame>
+    </ContentView.Content>
+    
+</ContentView>

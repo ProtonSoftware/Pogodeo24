@@ -2,21 +2,51 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Pogodeo.Mobile"
-             x:Class="Pogodeo.Mobile.ShowWeatherPage">
+             x:Class="Pogodeo.Mobile.ShowWeatherPage"
+             Title="{Binding Title}">
 
-    <Grid>
+    <Grid BackgroundColor="Beige">
 
-        <Frame VerticalOptions="Center"
-               HorizontalOptions="Center"
-               WidthRequest="300"
-               BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <Label Text="{Binding CityName}" 
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center"
-                    Margin="10" />
+        <FlexLayout Direction="Row" 
+                    Margin="8"
+                    JustifyContent="SpaceBetween"
+                    VerticalOptions="Center">
 
-        </Frame>
+            <local:DateTitleControl BindingContext="{Binding DateViewModel}" />
+
+            <Switch IsToggled="{Binding IsSwitchToggled}" />
+
+        </FlexLayout>
+
+        <FlexLayout x:Name="ListContainer"
+                    Grid.Row="1"
+                    Direction="Column"
+                    AlignItems="Center"
+                    JustifyContent="SpaceEvenly">
+
+        </FlexLayout>
+
+        <Slider Grid.Row="2"
+                Margin="8"
+                Value="{Binding SliderValue}"
+                Minimum="0"
+                Maximum="20"
+                IsVisible="{Binding IsSwitchToggledInverted}"
+                ThumbColor="{StaticResource RedPrimary}" />
+
+        <Slider Grid.Row="2"
+                Margin="8"
+                Value="{Binding SliderValue}"
+                Minimum="0"
+                Maximum="23"
+                IsVisible="{Binding IsSwitchToggled}"
+                ThumbColor="{StaticResource BluePrimary}" />
 
     </Grid>
 

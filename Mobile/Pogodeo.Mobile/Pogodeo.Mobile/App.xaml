@@ -4,12 +4,16 @@
              x:Class="Pogodeo.Mobile.App">
     <Application.Resources>
         <ResourceDictionary>
+
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="WhitePure">#FFFFFF</Color>
+            <Color x:Key="RedPrimary">#FF1507</Color>
+            <Color x:Key="BluePrimary">#3C0EFF</Color>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="#3F51B5" />
+                <Setter Property="BarTextColor" Value="{StaticResource WhitePure}" />
             </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

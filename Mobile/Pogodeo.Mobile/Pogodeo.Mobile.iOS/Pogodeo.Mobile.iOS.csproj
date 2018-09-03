@@ -141,4 +141,22 @@
       <Name>Pogodeo.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_sunny_yellow_light_36pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_sunny_yellow_light_36pt%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_sunny_yellow_light_36pt%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_cloudy_white_36pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_cloudy_white_36pt%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_wb_cloudy_white_36pt%403x.png" />
+  </ItemGroup>
 </Project>

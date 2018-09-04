@@ -1,10 +1,13 @@
-﻿namespace Pogodeo.Mobile
+﻿namespace Pogodeo.Core
 {
     /// <summary>
-    /// The model with new data for the card to update
+    /// The model with data for the weather card
+    /// Should be associated with date
     /// </summary>
-    public class CardUpdateModel
+    public class CardDataAPIModel
     {
+        #region Public Properties
+
         /// <summary>
         /// The value of temperature to update to
         /// </summary>
@@ -24,5 +27,12 @@
         /// The value of wind speed to update to
         /// </summary>
         public int ValueWind { get; set; }
+
+        /// <summary>
+        /// The new icon to update
+        /// </summary>
+        public WeatherIconType WeatherIcon { get; set; }
+
+        #endregion
     }
 }

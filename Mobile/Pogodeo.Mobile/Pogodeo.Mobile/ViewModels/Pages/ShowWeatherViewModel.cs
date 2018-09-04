@@ -1,5 +1,6 @@
 ﻿using Dna;
 using Pogodeo.Core;
+using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
@@ -109,9 +110,9 @@ namespace Pogodeo.Mobile
             // Send an API request
             Task.Run(GetAPIData);
 
-            Items.Add(new WeatherCardViewModel("Onet", new CardUpdateModel { ValueTemperature = 27, ValueHumidity = 65, ValueRain = 23, ValueWind = 9 }));
-            Items.Add(new WeatherCardViewModel("Interia", new CardUpdateModel { ValueTemperature = 23, ValueHumidity = 55, ValueRain = 22, ValueWind = 11 }));
-            Items.Add(new WeatherCardViewModel("WP", new CardUpdateModel { ValueTemperature = 21, ValueHumidity = 75, ValueRain = 21, ValueWind = 7 }));
+            Items.Add(new WeatherCardViewModel("Onet", new CardDataAPIModel { ValueTemperature = 27, ValueHumidity = 65, ValueRain = 23, ValueWind = 9, WeatherIcon = WeatherIconType.Sun }));
+            Items.Add(new WeatherCardViewModel("Interia", new CardDataAPIModel { ValueTemperature = 23, ValueHumidity = 55, ValueRain = 22, ValueWind = 11, WeatherIcon = WeatherIconType.Rain }));
+            Items.Add(new WeatherCardViewModel("WP", new CardDataAPIModel { ValueTemperature = 21, ValueHumidity = 75, ValueRain = 21, ValueWind = 7, WeatherIcon = WeatherIconType.Cloud }));
         }
 
         #endregion
@@ -128,8 +129,17 @@ namespace Pogodeo.Mobile
 
             // If we got a data back...
             if (apiResult != null && apiResult.Successful && apiResult.ServerResponse != null)
+            {
                 // Deserialize json to suitable view model
                 APIResponse = apiResult.ServerResponse;
+
+                // Update cards with that data
+                UpdateWeatherCards();
+            }
+            // Otherwise...
+            else
+                // TODO: Show that we got no data back
+                return;
         }
 
         /// <summary>
@@ -143,11 +153,21 @@ namespace Pogodeo.Mobile
         /// </summary>
         private void UpdateWeatherCards()
         {
-            // Get data for current choosen date
+            // TODO: Get current date
+            var currentDate = new DateTime(2018, 11, 20, 15, 00, 00, 00);
+
+            // Get data for choosen date
+            var currentWeatherData = APIResponse.AggregatedWeatherList.TryGetValue(currentDate, out var weatherInfo);
 
             // Update every card
             foreach (var card in Items)
-                card.UpdateData(new CardUpdateModel());
+            {
+                // Get info for current external API
+                weatherInfo.ExternalAPIWeatherData.TryGetValue(card.Name, out var weather);
+
+                // Update the card
+                card.UpdateData(weather);
+            }
         }
 
         #endregion

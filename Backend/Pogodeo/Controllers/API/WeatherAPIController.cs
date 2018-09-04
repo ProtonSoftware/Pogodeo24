@@ -2,6 +2,7 @@
 using Pogodeo.Core;
 using Pogodeo.Services;
 using Pogodeo.Services.ExternalApiServices;
+using System;
 using System.Collections.Generic;
 
 namespace Pogodeo
@@ -60,27 +61,77 @@ namespace Pogodeo
             // Create response object
             var response = new APIWeatherResponse
             {
-                WeatherInformationsList = new List<WeatherInformationAPIModel>
+                AggregatedWeatherList = new Dictionary<DateTime, WeatherInformationAPIModel>
                 {
-                    new WeatherInformationAPIModel
                     {
-                        WeatherProviderAPIName = "Onet",
-                        Celsius = 20,
+                        new DateTime(2018, 11, 20, 15, 00, 00, 00), new WeatherInformationAPIModel
+                        {
+                            ExternalAPIWeatherData = new Dictionary<string, CardDataAPIModel>
+                            {
+                                {
+                                    "Onet", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 20,
+                                        ValueHumidity = 50,
+                                        ValueRain = 20,
+                                        ValueWind = 9
+                                    }
+                                },
+                                {
+                                    "WP", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 22,
+                                        ValueHumidity = 40,
+                                        ValueRain = 10,
+                                        ValueWind = 19
+                                    }
+                                },
+                                {
+                                    "Interia", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 29,
+                                        ValueHumidity = 59,
+                                        ValueRain = 11,
+                                        ValueWind = 11
+                                    }
+                                }
+                            }
+                        }
                     },
-                    new WeatherInformationAPIModel
                     {
-                        WeatherProviderAPIName = "WP",
-                        Celsius = 21,
-                    },
-                    new WeatherInformationAPIModel
-                    {
-                        WeatherProviderAPIName = "Onet",
-                        Celsius = 18,
-                    },
-                    new WeatherInformationAPIModel
-                    {
-                        WeatherProviderAPIName = "WP",
-                        Celsius = 11,
+                        new DateTime(2018, 11, 20, 18, 00, 00, 00), new WeatherInformationAPIModel
+                        {
+                            ExternalAPIWeatherData = new Dictionary<string, CardDataAPIModel>
+                            {
+                                {
+                                    "Onet", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 21,
+                                        ValueHumidity = 51,
+                                        ValueRain = 21,
+                                        ValueWind = 9
+                                    }
+                                },
+                                {
+                                    "WP", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 23,
+                                        ValueHumidity = 41,
+                                        ValueRain = 11,
+                                        ValueWind = 19
+                                    }
+                                },
+                                {
+                                    "Interia", new CardDataAPIModel
+                                    {
+                                        ValueTemperature = 33,
+                                        ValueHumidity = 59,
+                                        ValueRain = 12,
+                                        ValueWind = 11
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             };

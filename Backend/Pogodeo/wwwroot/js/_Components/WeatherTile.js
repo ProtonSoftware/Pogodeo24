@@ -19,8 +19,8 @@
         },
 
         mounted: function () {
-            this.weatherData.Name = this.$props.weather.WeatherProviderAPIName;
-            this.weatherData.Value = this.$props.weather.Celsius;
+            this.weatherData.Name = this.$props.weather.Key;
+            this.weatherData.Value = this.$props.weather.Value.ValueTemperature;
         },
 
         methods: {

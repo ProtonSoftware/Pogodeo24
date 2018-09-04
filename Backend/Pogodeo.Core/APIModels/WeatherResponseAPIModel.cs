@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Pogodeo.Core
 {
@@ -8,8 +9,9 @@ namespace Pogodeo.Core
     public class APIWeatherResponse
     {
         /// <summary>
-        /// The list of informations about weather from external APIs
+        /// The list of dates for a week
+        /// Every date contains list of external APIs that contain weather info
         /// </summary>
-        public List<WeatherInformationAPIModel> WeatherInformationsList { get; set; }
+        public Dictionary<DateTime, WeatherInformationAPIModel> AggregatedWeatherList { get; set; }
     }
 }

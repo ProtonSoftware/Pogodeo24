@@ -1,4 +1,4 @@
-﻿namespace Pogodeo.Mobile
+﻿namespace Pogodeo.Core
 {
     /// <summary>
     /// Every possible icon for weather info in this app

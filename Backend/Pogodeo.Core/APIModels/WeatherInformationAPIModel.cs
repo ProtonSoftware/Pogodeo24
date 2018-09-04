@@ -1,18 +1,15 @@
-﻿namespace Pogodeo.Core
+﻿using System.Collections.Generic;
+
+namespace Pogodeo.Core
 {
     /// <summary>
-    /// The view model for single information box from external API
+    /// The API model for weather information for every external API
     /// </summary>
     public class WeatherInformationAPIModel
     {
         /// <summary>
-        /// The name of the API that provided information
+        /// The data about weather from external APIs
         /// </summary>
-        public string WeatherProviderAPIName { get; set; }
-
-        /// <summary>
-        /// TODO: Make something different about weather
-        /// </summary>
-        public int Celsius { get; set; }
+        public Dictionary<string, CardDataAPIModel> ExternalAPIWeatherData { get; set; }
     }
 }

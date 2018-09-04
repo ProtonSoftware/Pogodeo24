@@ -1,4 +1,6 @@
-﻿namespace Pogodeo.Mobile
+﻿using Pogodeo.Core;
+
+namespace Pogodeo.Mobile
 {
     /// <summary>
     /// The view model for single weather card containing informations from single external API
@@ -46,7 +48,7 @@
         /// </summary>
         /// <param name="name">The name of a provider that returned this data</param>
         /// <param name="updateModel">The initial data to set on this card</param>
-        public WeatherCardViewModel(string name, CardUpdateModel updateModel)
+        public WeatherCardViewModel(string name, CardDataAPIModel updateModel)
         {
             // Set the name
             Name = name;
@@ -63,12 +65,14 @@
         /// Updates this view model with new data
         /// </summary>
         /// <param name="updateModel">New data</param>
-        public void UpdateData(CardUpdateModel updateModel)
+        public void UpdateData(CardDataAPIModel updateModel)
         {
+            // Update every value
             ValueTemperature = updateModel.ValueTemperature;
             ValueRain = updateModel.ValueRain;
             ValueHumidity = updateModel.ValueHumidity;
             ValueWind = updateModel.ValueWind;
+            Icon = updateModel.WeatherIcon;
         }
 
         #endregion

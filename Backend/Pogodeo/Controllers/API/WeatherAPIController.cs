@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pogodeo.Core;
 using Pogodeo.Services;
-using Pogodeo.Services.ExternalApiServices;
 using System;
 using System.Collections.Generic;
 
@@ -15,6 +14,7 @@ namespace Pogodeo
         #region Private Members
 
         private readonly ITestService _service;
+        private readonly IInteriaWeatherApiService _interiaWeatherApiService;
         private readonly IOpenCageGeocoder _geo;
 
         #endregion
@@ -24,10 +24,11 @@ namespace Pogodeo
         /// <summary>
         /// Default constructor
         /// </summary>
-        public WeatherAPIController(ITestService service, IOpenCageGeocoder geo)
+        public WeatherAPIController(ITestService service, IOpenCageGeocoder geo, IInteriaWeatherApiService interiaWeatherApiService)
         {
             _service = service;
             _geo = geo;
+            _interiaWeatherApiService = interiaWeatherApiService;
         }
 
         #endregion

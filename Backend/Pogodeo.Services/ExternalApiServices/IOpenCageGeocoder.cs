@@ -1,7 +1,7 @@
 ﻿using Pogodeo.Core;
 using System.Net;
 
-namespace Pogodeo.Services.ExternalApiServices
+namespace Pogodeo.Services
 {
     public interface IOpenCageGeocoder
     {

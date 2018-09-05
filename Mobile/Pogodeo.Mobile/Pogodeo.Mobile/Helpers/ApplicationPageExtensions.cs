@@ -24,6 +24,9 @@ namespace Pogodeo.Mobile
                 case ApplicationPage.ShowWeather:
                     return new ShowWeatherPage(viewModel as ShowWeatherViewModel);
 
+                case ApplicationPage.Settings:
+                    return new SettingsPage(viewModel as SettingsViewModel);
+
                 case ApplicationPage.About:
                     return new AboutPage(viewModel as AboutViewModel);
 

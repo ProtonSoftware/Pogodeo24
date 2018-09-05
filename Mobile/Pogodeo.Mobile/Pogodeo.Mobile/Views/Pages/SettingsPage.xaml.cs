@@ -5,14 +5,14 @@ using Xamarin.Forms.Xaml;
 namespace Pogodeo.Mobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AboutPage : BasePage
+    public partial class SettingsPage : BasePage
     {
         #region Constructor
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public AboutPage()
+        public SettingsPage()
         {
             // Do default things
             InitializeComponent();
@@ -24,13 +24,13 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Constructor with specified view model to setup for this page
         /// </summary>
-        public AboutPage(AboutViewModel viewModel)
+        public SettingsPage(SettingsViewModel viewModel)
         {
             // Do default things
             InitializeComponent();
 
             // Set specified view model
-            BindingContext = viewModel ?? new AboutViewModel();
+            BindingContext = viewModel ?? new SettingsViewModel();
         }
 
         #endregion

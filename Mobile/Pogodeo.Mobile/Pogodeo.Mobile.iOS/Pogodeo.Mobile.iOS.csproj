@@ -159,4 +159,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\ic_wb_cloudy_white_36pt%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrow_right%403x.png" />
+  </ItemGroup>
 </Project>

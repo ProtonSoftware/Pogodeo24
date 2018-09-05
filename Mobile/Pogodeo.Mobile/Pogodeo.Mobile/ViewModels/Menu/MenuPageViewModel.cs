@@ -27,12 +27,11 @@ namespace Pogodeo.Mobile
             Items = new List<MenuItemViewModel>
             {
                 new MenuItemViewModel(() => DI.Application.GoToPage(ApplicationPage.ProvideData)) { Page = ApplicationPage.ProvideData, Title = "Provide Data" },
+                new MenuItemViewModel(() => DI.Application.GoToPage(ApplicationPage.Settings)) { Page = ApplicationPage.Settings, Title = "Settings" },
                 new MenuItemViewModel(() => DI.Application.GoToPage(ApplicationPage.About)) { Page = ApplicationPage.About, Title = "About"  }
             };
         }
 
         #endregion
-
-        
     }
 }

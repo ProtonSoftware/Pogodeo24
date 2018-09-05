@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using Pogodeo.Core.Localization;
 
 using Xamarin.Forms;
 
@@ -29,7 +30,7 @@ namespace Pogodeo.Mobile
             // Create commands
             OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://pogodeo24.pl")));
 
-            Title = "About";
+            Title = LocalizationResources.About;
         }
 
         #endregion

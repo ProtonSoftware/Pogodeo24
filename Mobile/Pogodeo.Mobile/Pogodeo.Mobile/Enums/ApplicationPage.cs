@@ -16,6 +16,11 @@
         ShowWeather,
 
         /// <summary>
+        /// Settings page
+        /// </summary>
+        Settings,
+
+        /// <summary>
         /// About page
         /// </summary>
         About

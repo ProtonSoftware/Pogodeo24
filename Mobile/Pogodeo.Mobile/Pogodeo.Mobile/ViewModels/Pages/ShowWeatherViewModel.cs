@@ -1,5 +1,6 @@
 ﻿using Dna;
 using Pogodeo.Core;
+using Pogodeo.Core.Localization;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -53,7 +54,7 @@ namespace Pogodeo.Mobile
                 DateViewModel.SliderValueChanged(value);
 
                 // Update weather cards with new info
-                UpdateWeatherCards();
+                //UpdateWeatherCards();
             }
         }
 
@@ -105,7 +106,7 @@ namespace Pogodeo.Mobile
             CityName = city;
 
             // Set page's title
-            Title = "Pogoda dla " + CityName;
+            Title = string.Format(LocalizationResources.ShowWeatherTitle, CityName);
 
             // Send an API request
             Task.Run(GetAPIData);

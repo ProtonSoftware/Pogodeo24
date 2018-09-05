@@ -11,14 +11,14 @@ namespace Pogodeo.Mobile
         {
             base.OnAppearing();
 
-            this.Animate("x", (s) => Layout(new Rectangle(((1 - s) * Width), Y, Width, Height)), 16, 600, Easing.Linear);
+            //this.Animate("x", (s) => Layout(new Rectangle(((1 - s) * Width), Y, Width, Height)), 16, 600, Easing.Linear);
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
 
-            this.Animate("x", (s) => Layout(new Rectangle((s * Width) * -1, Y, Width, Height)), 16, 600, Easing.Linear);
+            //this.Animate("x", (s) => Layout(new Rectangle((s * Width) * -1, Y, Width, Height)), 16, 600, Easing.Linear);
         }
     }
 }

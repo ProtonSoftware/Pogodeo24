@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using Pogodeo.Core.Localization;
+using System.Windows.Input;
 
 namespace Pogodeo.Mobile
 {
@@ -35,7 +36,7 @@ namespace Pogodeo.Mobile
             // Create commands
             ChangePageWithDataCommand = new RelayCommand(ChangePage);
 
-            Title = "Provide data";
+            Title = LocalizationResources.ProvideData;
         }
 
         #endregion

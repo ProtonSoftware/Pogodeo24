@@ -39,5 +39,8 @@
     <Compile Update="Views\Controls\DateTitleControl.xaml.cs">
       <DependentUpon>DateTitleControl.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

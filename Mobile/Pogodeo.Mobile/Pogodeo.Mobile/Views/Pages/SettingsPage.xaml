@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Pogodeo.Mobile"
+             x:Class="Pogodeo.Mobile.SettingsPage"
+             Title="{Binding Title}">
+
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Jednostki">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 Margin="8">
+                        <Label Text="Jednostka temperatury"
+                               VerticalOptions="Center" />
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="EndAndExpand">
+                            <Label Text="*C" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 Margin="8">
+                        <Label Text="Jednostka wiatru"
+                               VerticalOptions="Center" />
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="EndAndExpand">
+                            <Label Text="km/h" />
+                            <Image Source="arrow_right" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Lokalizacja">
+                <SwitchCell Text="Używaj lokalizacji zamiast miasta" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    
+</local:BasePage>

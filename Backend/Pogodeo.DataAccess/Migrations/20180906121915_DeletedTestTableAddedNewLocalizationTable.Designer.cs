@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pogodeo.DataAccess;
 
 namespace Pogodeo.DataAccess.Migrations
 {
     [DbContext(typeof(PogodeoAppDataContext))]
-    partial class PogodeoAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20180906121915_DeletedTestTableAddedNewLocalizationTable")]
+    partial class DeletedTestTableAddedNewLocalizationTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

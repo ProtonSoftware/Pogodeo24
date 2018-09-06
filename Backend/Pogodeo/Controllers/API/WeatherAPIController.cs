@@ -12,10 +12,9 @@ namespace Pogodeo
     public class WeatherAPIController : Controller
     {
         #region Private Members
-
-        private readonly ITestService _service;
-        private readonly IInteriaWeatherApiService _interiaWeatherApiService;
-        private readonly IOpenCageGeocoder _geo;
+        
+        private readonly IAccuWeatherApiService mAccuWeatherApiService;
+        private readonly IOpenCageGeocoderService mGeocoderService;
 
         #endregion
 
@@ -24,11 +23,10 @@ namespace Pogodeo
         /// <summary>
         /// Default constructor
         /// </summary>
-        public WeatherAPIController(ITestService service, IOpenCageGeocoder geo, IInteriaWeatherApiService interiaWeatherApiService)
+        public WeatherAPIController(IOpenCageGeocoderService eocoderService, IAccuWeatherApiService accuWeatherApiService)
         {
-            _service = service;
-            _geo = geo;
-            _interiaWeatherApiService = interiaWeatherApiService;
+            mGeocoderService = eocoderService;
+            mAccuWeatherApiService = accuWeatherApiService;
         }
 
         #endregion
@@ -47,7 +45,7 @@ namespace Pogodeo
             // Check if we have info about this city in database
 
             // Check if city exists
-            var geoResponse = _geo.GetAddressLocation(city);
+            var geoResponse = mGeocoderService.GetAPIInfo(city);
 
             // If it does not
             if (false/*!city.DoesExist*/)
@@ -55,7 +53,8 @@ namespace Pogodeo
 
             // Get weather from Onet
 
-            // Get weather from XXX
+            // Get weather from AccuWeather
+            var accuResponse = mAccuWeatherApiService.GetAPIInfo(city).Result as List<AccuWeatherWeatherModel>;
 
             // Get weather from YYY
 

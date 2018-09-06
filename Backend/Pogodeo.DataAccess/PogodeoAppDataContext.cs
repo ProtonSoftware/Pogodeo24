@@ -9,7 +9,7 @@ namespace Pogodeo.DataAccess
     {
         #region Db Sets
 
-        public DbSet<TEST_Forecast> Forecasts { get; set; }
+        public DbSet<CityLocalizationKeys> CityLocalizationKeys { get; set; }
 
         #endregion
 
@@ -24,6 +24,7 @@ namespace Pogodeo.DataAccess
         }
 
         #endregion
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

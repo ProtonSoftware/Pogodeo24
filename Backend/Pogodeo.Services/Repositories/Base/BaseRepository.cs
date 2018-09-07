@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pogodeo.Core;
 using Pogodeo.DataAccess;
+using System;
 using System.Linq;
 
 namespace Pogodeo.Services
@@ -47,6 +48,8 @@ namespace Pogodeo.Services
         {
             return DbSet;
         }
+
+        public bool InsensitiveStringComparition(string first, string second) => string.Equals(first, second, StringComparison.OrdinalIgnoreCase);
 
         public OperationResult SaveChanges()
         {

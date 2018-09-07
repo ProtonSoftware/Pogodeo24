@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Pogodeo.Core;
-using System;
-using System.Net;
+using System.Collections.Generic;
 
 namespace Pogodeo.Services
 {
@@ -20,12 +20,47 @@ namespace Pogodeo.Services
 
         #endregion
 
+        #region Private JSON Classes
+
+        private class Rate
+        {
+            public int limit { get; set; }
+            public int remaining { get; set; }
+            public int reset { get; set; }
+        }
+
+        private class Geometry
+        {
+            public double lat { get; set; }
+            public double lng { get; set; }
+        }
+
+        private class Result
+        {
+            public Geometry geometry { get; set; }
+        }
+
+        private class Status
+        {
+            public int code { get; set; }
+            public string message { get; set; }
+        }
+
+        private class RootJsonObject
+        {
+            public Rate rate { get; set; }
+            public List<Result> results { get; set; }
+            public Status status { get; set; }
+        }
+
+        #endregion
+
         #region Public Properties
 
-        /// <summary>
-        /// The host url of this API
-        /// </summary>
-        public string Host => mConfigurationSection.GetValue<string>("Host");
+    /// <summary>
+    /// The host url of this API
+    /// </summary>
+    public string Host => mConfigurationSection.GetValue<string>("Host");
 
         /// <summary>
         /// The API Key name that is used in an url for this API
@@ -62,10 +97,25 @@ namespace Pogodeo.Services
 
         public OperationResult<object> GetAPIInfo(string city)
         {
+            // Build url for API request
             var apiUrl = ExternalApiServiceHelpers.BuildUrl(Host, CityInfoPath, $"?q={city}&", ApiKeyName, ApiKeyValue);
+
+            // Do the request
             var apiResponseText = ExternalApiServiceHelpers.SendAPIRequest(apiUrl);
-            var jsonObject = JsonConvert.DeserializeObject(apiResponseText);
-            return new OperationResult<object>(true, jsonObject);
+
+            // Get response as json
+            var jsonObject = JsonConvert.DeserializeObject<RootJsonObject>(apiResponseText);
+
+            // Create our API response model
+            var responseModel = new OpenCageGeocoderCityModel
+            {
+                Name = city,
+                Latitude = jsonObject.results[0].geometry.lat.ToString(),
+                Longitude = jsonObject.results[0].geometry.lng.ToString()
+            };
+
+            // Return the mode
+            return new OperationResult<object>(true, responseModel);
         }
 
         #endregion

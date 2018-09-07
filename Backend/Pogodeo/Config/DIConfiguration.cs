@@ -11,10 +11,12 @@ namespace Pogodeo
         public static IServiceCollection AddDIServices(this IServiceCollection services)
         {
             // Add services to the collection
-            services.AddScoped<ICityLocalizationKeysRepository, CityLocalizationKeysRepository>();
+            services.AddScoped<IBigCitiesRepository, BigCitiesRepository>();
+            services.AddScoped<ISmallCitiesRepository, SmallCitiesRepository>();
             services.AddScoped<IOpenCageGeocoderService, OpenCageGeocoderService>();
-            services.AddScoped<IGeolocationService, GeolocationService>();
+            services.AddScoped<ICityFacade, CityFacade>();
             services.AddScoped<IAccuWeatherApiService, AccuWeatherApiService>();
+            services.AddScoped<CityMapper, CityMapper>();
 
             // Return services for chaining
             return services;

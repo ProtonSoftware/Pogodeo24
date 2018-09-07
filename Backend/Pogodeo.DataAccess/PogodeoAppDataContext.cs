@@ -3,13 +3,21 @@
 namespace Pogodeo.DataAccess
 {
     /// <summary>
-    /// 
+    /// This application's database context
     /// </summary>
     public class PogodeoAppDataContext : DbContext
     {
         #region Db Sets
 
-        public DbSet<CityLocalizationKeys> CityLocalizationKeys { get; set; }
+        /// <summary>
+        /// Big cities informations table
+        /// </summary>
+        public DbSet<BigCity> BigCitiesData { get; set; }
+
+        /// <summary>
+        /// Small cities association table
+        /// </summary>
+        public DbSet<SmallCity> SmallCitiesData { get; set; }
 
         #endregion
 
@@ -24,10 +32,5 @@ namespace Pogodeo.DataAccess
         }
 
         #endregion
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
     }
 }

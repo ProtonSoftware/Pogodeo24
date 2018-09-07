@@ -1,12 +1,7 @@
-﻿using Pogodeo.Core;
-using System;
-using System.Net;
-using Microsoft.Extensions.Configuration;
-using System.IO;
-using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
+using Pogodeo.Core;
 using System.Collections.Generic;
-using Pogodeo.DataAccess;
 
 namespace Pogodeo.Services
 {
@@ -23,9 +18,9 @@ namespace Pogodeo.Services
         private readonly IConfigurationSection mConfigurationSection;
 
         /// <summary>
-        /// The repository that saves localization keys to the database
+        /// The repository to access big cities data from database
         /// </summary>
-        private readonly ICityLocalizationKeysRepository mCityLocalizationKeysRepository;
+        private readonly IBigCitiesRepository mBigCitiesRepository;
 
         #endregion
 
@@ -64,13 +59,13 @@ namespace Pogodeo.Services
         /// Default constructor
         /// </summary>
         /// <param name="config">The config for this app containing API info</param>
-        public AccuWeatherApiService(IConfiguration config, ICityLocalizationKeysRepository cityLocalizationKeysRepository)
+        public AccuWeatherApiService(IConfiguration config, IBigCitiesRepository bigCitiesRepository)
         {
             // Catch the configuration section for this API from configuration
             mConfigurationSection = config.GetSection("AccuWeatherAPI").GetSection("Config");
 
-            // Get repository for localization keys
-            mCityLocalizationKeysRepository = cityLocalizationKeysRepository;
+            // Get repository for big cities
+            mBigCitiesRepository = bigCitiesRepository;
         }
 
         #endregion
@@ -80,30 +75,11 @@ namespace Pogodeo.Services
         public OperationResult<object> GetAPIInfo(string city)
         {
             // Try to get localization key from database
-            var localizationKey = mCityLocalizationKeysRepository.GetAccuWeatherLocalizationKey(city);
+            var localizationKey = mBigCitiesRepository.GetAccuWeatherLocalizationKey(city);
 
             // If we didn't get any
             if (localizationKey == string.Empty || localizationKey == null)
-            {
-                // Build an url for api request
-                var localizationUrl = ExternalApiServiceHelpers.BuildUrl(Host, LocalizationKeyPath, $"?q={city}&", ApiKeyName, ApiKeyValue); 
-
-                // Send that request and catch json response
-                var localizationResponseText = ExternalApiServiceHelpers.SendAPIRequest(localizationUrl);
-
-                // The response is always a json array, parse it as that
-                var jsonArray = JArray.Parse(localizationResponseText);
-
-                // Deserialize the first array object, we don't care about duplicates
-                var localizationKeyObject = jsonArray[0].ToObject<AccuWeatherLocalizationKeyModel>();
-
-                // Set our localization key
-                localizationKey = localizationKeyObject.Key;
-
-                // Save localization key to the database for future requests
-                mCityLocalizationKeysRepository.Add(new CityLocalizationKeys { CityName = city, AccuWeatherLocalizationKey = localizationKey });
-                mCityLocalizationKeysRepository.SaveChanges();
-            }
+                localizationKey = GetLocalizationKeyFromApi(city);
 
             // At this point, we got our localization key
             // Build an url for api request based on that
@@ -126,6 +102,37 @@ namespace Pogodeo.Services
             }
 
             return new OperationResult<object>(true, weatherlist);
+        }
+
+        #endregion
+
+        #region Private Helpers
+
+        /// <summary>
+        /// Gets localization key by making an API call
+        /// In ideal case, shouldn't be called at all
+        /// </summary>
+        /// <param name="city">The city to get localization key for</param>
+        /// <returns>Localization key as string</returns>
+        private string GetLocalizationKeyFromApi(string city)
+        {
+            // Build an url for api request
+            var localizationUrl = ExternalApiServiceHelpers.BuildUrl(Host, LocalizationKeyPath, $"?q={city}&", ApiKeyName, ApiKeyValue);
+
+            // Send that request and catch json response
+            var localizationResponseText = ExternalApiServiceHelpers.SendAPIRequest(localizationUrl);
+
+            // The response is always a json array, parse it as that
+            var jsonArray = JArray.Parse(localizationResponseText);
+
+            // Deserialize the first array object, we don't care about duplicates
+            var localizationKeyObject = jsonArray[0].ToObject<AccuWeatherLocalizationKeyModel>();
+
+            // Update localization key to the database for future requests
+            mBigCitiesRepository.UpdateAccuWeatherLocalizationKey(city, localizationKeyObject.Key);
+
+            // Return found localization key
+            return localizationKeyObject.Key;
         }
 
         #endregion

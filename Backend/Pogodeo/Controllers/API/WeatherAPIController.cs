@@ -12,9 +12,16 @@ namespace Pogodeo
     public class WeatherAPIController : Controller
     {
         #region Private Members
-        
+
+        /// <summary>
+        /// The facade that gets us proper city to check weather for
+        /// </summary>
+        private readonly ICityFacade mCityFacade;
+
+        /// <summary>
+        /// The AccuWeather API service
+        /// </summary>
         private readonly IAccuWeatherApiService mAccuWeatherApiService;
-        private readonly IOpenCageGeocoderService mGeocoderService;
 
         #endregion
 
@@ -23,9 +30,9 @@ namespace Pogodeo
         /// <summary>
         /// Default constructor
         /// </summary>
-        public WeatherAPIController(IOpenCageGeocoderService eocoderService, IAccuWeatherApiService accuWeatherApiService)
+        public WeatherAPIController(ICityFacade cityFacade, IAccuWeatherApiService accuWeatherApiService)
         {
-            mGeocoderService = eocoderService;
+            mCityFacade = cityFacade;
             mAccuWeatherApiService = accuWeatherApiService;
         }
 
@@ -42,19 +49,17 @@ namespace Pogodeo
         [Route(ApiRoutes.GetWeatherForCity)]
         public IActionResult GetWeatherForCity([FromBody]string city)
         {
-            // Check if we have info about this city in database
+            // Get the city that we will get weather for
+            var weatherCity = mCityFacade.GetWeatherCity(city);
 
-            // Check if city exists
-            var geoResponse = mGeocoderService.GetAPIInfo(city);
-
-            // If it does not
-            if (false/*!city.DoesExist*/)
+            // If none was found
+            if (weatherCity == null)
                 return NotFound();
 
             // Get weather from Onet
 
             // Get weather from AccuWeather
-            var accuResponse = mAccuWeatherApiService.GetAPIInfo(city).Result as List<AccuWeatherWeatherModel>;
+            var accuResponse = mAccuWeatherApiService.GetAPIInfo(weatherCity).Result as List<AccuWeatherWeatherModel>;
 
             // Get weather from YYY
 

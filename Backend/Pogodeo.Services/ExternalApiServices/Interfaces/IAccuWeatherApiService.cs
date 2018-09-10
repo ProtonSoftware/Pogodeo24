@@ -3,6 +3,7 @@
     public interface IAccuWeatherApiService : IBaseExternalApiService
     {
         string LocalizationKeyPath { get; }
-        string WeatherPath { get; }
+        string WeatherHourPath { get; }
+        string WeatherDayPath { get; }
     }
 }

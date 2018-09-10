@@ -40,13 +40,8 @@
 
             <div class="row card-deck mt-2">
 
-                @foreach (var dateWeatherInfo in Model.APIResponse.AggregatedWeatherList.Values)
-                {
-                    foreach (var externalApi in dateWeatherInfo.ExternalAPIWeatherData)
-                    {
-                        <weather-tile v-bind:weather="@externalApi.ToJson()"></weather-tile>
-                    }
-                }
+                <weather-tile v-bind:weather="@Model.APIResponse.AccuWeatherWeatherResponse.ToJson()"></weather-tile>
+                <weather-tile v-bind:weather="@Model.APIResponse.AerisWeatherWeatherResponse.ToJson()"></weather-tile>
 
             </div>
 

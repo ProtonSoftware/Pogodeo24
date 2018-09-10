@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Pogodeo.Core;
 using System.Collections.Generic;
 
@@ -95,6 +94,11 @@ namespace Pogodeo.Services
 
         #region Public Methods
 
+        /// <summary>
+        /// Makes a request to this API to get informations about specified city
+        /// </summary>
+        /// <param name="city">The name of a city to send request for</param>
+        /// <returns>API response model or failure</returns>
         public OperationResult<object> GetAPIInfo(string city)
         {
             // Build url for API request
@@ -106,7 +110,12 @@ namespace Pogodeo.Services
             // Get response as json
             var jsonObject = JsonConvert.DeserializeObject<RootJsonObject>(apiResponseText);
 
-            // Create our API response model
+            // If we didn't get any data
+            if (jsonObject.status.code != 200)
+                // Return failure
+                return new OperationResult<object>(false);
+
+            // Otherwise, create our API response model
             var responseModel = new OpenCageGeocoderCityModel
             {
                 Name = city,
@@ -114,7 +123,7 @@ namespace Pogodeo.Services
                 Longitude = jsonObject.results[0].geometry.lng.ToString()
             };
 
-            // Return the mode
+            // Return the model
             return new OperationResult<object>(true, responseModel);
         }
 

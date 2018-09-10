@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Pogodeo.Core;
+using System;
 using System.Collections.Generic;
 
 namespace Pogodeo.Services
@@ -21,6 +23,110 @@ namespace Pogodeo.Services
         /// The repository to access big cities data from database
         /// </summary>
         private readonly IBigCitiesRepository mBigCitiesRepository;
+
+        #endregion
+
+        #region Private JSON Classes
+
+        private class AccuWeatherLocalizationKeyModel
+        {
+            public string LocalizedName { get; set; }
+            public string Key { get; set; }
+        }
+
+        private class Headline
+        {
+            public DateTime EffectiveDate { get; set; }
+            public int EffectiveEpochDate { get; set; }
+            public int Severity { get; set; }
+            public string Text { get; set; }
+            public string Category { get; set; }
+            public DateTime EndDate { get; set; }
+            public int EndEpochDate { get; set; }
+            public string MobileLink { get; set; }
+            public string Link { get; set; }
+        }
+
+        private class Wind
+        {
+            public Minimum Speed { get; set; }
+        }
+
+        private class Minimum
+        {
+            public double? Value { get; set; }
+            public string Unit { get; set; }
+            public int UnitType { get; set; }
+        }
+
+        private class Maximum
+        {
+            public double? Value { get; set; }
+            public string Unit { get; set; }
+            public int UnitType { get; set; }
+        }
+
+        private class Temperature
+        {
+            public double? Value { get; set; }
+            public string Unit { get; set; }
+            public int UnitType { get; set; }
+            public Minimum Minimum { get; set; }
+            public Maximum Maximum { get; set; }
+        }
+
+        private class Day
+        {
+            public int Icon { get; set; }
+            public string IconPhrase { get; set; }
+        }
+
+        private class Night
+        {
+            public int Icon { get; set; }
+            public string IconPhrase { get; set; }
+        }
+
+        private class DailyForecast
+        {
+            public DateTime Date { get; set; }
+            public int EpochDate { get; set; }
+            public Temperature Temperature { get; set; }
+            public Day Day { get; set; }
+            public Night Night { get; set; }
+            public List<string> Sources { get; set; }
+            public string MobileLink { get; set; }
+            public string Link { get; set; }
+        }
+
+        private class RootJsonDayObject
+        {
+            public Headline Headline { get; set; }
+            public List<DailyForecast> DailyForecasts { get; set; }
+        }
+
+        private class RootJsonHourObject
+        {
+            public DateTime DateTime { get; set; }
+            public int EpochDateTime { get; set; }
+            public int WeatherIcon { get; set; }
+            public string IconPhrase { get; set; }
+            public bool IsDaylight { get; set; }
+            public Temperature Temperature { get; set; }
+            public Wind Wind { get; set; }
+            public int RelativeHumidity { get; set; }
+            public int UVIndex { get; set; }
+            public string UVIndexText { get; set; }
+            public int PrecipitationProbability { get; set; }
+            public int RainProbability { get; set; }
+            public int SnowProbability { get; set; }
+            public int IceProbability { get; set; }
+            public Minimum TotalLiquid { get; set; }
+            public Minimum Rain { get; set; }
+            public int CloudCover { get; set; }
+            public string MobileLink { get; set; }
+            public string Link { get; set; }
+        }
 
         #endregion
 
@@ -47,9 +153,14 @@ namespace Pogodeo.Services
         public string LocalizationKeyPath => mConfigurationSection.GetSection("PathPrefix").GetValue<string>("LocalizationKey");
 
         /// <summary>
-        /// The path prefix to weather info API
+        /// The path prefix to hourly weather info API
         /// </summary>
-        public string WeatherPath => mConfigurationSection.GetSection("PathPrefix").GetValue<string>("Weather");
+        public string WeatherHourPath => mConfigurationSection.GetSection("PathPrefix").GetValue<string>("WeatherHour");
+
+        /// <summary>
+        /// The path prefix to daily weather info API
+        /// </summary>
+        public string WeatherDayPath => mConfigurationSection.GetSection("PathPrefix").GetValue<string>("WeatherDay");
 
         #endregion
 
@@ -72,36 +183,90 @@ namespace Pogodeo.Services
 
         #region Public Methods
 
+        /// <summary>
+        /// Makes a request to this API to get informations about specified city
+        /// </summary>
+        /// <param name="city">The name of a city to send request for</param>
+        /// <returns>API response model or failure</returns>
         public OperationResult<object> GetAPIInfo(string city)
         {
+            // Prepare response model to return
+            var response = new WeatherInformationAPIModel
+            {
+                TodayWeatherTruncatedData = new Dictionary<DateTime, CardHourDataAPIModel>(),
+                NextDaysWeatherTruncatedData = new Dictionary<DateTime, CardDayDataAPIModel>()
+            };
+
             // Try to get localization key from database
             var localizationKey = mBigCitiesRepository.GetAccuWeatherLocalizationKey(city);
 
             // If we didn't get any
             if (localizationKey == string.Empty || localizationKey == null)
+                // Get one from API
                 localizationKey = GetLocalizationKeyFromApi(city);
 
-            // At this point, we got our localization key
-            // Build an url for api request based on that
-            var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"{localizationKey}?", ApiKeyName, ApiKeyValue);
+            #region Today's data
+
+            // Build an url for api request based on localization key
+            var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherHourPath, $"{localizationKey}?details=true&", ApiKeyName, ApiKeyValue);
 
             // Catch the response from external api
             var weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
 
-            var jsonObject = JObject.Parse(weatherResponseText);
-            var jArray = JArray.Parse(jsonObject["DailyForecasts"].ToString());
+            // Deserialize to json object
+            var jsonHourObject = JsonConvert.DeserializeObject<List<RootJsonHourObject>>(weatherResponseText);
 
-            var weatherlist = new List<AccuWeatherWeatherModel>();
+            // If we didn't get any data
+            if (jsonHourObject == null)
+                // Return failure
+                return new OperationResult<object>(false);
 
-            foreach (var json in jArray)
+            // Collect every weather data
+            foreach (var weather in jsonHourObject)
             {
-                var weatherInfo = json.ToObject<AccuWeatherWeatherModel>();
-                weatherInfo.Maximum = int.Parse(json["Temperature"]["Maximum"]["Value"].ToString());
-                weatherInfo.Minimum = int.Parse(json["Temperature"]["Minimum"]["Value"].ToString());
-                weatherlist.Add(weatherInfo);
+                // Add new timestamp
+                response.TodayWeatherTruncatedData.Add(weather.DateTime, new CardHourDataAPIModel
+                {
+                    ValueTemperature = (int)Math.Round((double)((weather.Temperature.Value - 32) * 5 / 9), 0),
+                    ValueRain = weather.Rain.Value,
+                    ValueHumidity = weather.RelativeHumidity,
+                    ValueWind = (int)Math.Round((double)weather.Wind.Speed.Value, 0)
+                });
             }
 
-            return new OperationResult<object>(true, weatherlist);
+            #endregion
+
+            #region Next Days Data
+
+            // Build an url for api request based on localization key
+            weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherDayPath, $"{localizationKey}?", ApiKeyName, ApiKeyValue);
+
+            // Catch the response from external api
+            weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+
+            // Deserialize to json object
+            var jsonDayObject = JsonConvert.DeserializeObject<RootJsonDayObject>(weatherResponseText);
+
+            // If we didn't get any data
+            if (jsonDayObject == null)
+                // Return failure
+                return new OperationResult<object>(false);
+
+            // Collect every weather data
+            foreach (var weather in jsonDayObject.DailyForecasts)
+            {
+                // Add new timestamp
+                response.NextDaysWeatherTruncatedData.Add(weather.Date, new CardDayDataAPIModel
+                {
+                    DayTemperature = (int)Math.Round((double)((weather.Temperature.Maximum.Value - 32) * 5 / 9), 0),
+                    NightTemperature = (int)Math.Round((double)((weather.Temperature.Minimum.Value - 32) * 5 / 9), 0)
+                });
+            }
+
+            #endregion
+
+            // Finally return our response model
+            return new OperationResult<object>(true, response);
         }
 
         #endregion

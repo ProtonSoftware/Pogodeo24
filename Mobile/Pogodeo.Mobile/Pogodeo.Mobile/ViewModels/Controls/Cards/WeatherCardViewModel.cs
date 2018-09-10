@@ -22,22 +22,22 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// The value of temperature to show
         /// </summary>
-        public int ValueTemperature { get; set; }
+        public int? ValueTemperature { get; set; }
 
         /// <summary>
         /// The value of rain to show
         /// </summary>
-        public int ValueRain { get; set; }
+        public double? ValueRain { get; set; }
 
         /// <summary>
         /// The value of humidity to show
         /// </summary>
-        public int ValueHumidity { get; set; }
+        public int? ValueHumidity { get; set; }
 
         /// <summary>
         /// The value of wind speed to show
         /// </summary>
-        public int ValueWind { get; set; }
+        public int? ValueWind { get; set; }
 
         #endregion
 
@@ -48,7 +48,7 @@ namespace Pogodeo.Mobile
         /// </summary>
         /// <param name="name">The name of a provider that returned this data</param>
         /// <param name="updateModel">The initial data to set on this card</param>
-        public WeatherCardViewModel(string name, CardDataAPIModel updateModel)
+        public WeatherCardViewModel(string name, CardHourDataAPIModel updateModel)
         {
             // Set the name
             Name = name;
@@ -65,7 +65,7 @@ namespace Pogodeo.Mobile
         /// Updates this view model with new data
         /// </summary>
         /// <param name="updateModel">New data</param>
-        public void UpdateData(CardDataAPIModel updateModel)
+        public void UpdateData(CardHourDataAPIModel updateModel)
         {
             // Update every value
             ValueTemperature = updateModel.ValueTemperature;

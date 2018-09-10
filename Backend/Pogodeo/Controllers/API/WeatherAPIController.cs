@@ -23,6 +23,11 @@ namespace Pogodeo
         /// </summary>
         private readonly IAccuWeatherApiService mAccuWeatherApiService;
 
+        /// <summary>
+        /// The Pogodynka.net API service
+        /// </summary>
+        private readonly IAerisWeatherApiService mAerisWeatherApiService;
+
         #endregion
 
         #region Constructor
@@ -30,10 +35,11 @@ namespace Pogodeo
         /// <summary>
         /// Default constructor
         /// </summary>
-        public WeatherAPIController(ICityFacade cityFacade, IAccuWeatherApiService accuWeatherApiService)
+        public WeatherAPIController(ICityFacade cityFacade, IAccuWeatherApiService accuWeatherApiService, IAerisWeatherApiService aerisWeatherApiService)
         {
             mCityFacade = cityFacade;
             mAccuWeatherApiService = accuWeatherApiService;
+            mAerisWeatherApiService = aerisWeatherApiService;
         }
 
         #endregion
@@ -56,88 +62,19 @@ namespace Pogodeo
             if (weatherCity == null)
                 return NotFound();
 
-            // Get weather from Onet
-
             // Get weather from AccuWeather
-            var accuResponse = mAccuWeatherApiService.GetAPIInfo(weatherCity).Result as List<AccuWeatherWeatherModel>;
+            var accuResponse = mAccuWeatherApiService.GetAPIInfo(weatherCity).Result as WeatherInformationAPIModel;
 
-            // Get weather from YYY
+            // Get weather from AerisWeather
+            var aerisResponse = mAerisWeatherApiService.GetAPIInfo(weatherCity).Result as WeatherInformationAPIModel;
 
             // Create response object
             var response = new APIWeatherResponse
             {
-                AggregatedWeatherList = new Dictionary<DateTime, WeatherInformationAPIModel>
+                WeatherResponses = new Dictionary<string, WeatherInformationAPIModel>
                 {
-                    {
-                        new DateTime(2018, 11, 20, 15, 00, 00, 00), new WeatherInformationAPIModel
-                        {
-                            ExternalAPIWeatherData = new Dictionary<string, CardDataAPIModel>
-                            {
-                                {
-                                    "Onet", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 20,
-                                        ValueHumidity = 50,
-                                        ValueRain = 20,
-                                        ValueWind = 9
-                                    }
-                                },
-                                {
-                                    "WP", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 22,
-                                        ValueHumidity = 40,
-                                        ValueRain = 10,
-                                        ValueWind = 19
-                                    }
-                                },
-                                {
-                                    "Interia", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 29,
-                                        ValueHumidity = 59,
-                                        ValueRain = 11,
-                                        ValueWind = 11
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    {
-                        new DateTime(2018, 11, 20, 18, 00, 00, 00), new WeatherInformationAPIModel
-                        {
-                            ExternalAPIWeatherData = new Dictionary<string, CardDataAPIModel>
-                            {
-                                {
-                                    "Onet", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 21,
-                                        ValueHumidity = 51,
-                                        ValueRain = 21,
-                                        ValueWind = 9
-                                    }
-                                },
-                                {
-                                    "WP", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 23,
-                                        ValueHumidity = 41,
-                                        ValueRain = 11,
-                                        ValueWind = 19
-                                    }
-                                },
-                                {
-                                    "Interia", new CardDataAPIModel
-                                    {
-                                        ValueTemperature = 33,
-                                        ValueHumidity = 59,
-                                        ValueRain = 12,
-                                        ValueWind = 11
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    { "AccuWeather", accuResponse },
+                    { "AerisWeather", aerisResponse }
                 }
             };
 

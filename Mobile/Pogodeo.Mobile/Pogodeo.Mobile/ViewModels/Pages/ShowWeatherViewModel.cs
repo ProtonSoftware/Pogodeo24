@@ -111,9 +111,9 @@ namespace Pogodeo.Mobile
             // Send an API request
             Task.Run(GetAPIData);
 
-            Items.Add(new WeatherCardViewModel("Onet", new CardDataAPIModel { ValueTemperature = 27, ValueHumidity = 65, ValueRain = 23, ValueWind = 9, WeatherIcon = WeatherIconType.Sun }));
-            Items.Add(new WeatherCardViewModel("Interia", new CardDataAPIModel { ValueTemperature = 23, ValueHumidity = 55, ValueRain = 22, ValueWind = 11, WeatherIcon = WeatherIconType.Rain }));
-            Items.Add(new WeatherCardViewModel("WP", new CardDataAPIModel { ValueTemperature = 21, ValueHumidity = 75, ValueRain = 21, ValueWind = 7, WeatherIcon = WeatherIconType.Cloud }));
+            Items.Add(new WeatherCardViewModel("Onet", new CardHourDataAPIModel { ValueTemperature = 27, ValueHumidity = 65, ValueRain = 23, ValueWind = 9, WeatherIcon = WeatherIconType.Sun }));
+            Items.Add(new WeatherCardViewModel("Interia", new CardHourDataAPIModel { ValueTemperature = 23, ValueHumidity = 55, ValueRain = 22, ValueWind = 11, WeatherIcon = WeatherIconType.Rain }));
+            Items.Add(new WeatherCardViewModel("WP", new CardHourDataAPIModel { ValueTemperature = 21, ValueHumidity = 75, ValueRain = 21, ValueWind = 7, WeatherIcon = WeatherIconType.Cloud }));
         }
 
         #endregion
@@ -157,17 +157,14 @@ namespace Pogodeo.Mobile
             // TODO: Get current date
             var currentDate = new DateTime(2018, 11, 20, 15, 00, 00, 00);
 
-            // Get data for choosen date
-            var currentWeatherData = APIResponse.AggregatedWeatherList.TryGetValue(currentDate, out var weatherInfo);
+            // TODO: Logic
+            var currentWeatherData = APIResponse.WeatherResponses["AccuWeather"].TodayWeatherTruncatedData.TryGetValue(currentDate, out var weatherInfo);
 
             // Update every card
             foreach (var card in Items)
             {
-                // Get info for current external API
-                weatherInfo.ExternalAPIWeatherData.TryGetValue(card.Name, out var weather);
-
-                // Update the card
-                card.UpdateData(weather);
+                // Update the card with current external API info
+                card.UpdateData(weatherInfo);
             }
         }
 

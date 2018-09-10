@@ -16,6 +16,7 @@ namespace Pogodeo
             services.AddScoped<IOpenCageGeocoderService, OpenCageGeocoderService>();
             services.AddScoped<ICityFacade, CityFacade>();
             services.AddScoped<IAccuWeatherApiService, AccuWeatherApiService>();
+            services.AddScoped<IAerisWeatherApiService, AerisWeatherApiService>();
             services.AddScoped<CityMapper, CityMapper>();
 
             // Return services for chaining

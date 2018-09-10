@@ -19,6 +19,16 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public DbSet<SmallCity> SmallCitiesData { get; set; }
 
+        /// <summary>
+        /// AccuWeather cached weather table
+        /// </summary>
+        public DbSet<AccuWeather> AccuWeatherWeather { get; set; }
+
+        /// <summary>
+        /// AerisWeather cached weather table
+        /// </summary>
+        public DbSet<AerisWeather> AerisWeatherWeather { get; set; }
+
         #endregion
 
         #region Constructor

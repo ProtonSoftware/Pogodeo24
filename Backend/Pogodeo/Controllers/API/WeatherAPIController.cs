@@ -14,19 +14,14 @@ namespace Pogodeo
         #region Private Members
 
         /// <summary>
-        /// The facade that gets us proper city to check weather for
+        /// The mapper for city objects
+        /// </summary>
+        private readonly CityMapper mCityMapper;
+
+        /// <summary>
+        /// The facade that handles city providing and weather updating
         /// </summary>
         private readonly ICityFacade mCityFacade;
-
-        /// <summary>
-        /// The AccuWeather API service
-        /// </summary>
-        private readonly IAccuWeatherApiService mAccuWeatherApiService;
-
-        /// <summary>
-        /// The Pogodynka.net API service
-        /// </summary>
-        private readonly IAerisWeatherApiService mAerisWeatherApiService;
 
         #endregion
 
@@ -35,11 +30,10 @@ namespace Pogodeo
         /// <summary>
         /// Default constructor
         /// </summary>
-        public WeatherAPIController(ICityFacade cityFacade, IAccuWeatherApiService accuWeatherApiService, IAerisWeatherApiService aerisWeatherApiService)
+        public WeatherAPIController(ICityFacade cityFacade, CityMapper cityMapper)
         {
             mCityFacade = cityFacade;
-            mAccuWeatherApiService = accuWeatherApiService;
-            mAerisWeatherApiService = aerisWeatherApiService;
+            mCityMapper = cityMapper;
         }
 
         #endregion
@@ -55,26 +49,23 @@ namespace Pogodeo
         [Route(ApiRoutes.GetWeatherForCity)]
         public IActionResult GetWeatherForCity([FromBody]string city)
         {
-            // Get the city that we will get weather for
-            var weatherCity = mCityFacade.GetWeatherCity(city);
+            // If we have out-dated weather info, update it
+            var result = mCityFacade.UpdateWeatherIfNecessery(city);
 
-            // If none was found
-            if (weatherCity == null)
+            // If no city was found
+            if (!result.Success)
                 return NotFound();
 
-            // Get weather from AccuWeather
-            var accuResponse = mAccuWeatherApiService.GetAPIInfo(weatherCity).Result as WeatherInformationAPIModel;
-
-            // Get weather from AerisWeather
-            var aerisResponse = mAerisWeatherApiService.GetAPIInfo(weatherCity).Result as WeatherInformationAPIModel;
+            // Get up-to-date weather for this city
+            var weatherCity = mCityFacade.GetWeatherCity(city);
 
             // Create response object
             var response = new APIWeatherResponse
             {
                 WeatherResponses = new Dictionary<string, WeatherInformationAPIModel>
                 {
-                    { "AccuWeather", accuResponse },
-                    { "AerisWeather", aerisResponse }
+                    { "AccuWeather", mCityMapper.Map(weatherCity.AccuWeatherContext) },
+                    { "AerisWeather", mCityMapper.Map(weatherCity.AerisWeatherContext) }
                 }
             };
 

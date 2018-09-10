@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pogodeo.DataAccess;
 
 namespace Pogodeo.DataAccess.Migrations
 {
     [DbContext(typeof(PogodeoAppDataContext))]
-    partial class PogodeoAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20180910120203_AccuWeatherWeatherTable")]
+    partial class AccuWeatherWeatherTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,31 +25,17 @@ namespace Pogodeo.DataAccess.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("AssociatedBigCityId");
+
                     b.Property<DateTime>("LastUpdateDate");
 
-                    b.Property<string>("WeatherDayData");
-
-                    b.Property<string>("WeatherHourData");
+                    b.Property<string>("WeatherData");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AssociatedBigCityId");
 
                     b.ToTable("AccuWeatherWeather");
-                });
-
-            modelBuilder.Entity("Pogodeo.DataAccess.AerisWeather", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("LastUpdateDate");
-
-                    b.Property<string>("WeatherDayData");
-
-                    b.Property<string>("WeatherHourData");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AerisWeatherWeather");
                 });
 
             modelBuilder.Entity("Pogodeo.DataAccess.BigCity", b =>
@@ -57,10 +45,6 @@ namespace Pogodeo.DataAccess.Migrations
 
                     b.Property<string>("AccuWeatherLocalizationKey");
 
-                    b.Property<int?>("AccuWeatherWeatherId");
-
-                    b.Property<int?>("AerisWeatherWeatherId");
-
                     b.Property<string>("CityName");
 
                     b.Property<string>("Latitude");
@@ -68,10 +52,6 @@ namespace Pogodeo.DataAccess.Migrations
                     b.Property<string>("Longitude");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccuWeatherWeatherId");
-
-                    b.HasIndex("AerisWeatherWeatherId");
 
                     b.ToTable("BigCitiesData");
                 });
@@ -96,15 +76,11 @@ namespace Pogodeo.DataAccess.Migrations
                     b.ToTable("SmallCitiesData");
                 });
 
-            modelBuilder.Entity("Pogodeo.DataAccess.BigCity", b =>
+            modelBuilder.Entity("Pogodeo.DataAccess.AccuWeather", b =>
                 {
-                    b.HasOne("Pogodeo.DataAccess.AccuWeather", "AccuWeatherWeather")
+                    b.HasOne("Pogodeo.DataAccess.BigCity", "AssociatedBigCity")
                         .WithMany()
-                        .HasForeignKey("AccuWeatherWeatherId");
-
-                    b.HasOne("Pogodeo.DataAccess.AerisWeather", "AerisWeatherWeather")
-                        .WithMany()
-                        .HasForeignKey("AerisWeatherWeatherId");
+                        .HasForeignKey("AssociatedBigCityId");
                 });
 
             modelBuilder.Entity("Pogodeo.DataAccess.SmallCity", b =>

@@ -1,7 +1,10 @@
-﻿namespace Pogodeo.Services
+﻿using Pogodeo.Core;
+
+namespace Pogodeo.Services
 {
     public interface ICityFacade
     {
-        string GetWeatherCity(string city);
+        BigCityContext GetWeatherCity(string city);
+        OperationResult UpdateWeatherIfNecessery(string city);
     }
 }

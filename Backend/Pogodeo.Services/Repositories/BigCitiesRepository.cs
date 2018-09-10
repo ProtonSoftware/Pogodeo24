@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Pogodeo.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -125,7 +126,41 @@ namespace Pogodeo.Services
             // Update its localization key
             result.AccuWeatherLocalizationKey = localizationKey;
 
-            // Update it in the database by saving changse
+            // Update it in the database by saving changes
+            SaveChanges();
+        }
+
+        /// <summary>
+        /// Updates the AerisWeather weather info for specified city
+        /// </summary>
+        /// <param name="context">The city of which weather is being updated</param>
+        public void UpdateWeatherInfo(BigCityContext context)
+        {
+            // Get the entity from database
+            var result = DbSet.Where(model => InsensitiveStringComparition(model.CityName, context.CityName)).FirstOrDefault();
+
+            // If we didn't get one
+            if (result == null)
+                // Don't update anything
+                return;
+
+            // Update AccuWeather weather info
+            result.AccuWeatherWeather = new AccuWeather
+            {
+                WeatherHourData = JsonConvert.SerializeObject(context.AccuWeatherContext.TodayWeatherTruncatedData),
+                WeatherDayData = JsonConvert.SerializeObject(context.AccuWeatherContext.NextDaysWeatherTruncatedData),
+                LastUpdateDate = DateTime.Now
+            };
+
+            // Update AerisWeather weather info
+            result.AerisWeatherWeather = new AerisWeather
+            {
+                WeatherHourData = JsonConvert.SerializeObject(context.AerisWeatherContext.TodayWeatherTruncatedData),
+                WeatherDayData = JsonConvert.SerializeObject(context.AerisWeatherContext.NextDaysWeatherTruncatedData),
+                LastUpdateDate = DateTime.Now
+            };
+
+            // Update it in the database by saving changes
             SaveChanges();
         }
 

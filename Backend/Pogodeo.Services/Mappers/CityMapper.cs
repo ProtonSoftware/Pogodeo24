@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
+using Newtonsoft.Json;
+using Pogodeo.Core;
 using Pogodeo.DataAccess;
+using System;
+using System.Collections.Generic;
 
 namespace Pogodeo.Services
 {
     /// <summary>
-    /// 
+    /// The mapper for city objects
     /// </summary>
     public class CityMapper
     {
@@ -28,9 +32,26 @@ namespace Pogodeo.Services
             mMapper = new MapperConfiguration(config =>
             {
                 // Map from BigCity to BigCityContext
-                config.CreateMap<BigCity, BigCityContext>();
+                config.CreateMap<BigCity, BigCityContext>()
+                      .ForMember(dest => dest.AccuWeatherContext, opt => opt.ResolveUsing(entity => new WeatherContext
+                      {
+                          TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.AccuWeatherWeather == null ? "" : entity.AccuWeatherWeather.WeatherHourData),
+                          NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.AccuWeatherWeather == null ? "" : entity.AccuWeatherWeather.WeatherDayData)
+                      }))
+                      .ForMember(dest => dest.AerisWeatherContext, opt => opt.ResolveUsing(entity => new WeatherContext
+                      {
+                          TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherHourData),
+                          NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherDayData)
+                      }));
+
+                // Map from SmallCity to SmallCityContext
                 config.CreateMap<SmallCity, SmallCityContext>();
+
+                // Map from WeatherContext to WeatherInformationAPIModel
+                config.CreateMap<WeatherContext, WeatherInformationAPIModel>()
+                      .ReverseMap();
             })
+            // And create it afterwards
             .CreateMapper();
         }
 
@@ -51,6 +72,20 @@ namespace Pogodeo.Services
         /// <param name="city">The <see cref="SmallCity"/> to map</param>
         /// <returns><see cref="SmallCityContext"/></returns>
         public SmallCityContext Map(SmallCity city) => mMapper.Map<SmallCityContext>(city);
+
+        /// <summary>
+        /// Maps a <see cref="WeatherContext"/> to a <see cref="WeatherInformationAPIModel"/> object
+        /// </summary>
+        /// <param name="context">The <see cref="WeatherContext"/> to map</param>
+        /// <returns><see cref="WeatherInformationAPIModel"/></returns>
+        public WeatherInformationAPIModel Map(WeatherContext context) => mMapper.Map<WeatherInformationAPIModel>(context);
+
+        /// <summary>
+        /// Maps a <see cref="WeatherInformationAPIModel"/> to a <see cref="WeatherContext"/> object
+        /// </summary>
+        /// <param name="weather">The <see cref="WeatherInformationAPIModel"/> to map</param>
+        /// <returns><see cref="WeatherContext"/></returns>
+        public WeatherContext Map(WeatherInformationAPIModel weather) => mMapper.Map<WeatherContext>(weather);
 
         #endregion
     }

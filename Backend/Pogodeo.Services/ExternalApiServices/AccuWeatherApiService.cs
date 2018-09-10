@@ -219,7 +219,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (jsonHourObject == null)
                 // Return failure
-                return new OperationResult<object>(false);
+                return new OperationResult<WeatherInformationAPIModel>(false);
 
             // Collect every weather data
             foreach (var weather in jsonHourObject)
@@ -250,7 +250,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (jsonDayObject == null)
                 // Return failure
-                return new OperationResult<object>(false);
+                return new OperationResult<WeatherInformationAPIModel>(false);
 
             // Collect every weather data
             foreach (var weather in jsonDayObject.DailyForecasts)
@@ -266,7 +266,7 @@ namespace Pogodeo.Services
             #endregion
 
             // Finally return our response model
-            return new OperationResult<object>(true, response);
+            return new OperationResult<WeatherInformationAPIModel>(true, response);
         }
 
         #endregion

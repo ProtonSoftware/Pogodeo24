@@ -41,6 +41,16 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public virtual List<SmallCity> SubordinateCities { get; set; }
 
+        /// <summary>
+        /// Last saved AccuWeather weather for this city
+        /// </summary>
+        public virtual AccuWeather AccuWeatherWeather { get; set; }
+
+        /// <summary>
+        /// Last saved AerisWeather weather for this city
+        /// </summary>
+        public virtual AerisWeather AerisWeatherWeather { get; set; }
+
         #endregion
     }
 }

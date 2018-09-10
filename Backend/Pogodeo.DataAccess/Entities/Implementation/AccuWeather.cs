@@ -3,9 +3,9 @@
 namespace Pogodeo.DataAccess
 {
     /// <summary>
-    /// The entity for big city weather
+    /// The entity for AccuWeather cached weather
     /// </summary>
-    public class BigCityWeather : BaseObject<int>
+    public class AccuWeather : BaseObject<int>
     {
         #region Public Properties
 
@@ -14,14 +14,15 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public DateTime LastUpdateDate { get; set; }
 
-        #endregion
-
-        #region Relational Properties
+        /// <summary>
+        /// The hourly weather data as JSON text
+        /// </summary>
+        public string WeatherHourData { get; set; }
 
         /// <summary>
-        /// The city that this weather is associated with
+        /// The daily weather data as JSON text
         /// </summary>
-        public virtual BigCity AssociatedBigCity { get; set; }
+        public string WeatherDayData { get; set; }
 
         #endregion
     }

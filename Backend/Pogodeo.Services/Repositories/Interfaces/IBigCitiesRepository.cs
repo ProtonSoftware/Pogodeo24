@@ -9,5 +9,6 @@ namespace Pogodeo.Services
         void AttachNewSmallCity(string name, string latitude, string longitude);
         string GetAccuWeatherLocalizationKey(string city);
         void UpdateAccuWeatherLocalizationKey(string city, string localizationKey);
+        void UpdateWeatherInfo(BigCityContext context);
     }
 }

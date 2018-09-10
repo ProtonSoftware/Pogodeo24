@@ -99,7 +99,7 @@ namespace Pogodeo.Services
         /// </summary>
         /// <param name="city">The name of a city to send request for</param>
         /// <returns>API response model or failure</returns>
-        public OperationResult<object> GetAPIInfo(string city)
+        public OperationResult<OpenCageGeocoderCityModel> GetAPIInfo(string city)
         {
             // Build url for API request
             var apiUrl = ExternalApiServiceHelpers.BuildUrl(Host, CityInfoPath, $"?q={city}&", ApiKeyName, ApiKeyValue);
@@ -113,7 +113,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (jsonObject.status.code != 200)
                 // Return failure
-                return new OperationResult<object>(false);
+                return new OperationResult<OpenCageGeocoderCityModel>(false);
 
             // Otherwise, create our API response model
             var responseModel = new OpenCageGeocoderCityModel
@@ -124,7 +124,7 @@ namespace Pogodeo.Services
             };
 
             // Return the model
-            return new OperationResult<object>(true, responseModel);
+            return new OperationResult<OpenCageGeocoderCityModel>(true, responseModel);
         }
 
         #endregion

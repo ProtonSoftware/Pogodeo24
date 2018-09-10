@@ -190,7 +190,7 @@ namespace Pogodeo.Services
         /// </summary>
         /// <param name="city">The name of a city to send request for</param>
         /// <returns>API response model or failure</returns>
-        public OperationResult<object> GetAPIInfo(string city)
+        public OperationResult<WeatherInformationAPIModel> GetAPIInfo(string city)
         {
             // Prepare response model to return
             var response = new WeatherInformationAPIModel
@@ -213,7 +213,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (!jsonHourObject.success)
                 // Return failure
-                return new OperationResult<object>(jsonHourObject.success);
+                return new OperationResult<WeatherInformationAPIModel>(jsonHourObject.success);
 
             // Collect every weather data
             foreach (var weather in jsonHourObject.response[0].periods)
@@ -244,7 +244,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (!jsonDayObject.success)
                 // Return failure
-                return new OperationResult<object>(jsonDayObject.success);
+                return new OperationResult<WeatherInformationAPIModel>(jsonDayObject.success);
 
             // Collect every weather data
             var weatherObject = new CardDayDataAPIModel();
@@ -271,7 +271,7 @@ namespace Pogodeo.Services
             #endregion
 
             // Finally return our response model
-            return new OperationResult<object>(true, response);
+            return new OperationResult<WeatherInformationAPIModel>(true, response);
         }
 
         #endregion

@@ -13,11 +13,14 @@ namespace Pogodeo
             // Add services to the collection
             services.AddScoped<IBigCitiesRepository, BigCitiesRepository>();
             services.AddScoped<ISmallCitiesRepository, SmallCitiesRepository>();
-            services.AddScoped<IOpenCageGeocoderService, OpenCageGeocoderService>();
+
             services.AddScoped<ICityFacade, CityFacade>();
+
+            services.AddScoped<CityMapper, CityMapper>();
+
+            services.AddScoped<IOpenCageGeocoderService, OpenCageGeocoderService>();
             services.AddScoped<IAccuWeatherApiService, AccuWeatherApiService>();
             services.AddScoped<IAerisWeatherApiService, AerisWeatherApiService>();
-            services.AddScoped<CityMapper, CityMapper>();
 
             // Return services for chaining
             return services;

@@ -188,7 +188,7 @@ namespace Pogodeo.Services
         /// </summary>
         /// <param name="city">The name of a city to send request for</param>
         /// <returns>API response model or failure</returns>
-        public OperationResult<object> GetAPIInfo(string city)
+        public OperationResult<WeatherInformationAPIModel> GetAPIInfo(string city)
         {
             // Prepare response model to return
             var response = new WeatherInformationAPIModel

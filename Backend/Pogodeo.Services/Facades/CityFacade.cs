@@ -93,12 +93,12 @@ namespace Pogodeo.Services
             var response = mOpenCageGeocoderService.GetAPIInfo(city);
 
             // If we didn't get a city
-            if (!response.Success || !(response.Result is OpenCageGeocoderCityModel newCity))
+            if (!response.Success || response.Result == null)
                 // City doesn't exist
                 return;
 
             // Otherwise, get the associated big city
-            mBigCitiesRepository.AttachNewSmallCity(newCity.Name, newCity.Latitude, newCity.Longitude);
+            mBigCitiesRepository.AttachNewSmallCity(response.Result.Name, response.Result.Latitude, response.Result.Longitude);
         }
     }
 }

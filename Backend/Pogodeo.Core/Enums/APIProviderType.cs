@@ -14,5 +14,10 @@
         /// AerisWeather provider - aerisweather.com
         /// </summary>
         AerisWeather,
+
+        /// <summary>
+        /// WorldWeatherOnline provider - worldweatheronline.com
+        /// </summary>
+        WorldWeatherOnline
     }
 }

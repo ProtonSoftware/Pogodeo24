@@ -205,7 +205,7 @@ namespace Pogodeo.Services
                 // Get one from API
                 localizationKey = GetLocalizationKeyFromApi(city);
 
-            #region Today's data
+            #region Today's Data
 
             // Build an url for api request based on localization key
             var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherHourPath, $"{localizationKey}?details=true&", ApiKeyName, ApiKeyValue);

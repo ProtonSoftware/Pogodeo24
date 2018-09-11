@@ -65,7 +65,8 @@ namespace Pogodeo
                 WeatherResponses = new Dictionary<APIProviderType, WeatherInformationAPIModel>
                 {
                     { APIProviderType.AccuWeather, mCityMapper.Map(weatherCity.AccuWeatherContext) },
-                    { APIProviderType.AerisWeather, mCityMapper.Map(weatherCity.AerisWeatherContext) }
+                    { APIProviderType.AerisWeather, mCityMapper.Map(weatherCity.AerisWeatherContext) },
+                    { APIProviderType.WorldWeatherOnline, mCityMapper.Map(weatherCity.WWOContext) }
                 }
             };
 

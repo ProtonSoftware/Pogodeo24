@@ -6675,3 +6675,212 @@ LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWea
 [2018-09-11 11:10:19] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 34844.0469ms
 [2018-09-11 11:10:19] An unhandled exception has occurred while executing the request
 [2018-09-11 11:10:20] Request finished in 35239.6125ms 500 text/html; charset=utf-8
+[2018-09-11 12:47:49] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-11 12:47:51] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 12:47:51] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:47:51] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:47:51] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-11 12:47:51] No migrations were applied. The database is already up to date.
+[2018-09-11 12:47:51] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 12:54:27] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-11 12:54:29] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 12:54:29] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:54:29] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:54:30] Executed DbCommand (59ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-11 12:54:30] Applying migration '20180911104752_WWOProvider'.
+[2018-09-11 12:54:30] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [BigCitiesData] ADD [WWOWeatherId] int NULL;
+[2018-09-11 12:54:30] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [WWOWeather] (
+    [Id] int NOT NULL IDENTITY,
+    [LastUpdateDate] datetime2 NOT NULL,
+    [WeatherHourData] nvarchar(max) NULL,
+    [WeatherDayData] nvarchar(max) NULL,
+    CONSTRAINT [PK_WWOWeather] PRIMARY KEY ([Id])
+);
+[2018-09-11 12:54:30] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_BigCitiesData_WWOWeatherId] ON [BigCitiesData] ([WWOWeatherId]);
+[2018-09-11 12:54:30] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [BigCitiesData] ADD CONSTRAINT [FK_BigCitiesData_WWOWeather_WWOWeatherId] FOREIGN KEY ([WWOWeatherId]) REFERENCES [WWOWeather] ([Id]) ON DELETE NO ACTION;
+[2018-09-11 12:54:30] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20180911104752_WWOProvider', N'2.1.2-rtm-30932');
+[2018-09-11 12:54:30] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 12:54:30] Request starting HTTP/1.1 DEBUG http://localhost:53052/  0
+[2018-09-11 12:54:31] Request finished in 214.9589ms 200 
+[2018-09-11 12:54:31] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 12:54:36] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 12:54:37] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5626.1068ms
+[2018-09-11 12:54:37] Request starting HTTP/1.1 GET http://localhost:53052/js/_Components/WeatherTile.js?v=l5Cy8vdvtiYwqtV5sWcL4opCjsNchZVaPfqFRx6-R8w  
+[2018-09-11 12:54:37] Request finished in 6248.1331ms 200 text/html; charset=utf-8
+[2018-09-11 12:54:37] Sending file. Request path: '/js/_Components/WeatherTile.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\_Components\WeatherTile.js'
+[2018-09-11 12:54:37] Request finished in 154.8974ms 200 application/javascript
+[2018-09-11 12:54:59] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryf7fYhOxmhlVPMUg7 413
+[2018-09-11 12:54:59] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-11 12:54:59] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 8
+[2018-09-11 12:54:59] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 5.2125ms
+[2018-09-11 12:54:59] An unhandled exception has occurred while executing the request
+[2018-09-11 12:55:00] Request finished in 325.2283ms 500 text/html; charset=utf-8
+[2018-09-11 12:55:00] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-09-11 12:55:00] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 1201.6921ms
+[2018-09-11 12:55:00] An unhandled exception has occurred while executing the request
+[2018-09-11 12:55:00] Request finished in 1547.6147ms 500 text/html; charset=utf-8
+[2018-09-11 12:55:20] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 12:55:20] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 12:55:20] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 12:55:20] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 68.7893ms
+[2018-09-11 12:55:20] Request finished in 260.2743ms 200 text/html; charset=utf-8
+[2018-09-11 12:55:23] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary4eqNzeyK5ZKFB2bN 415
+[2018-09-11 12:55:23] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-11 12:55:23] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 10
+[2018-09-11 12:55:23] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 30.0386ms
+[2018-09-11 12:55:23] An unhandled exception has occurred while executing the request
+[2018-09-11 12:55:23] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-09-11 12:55:23] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 338.2421ms
+[2018-09-11 12:55:23] Request finished in 352.0699ms 500 text/html; charset=utf-8
+[2018-09-11 12:55:23] An unhandled exception has occurred while executing the request
+[2018-09-11 12:55:23] Request finished in 711.4227ms 500 text/html; charset=utf-8
+[2018-09-11 12:56:09] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 12:56:09] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 12:56:09] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 12:56:09] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 57.2838ms
+[2018-09-11 12:56:09] Request finished in 119.0822ms 200 text/html; charset=utf-8
+[2018-09-11 12:56:10] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 12:56:10] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 12:56:10] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 12:56:10] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 43.6356ms
+[2018-09-11 12:56:10] Request finished in 86.9499ms 200 text/html; charset=utf-8
+[2018-09-11 12:56:15] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarybepBHxX3xbjmA5Cv 413
+[2018-09-11 12:56:15] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-11 12:56:15] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 8
+[2018-09-11 12:56:15] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 1.3896ms
+[2018-09-11 12:56:15] An unhandled exception has occurred while executing the request
+[2018-09-11 12:56:15] Request finished in 201.1008ms 500 text/html; charset=utf-8
+[2018-09-11 12:56:15] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-09-11 12:56:15] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 692.5213ms
+[2018-09-11 12:56:16] Request starting HTTP/1.1 GET http://localhost:53052/js/ShowWeather.js?v=sHN_ROmMikAccAXRiVPQRfAEzaNYPaJzG_0_hMRrrm8  
+[2018-09-11 12:56:16] Request finished in 865.5074ms 200 text/html; charset=utf-8
+[2018-09-11 12:56:16] Sending file. Request path: '/js/ShowWeather.js'. Physical path: 'C:\Users\minor\Documents\GitHub\Pogodeo24\Backend\Pogodeo\wwwroot\js\ShowWeather.js'
+[2018-09-11 12:56:16] Request finished in 213.3363ms 200 application/javascript
+[2018-09-11 12:58:50] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-11 12:58:52] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 12:58:53] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:58:53] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 12:58:53] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-11 12:58:53] No migrations were applied. The database is already up to date.
+[2018-09-11 12:58:53] Request starting HTTP/1.1 DEBUG http://localhost:53052/  0
+[2018-09-11 12:58:53] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 12:58:53] Request finished in 200.628ms 200 
+[2018-09-11 12:58:54] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 12:58:59] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 12:59:00] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5763.4299ms
+[2018-09-11 12:59:00] Request finished in 6559.3006ms 200 text/html; charset=utf-8
+[2018-09-11 12:59:04] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundarywQjAYuypMcxuDV15 413
+[2018-09-11 12:59:05] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-11 12:59:05] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 8
+[2018-09-11 12:59:05] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Kielce) - ModelState is Valid
+[2018-09-11 12:59:09] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 12:59:10] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-11 12:59:10] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-11 12:59:10] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-11 12:59:10] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-11 12:59:10] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-11 12:59:11] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-11 01:00:12] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-11 01:00:15] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 01:00:15] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 01:00:15] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-11 01:00:15] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-11 01:00:15] No migrations were applied. The database is already up to date.
+[2018-09-11 01:00:16] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-11 01:00:16] Request starting HTTP/1.1 DEBUG http://localhost:53052/  0
+[2018-09-11 01:00:16] Request finished in 184.0661ms 200 
+[2018-09-11 01:00:16] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-11 01:00:21] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-11 01:00:21] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 4936.8123ms
+[2018-09-11 01:00:21] Request finished in 5516.9501ms 200 text/html; charset=utf-8
+[2018-09-11 01:00:27] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundary35FmuUcEng2YJcSz 415
+[2018-09-11 01:00:27] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-11 01:00:28] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 10
+[2018-09-11 01:00:28] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Szczecin) - ModelState is Valid
+[2018-09-11 01:00:28] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-11 01:00:29] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-11 01:00:29] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-11 01:00:29] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-11 01:00:29] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-11 01:00:29] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-11 01:00:29] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-11 01:01:37] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __context_CityName_0)' could not be translated and will be evaluated locally.
+[2018-09-11 01:01:37] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-11 01:01:37] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-11 01:01:37] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AccuWeatherWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AccuWeatherWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-11 01:01:37] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AerisWeatherWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AerisWeatherWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-11 01:01:37] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [WWOWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [WWOWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-11 01:01:37] Executed DbCommand (7ms) [Parameters=[@p6='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [BigCitiesData] SET [AccuWeatherWeatherId] = @p3, [AerisWeatherWeatherId] = @p4, [WWOWeatherId] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+[2018-09-11 01:01:40] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-11 01:01:40] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-09-11 01:01:40] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 72350.0672ms
+[2018-09-11 01:01:40] Request finished in 72450.2647ms 200 application/json; charset=utf-8
+[2018-09-11 01:01:40] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-09-11 01:01:40] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 73247.6714ms
+[2018-09-11 01:01:40] Request finished in 73317.8274ms 200 text/html; charset=utf-8

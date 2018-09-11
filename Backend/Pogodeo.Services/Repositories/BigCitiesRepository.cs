@@ -154,6 +154,11 @@ namespace Pogodeo.Services
                 // Create new one
                 result.AerisWeatherWeather = new AerisWeather();
 
+            // If none WWO weather exists for this city
+            if (result.WWOWeather == null)
+                // Create new one
+                result.WWOWeather = new WWO();
+
             // Update AccuWeather weather info
             result.AccuWeatherWeather.WeatherHourData = JsonConvert.SerializeObject(context.AccuWeatherContext.TodayWeatherTruncatedData);
             result.AccuWeatherWeather.WeatherDayData = JsonConvert.SerializeObject(context.AccuWeatherContext.NextDaysWeatherTruncatedData);
@@ -163,6 +168,11 @@ namespace Pogodeo.Services
             result.AerisWeatherWeather.WeatherHourData = JsonConvert.SerializeObject(context.AerisWeatherContext.TodayWeatherTruncatedData);
             result.AerisWeatherWeather.WeatherDayData = JsonConvert.SerializeObject(context.AerisWeatherContext.NextDaysWeatherTruncatedData);
             result.AerisWeatherWeather.LastUpdateDate = DateTime.Now;
+
+            // Update WWO weather info
+            result.WWOWeather.WeatherHourData = JsonConvert.SerializeObject(context.WWOContext.TodayWeatherTruncatedData);
+            result.WWOWeather.WeatherDayData = JsonConvert.SerializeObject(context.WWOContext.NextDaysWeatherTruncatedData);
+            result.WWOWeather.LastUpdateDate = DateTime.Now;
 
             // Update it in the database by saving changes
             SaveChanges();

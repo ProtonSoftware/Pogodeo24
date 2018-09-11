@@ -1,6 +1,4 @@
-﻿using Pogodeo.Core;
-
-namespace Pogodeo.Services
+﻿namespace Pogodeo.Services
 {
     /// <summary>
     /// The context for <see cref="BigCity"/>
@@ -36,6 +34,11 @@ namespace Pogodeo.Services
         /// The weather data for this city from AerisWeather
         /// </summary>
         public WeatherContext AerisWeatherContext { get; set; }
+
+        // <summary>
+        /// The weather data for this city from WWO (WorldWeatherOnline)
+        /// </summary>
+        public WeatherContext WWOContext { get; set; }
 
         #endregion
     }

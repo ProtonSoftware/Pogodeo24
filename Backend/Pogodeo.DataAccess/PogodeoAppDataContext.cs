@@ -29,6 +29,11 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public DbSet<AerisWeather> AerisWeatherWeather { get; set; }
 
+        /// <summary>
+        /// WWO (WorldWeatherOnline) cached weather table
+        /// </summary>
+        public DbSet<WWO> WWOWeather { get; set; }
+
         #endregion
 
         #region Constructor

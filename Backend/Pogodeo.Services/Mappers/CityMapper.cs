@@ -44,6 +44,12 @@ namespace Pogodeo.Services
                           LastUpdateDate = entity.AerisWeatherWeather == null ? new DateTime() : entity.AerisWeatherWeather.LastUpdateDate,
                           TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherHourData),
                           NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherDayData)
+                      }))
+                      .ForMember(dest => dest.WWOContext, opt => opt.ResolveUsing(entity => new WeatherContext
+                      {
+                          LastUpdateDate = entity.WWOWeather == null ? new DateTime() : entity.WWOWeather.LastUpdateDate,
+                          TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.WWOWeather == null ? "" : entity.WWOWeather.WeatherHourData),
+                          NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.WWOWeather == null ? "" : entity.WWOWeather.WeatherDayData)
                       }));
 
                 // Map from SmallCity to SmallCityContext

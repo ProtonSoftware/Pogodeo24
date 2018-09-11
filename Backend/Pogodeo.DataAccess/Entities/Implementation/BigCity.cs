@@ -51,6 +51,11 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public virtual AerisWeather AerisWeatherWeather { get; set; }
 
+        /// <summary>
+        /// Last saved WWO (WorldWeatherOnline) weather for this city
+        /// </summary>
+        public virtual WWO WWOWeather { get; set; }
+
         #endregion
     }
 }

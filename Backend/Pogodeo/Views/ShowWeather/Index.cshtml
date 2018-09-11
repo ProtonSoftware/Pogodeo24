@@ -39,11 +39,11 @@
             </div>
 
             <div class="row card-deck mt-2">
-
-                @foreach (var weatherInfo in Model.APIResponse.WeatherResponses)
-                {
-                    <weather-tile v-bind:weather="@weatherInfo.ToJson()"></weather-tile>
-                }
+                @*
+        @foreach (var weatherInfo in Model.APIResponse.WeatherResponses)
+        {
+            <weather-tile v-bind:weather="@weatherInfo.ToJson()"></weather-tile>
+        }*@
 
             </div>
 

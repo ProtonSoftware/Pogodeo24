@@ -42,9 +42,14 @@ namespace Pogodeo.Services
         private readonly IAccuWeatherApiService mAccuWeatherApiService;
 
         /// <summary>
-        /// The Pogodynka.net API service
+        /// The AerisWeather API service
         /// </summary>
         private readonly IAerisWeatherApiService mAerisWeatherApiService;
+
+        /// <summary>
+        /// The WWO (WorldWeatherOnline) API service
+        /// </summary>
+        private readonly IWWOApiService mWWOApiService;
 
         #endregion
 
@@ -59,7 +64,8 @@ namespace Pogodeo.Services
                           IBigCitiesRepository bigCitiesRepository, 
                           ISmallCitiesRepository smallCitiesRepository, 
                           IAccuWeatherApiService accuWeatherApiService, 
-                          IAerisWeatherApiService aerisWeatherApiService)
+                          IAerisWeatherApiService aerisWeatherApiService,
+                          IWWOApiService wwoApiService)
         {
             mCityMapper = cityMapper;
             mConfiguration = configuration;
@@ -68,6 +74,7 @@ namespace Pogodeo.Services
             mSmallCitiesRepository = smallCitiesRepository;
             mAccuWeatherApiService = accuWeatherApiService;
             mAerisWeatherApiService = aerisWeatherApiService;
+            mWWOApiService = wwoApiService;
         }
 
         #endregion
@@ -141,6 +148,10 @@ namespace Pogodeo.Services
             // Get weather from AerisWeather
             var aerisResponse = mAerisWeatherApiService.GetAPIInfo(weatherCity.CityName).Result;
             weatherCity.AerisWeatherContext = mCityMapper.Map(aerisResponse);
+
+            // Get weather from WWO
+            var wwoResponse = mWWOApiService.GetAPIInfo(weatherCity.CityName).Result;
+            weatherCity.WWOContext = mCityMapper.Map(wwoResponse);
 
             // Save new info to the database
             mBigCitiesRepository.UpdateWeatherInfo(weatherCity);

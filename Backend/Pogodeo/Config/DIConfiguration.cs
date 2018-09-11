@@ -21,6 +21,7 @@ namespace Pogodeo
             services.AddScoped<IOpenCageGeocoderService, OpenCageGeocoderService>();
             services.AddScoped<IAccuWeatherApiService, AccuWeatherApiService>();
             services.AddScoped<IAerisWeatherApiService, AerisWeatherApiService>();
+            services.AddScoped<IWWOApiService, WWOApiService>();
 
             // Return services for chaining
             return services;

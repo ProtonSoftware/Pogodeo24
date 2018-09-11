@@ -18,11 +18,6 @@ namespace Pogodeo.Services
         /// </summary>
         private readonly IConfigurationSection mConfigurationSection;
 
-        /// <summary>
-        /// The repository to access big cities data from database
-        /// </summary>
-        private readonly IBigCitiesRepository mBigCitiesRepository;
-
         #endregion
 
         #region Private JSON Classes
@@ -172,13 +167,10 @@ namespace Pogodeo.Services
         /// Default constructor
         /// </summary>
         /// <param name="config">The config for this app containing API info</param>
-        public AerisWeatherApiService(IConfiguration config, IBigCitiesRepository bigCitiesRepository)
+        public AerisWeatherApiService(IConfiguration config)
         {
             // Catch the configuration section for this API from configuration
             mConfigurationSection = config.GetSection("AerisWeatherAPI").GetSection("Config");
-
-            // Get repository for big cities
-            mBigCitiesRepository = bigCitiesRepository;
         }
 
         #endregion
@@ -199,7 +191,7 @@ namespace Pogodeo.Services
                 NextDaysWeatherTruncatedData = new Dictionary<DateTime, CardDayDataAPIModel>()
             };
 
-            #region Today's data
+            #region Today's Data
 
             // Build an url for api request
             var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"{city},pl?filter=1hr&limit=24&client_id={ClientID}&", ApiKeyName, ApiKeyValue);

@@ -1,0 +1,5 @@
+Ikonka
+Temp *C
+Wilgotnoœæ
+Wiatr
+Opady

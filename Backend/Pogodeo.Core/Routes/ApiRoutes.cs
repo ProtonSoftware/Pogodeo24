@@ -8,6 +8,11 @@
         /// <summary>
         /// Route to the GetWeatherForCity call
         /// </summary>
-        public const string GetWeatherForCity = "/api/GetWeatherFor"; 
+        public const string GetWeatherForCity = "/api/GetWeatherFor";
+
+        /// <summary>
+        /// Route to the CheckIfWeatherRequiresUpdate call
+        /// </summary>
+        public const string CheckIfWeatherRequiresUpdate = "/api/CheckWeatherUpdate";
     }
 }

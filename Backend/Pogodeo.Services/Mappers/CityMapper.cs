@@ -35,11 +35,13 @@ namespace Pogodeo.Services
                 config.CreateMap<BigCity, BigCityContext>()
                       .ForMember(dest => dest.AccuWeatherContext, opt => opt.ResolveUsing(entity => new WeatherContext
                       {
+                          LastUpdateDate = entity.AccuWeatherWeather == null ? new DateTime() : entity.AccuWeatherWeather.LastUpdateDate,
                           TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.AccuWeatherWeather == null ? "" : entity.AccuWeatherWeather.WeatherHourData),
                           NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.AccuWeatherWeather == null ? "" : entity.AccuWeatherWeather.WeatherDayData)
                       }))
                       .ForMember(dest => dest.AerisWeatherContext, opt => opt.ResolveUsing(entity => new WeatherContext
                       {
+                          LastUpdateDate = entity.AerisWeatherWeather == null ? new DateTime() : entity.AerisWeatherWeather.LastUpdateDate,
                           TodayWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardHourDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherHourData),
                           NextDaysWeatherTruncatedData = JsonConvert.DeserializeObject<Dictionary<DateTime, CardDayDataAPIModel>>(entity.AerisWeatherWeather == null ? "" : entity.AerisWeatherWeather.WeatherDayData)
                       }));

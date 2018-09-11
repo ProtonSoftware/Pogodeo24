@@ -1,5 +1,6 @@
 ﻿using Pogodeo.Core;
 using System;
+using Microsoft.Extensions.Configuration;
 
 namespace Pogodeo.Services
 {
@@ -14,6 +15,11 @@ namespace Pogodeo.Services
         /// The mapper for city objects
         /// </summary>
         private readonly CityMapper mCityMapper;
+
+        /// <summary>
+        /// The configuration for weather date settings
+        /// </summary>
+        private readonly IConfiguration mConfiguration;
 
         /// <summary>
         /// The service that gets us city information from OpenCageGeocoder API
@@ -48,6 +54,7 @@ namespace Pogodeo.Services
         /// Default constructor
         /// </summary>
         public CityFacade(CityMapper cityMapper,
+                          IConfiguration configuration, 
                           IOpenCageGeocoderService openCageGeocoderService, 
                           IBigCitiesRepository bigCitiesRepository, 
                           ISmallCitiesRepository smallCitiesRepository, 
@@ -55,6 +62,7 @@ namespace Pogodeo.Services
                           IAerisWeatherApiService aerisWeatherApiService)
         {
             mCityMapper = cityMapper;
+            mConfiguration = configuration;
             mOpenCageGeocoderService = openCageGeocoderService;
             mBigCitiesRepository = bigCitiesRepository;
             mSmallCitiesRepository = smallCitiesRepository;
@@ -121,7 +129,7 @@ namespace Pogodeo.Services
                 return new OperationResult(false);
 
             // Check if its weather is up-to-date
-            if (CheckWeatherDate(weatherCity))
+            if (CheckWeatherDate(weatherCity.AccuWeatherContext.LastUpdateDate))
                 // Return success
                 return new OperationResult(true);
 
@@ -139,6 +147,24 @@ namespace Pogodeo.Services
 
             // Return success
             return new OperationResult(true);
+        }
+
+        /// <summary>
+        /// Checks if the specified date is not outdated yet
+        /// </summary>
+        /// <param name="date">The date to check</param>
+        /// <returns>True or false</returns>
+        public bool CheckWeatherDate(DateTime date)
+        {
+            // Get how much old is weather
+            var timeDiffer = DateTime.Now - date;
+
+            // If its older than 6h, update
+            if (timeDiffer > GetOutDatedValue())
+                return false;
+
+            // Otherwise, no update
+            return true;
         }
 
         #endregion
@@ -164,22 +190,10 @@ namespace Pogodeo.Services
         }
 
         /// <summary>
-        /// Checks if the weather of specified city is up-to-date
+        /// Gets the Out-dated weather value from configuration
         /// </summary>
-        /// <param name="city">The city to check</param>
-        /// <returns>True or false</returns>
-        private bool CheckWeatherDate(BigCityContext city)
-        {
-            // Get how much old is weather
-            var timeDiffer = DateTime.Now - city.AccuWeatherContext.LastUpdateDate;
-
-            // If its older than 6h, update
-            if (timeDiffer.Hours > 6)
-                return false;
-
-            // Otherwise, no update
-            return true;
-        }
+        /// <returns>TimeSpan</returns>
+        private TimeSpan GetOutDatedValue() => mConfiguration.GetSection("WeatherConfiguration").GetValue<TimeSpan>("OutDatedTime");
 
         #endregion
     }

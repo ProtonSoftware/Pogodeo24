@@ -62,15 +62,31 @@ namespace Pogodeo
             // Create response object
             var response = new APIWeatherResponse
             {
-                WeatherResponses = new Dictionary<string, WeatherInformationAPIModel>
+                WeatherResponses = new Dictionary<APIProviderType, WeatherInformationAPIModel>
                 {
-                    { "AccuWeather", mCityMapper.Map(weatherCity.AccuWeatherContext) },
-                    { "AerisWeather", mCityMapper.Map(weatherCity.AerisWeatherContext) }
+                    { APIProviderType.AccuWeather, mCityMapper.Map(weatherCity.AccuWeatherContext) },
+                    { APIProviderType.AerisWeather, mCityMapper.Map(weatherCity.AerisWeatherContext) }
                 }
             };
 
             // Return successful response with data
             return Ok(response);
+        }
+
+        /// <summary>
+        /// Checks if provided weather's date is outdated or not and requires update
+        /// </summary>
+        /// <param name="date">The date to check</param>
+        /// <returns>True or false</returns>
+        [HttpPost]
+        [Route(ApiRoutes.CheckIfWeatherRequiresUpdate)]
+        public IActionResult CheckIfWeatherRequiresUpdate([FromBody]DateTime date)
+        {
+            // Check the date
+            var result = mCityFacade.CheckWeatherDate(date);
+
+            // Return the result
+            return Ok(result);
         }
 
         #endregion

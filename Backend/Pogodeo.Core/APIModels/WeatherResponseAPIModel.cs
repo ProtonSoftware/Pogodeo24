@@ -10,6 +10,6 @@ namespace Pogodeo.Core
         /// <summary>
         /// The list of every weather response from external APIs with truncated data
         /// </summary>
-        public Dictionary<string, WeatherInformationAPIModel> WeatherResponses { get; set; }
+        public Dictionary<APIProviderType, WeatherInformationAPIModel> WeatherResponses { get; set; }
     }
 }

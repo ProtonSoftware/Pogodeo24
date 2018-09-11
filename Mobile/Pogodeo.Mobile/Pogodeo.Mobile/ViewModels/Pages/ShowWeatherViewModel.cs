@@ -158,7 +158,7 @@ namespace Pogodeo.Mobile
             var currentDate = new DateTime(2018, 11, 20, 15, 00, 00, 00);
 
             // TODO: Logic
-            var currentWeatherData = APIResponse.WeatherResponses["AccuWeather"].TodayWeatherTruncatedData.TryGetValue(currentDate, out var weatherInfo);
+            var currentWeatherData = APIResponse.WeatherResponses[APIProviderType.AccuWeather].TodayWeatherTruncatedData.TryGetValue(currentDate, out var weatherInfo);
 
             // Update every card
             foreach (var card in Items)

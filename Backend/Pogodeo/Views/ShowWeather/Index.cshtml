@@ -40,8 +40,10 @@
 
             <div class="row card-deck mt-2">
 
-                <weather-tile v-bind:weather="@Model.APIResponse.AccuWeatherWeatherResponse.ToJson()"></weather-tile>
-                <weather-tile v-bind:weather="@Model.APIResponse.AerisWeatherWeatherResponse.ToJson()"></weather-tile>
+                @foreach (var weatherInfo in Model.APIResponse.WeatherResponses)
+                {
+                    <weather-tile v-bind:weather="@weatherInfo.ToJson()"></weather-tile>
+                }
 
             </div>
 

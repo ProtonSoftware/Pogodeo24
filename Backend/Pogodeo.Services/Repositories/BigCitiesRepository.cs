@@ -53,7 +53,7 @@ namespace Pogodeo.Services
         public BigCityContext GetByName(string city)
         {
             // Get the entity from database
-            var result = DbSet.Where(model => InsensitiveStringComparition(model.CityName, city)).FirstOrDefault();
+            var result = DbSet.Where(model => InsensitiveStringComparition(model.CityName, city)).Include(x => x.AccuWeatherWeather).Include(x => x.AerisWeatherWeather).FirstOrDefault();
 
             // If we didn't get one
             if (result == null)
@@ -144,21 +144,25 @@ namespace Pogodeo.Services
                 // Don't update anything
                 return;
 
+            // If none AccuWeather weather exists for this city
+            if (result.AccuWeatherWeather == null)
+                // Create new one
+                result.AccuWeatherWeather = new AccuWeather();
+
+            // If none AerisWeather weather exists for this city
+            if (result.AerisWeatherWeather == null)
+                // Create new one
+                result.AerisWeatherWeather = new AerisWeather();
+
             // Update AccuWeather weather info
-            result.AccuWeatherWeather = new AccuWeather
-            {
-                WeatherHourData = JsonConvert.SerializeObject(context.AccuWeatherContext.TodayWeatherTruncatedData),
-                WeatherDayData = JsonConvert.SerializeObject(context.AccuWeatherContext.NextDaysWeatherTruncatedData),
-                LastUpdateDate = DateTime.Now
-            };
+            result.AccuWeatherWeather.WeatherHourData = JsonConvert.SerializeObject(context.AccuWeatherContext.TodayWeatherTruncatedData);
+            result.AccuWeatherWeather.WeatherDayData = JsonConvert.SerializeObject(context.AccuWeatherContext.NextDaysWeatherTruncatedData);
+            result.AccuWeatherWeather.LastUpdateDate = DateTime.Now;
 
             // Update AerisWeather weather info
-            result.AerisWeatherWeather = new AerisWeather
-            {
-                WeatherHourData = JsonConvert.SerializeObject(context.AerisWeatherContext.TodayWeatherTruncatedData),
-                WeatherDayData = JsonConvert.SerializeObject(context.AerisWeatherContext.NextDaysWeatherTruncatedData),
-                LastUpdateDate = DateTime.Now
-            };
+            result.AerisWeatherWeather.WeatherHourData = JsonConvert.SerializeObject(context.AerisWeatherContext.TodayWeatherTruncatedData);
+            result.AerisWeatherWeather.WeatherDayData = JsonConvert.SerializeObject(context.AerisWeatherContext.NextDaysWeatherTruncatedData);
+            result.AerisWeatherWeather.LastUpdateDate = DateTime.Now;
 
             // Update it in the database by saving changes
             SaveChanges();

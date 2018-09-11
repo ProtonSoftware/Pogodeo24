@@ -99,11 +99,11 @@ namespace Pogodeo.DataAccess.Migrations
             modelBuilder.Entity("Pogodeo.DataAccess.BigCity", b =>
                 {
                     b.HasOne("Pogodeo.DataAccess.AccuWeather", "AccuWeatherWeather")
-                        .WithMany()
+                        .WithMany("AssociatedBigCity")
                         .HasForeignKey("AccuWeatherWeatherId");
 
                     b.HasOne("Pogodeo.DataAccess.AerisWeather", "AerisWeatherWeather")
-                        .WithMany()
+                        .WithMany("AssociatedBigCity")
                         .HasForeignKey("AerisWeatherWeatherId");
                 });
 

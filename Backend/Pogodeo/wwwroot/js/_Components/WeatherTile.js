@@ -20,7 +20,7 @@
 
         mounted: function () {
             this.weatherData.Name = this.$props.weather.Key;
-            this.weatherData.Value = this.$props.weather.Value.ValueTemperature;
+            this.weatherData.Value = this.$props.weather.Value;
         },
 
         methods: {

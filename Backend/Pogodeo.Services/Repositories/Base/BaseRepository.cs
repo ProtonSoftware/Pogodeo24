@@ -60,7 +60,7 @@ namespace Pogodeo.Services
             catch(DbUpdateException ex)
             {
                 if (ex.ForeginKeyViolation())
-                    return new OperationResult("Foregin key violation!");
+                    return new OperationResult("Foreign key violation!");
 
                 throw ex;
             }

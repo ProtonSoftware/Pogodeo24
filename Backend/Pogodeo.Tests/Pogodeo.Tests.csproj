@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dna.Framework" Version="1.0.7.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pogodeo.Core\Pogodeo.Core.csproj" />
+    <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
+    <ProjectReference Include="..\Pogodeo.Services\Pogodeo.Services.csproj" />
+    <ProjectReference Include="..\Pogodeo\Pogodeo.csproj" />
+  </ItemGroup>
+
+</Project>

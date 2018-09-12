@@ -53,7 +53,7 @@ namespace Pogodeo.Services
         public BigCityContext GetByName(string city)
         {
             // Get the entity from database
-            var result = DbSet.Where(model => InsensitiveStringComparition(model.CityName, city)).Include(x => x.AccuWeatherWeather).Include(x => x.AerisWeatherWeather).FirstOrDefault();
+            var result = DbSet.Where(model => InsensitiveStringComparition(model.CityName, city)).Include(x => x.AccuWeatherWeather).Include(x => x.AerisWeatherWeather).Include(x => x.WWOWeather).FirstOrDefault();
 
             // If we didn't get one
             if (result == null)

@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dna.Framework" Version="1.0.7.6" />
+    <None Remove="testappsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="testappsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
@@ -19,6 +29,13 @@
     <ProjectReference Include="..\Pogodeo.DataAccess\Pogodeo.DataAccess.csproj" />
     <ProjectReference Include="..\Pogodeo.Services\Pogodeo.Services.csproj" />
     <ProjectReference Include="..\Pogodeo\Pogodeo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccessTests\" />
+    <Folder Include="MobileAppTests\" />
+    <Folder Include="APITests\" />
+    <Folder Include="WebAppTests\" />
   </ItemGroup>
 
 </Project>

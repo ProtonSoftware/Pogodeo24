@@ -134,7 +134,7 @@ namespace Pogodeo.Services
         /// Default constructor
         /// </summary>
         /// <param name="config">The config for this app containing API info</param>
-        public WWOApiService(IConfiguration config, IBigCitiesRepository bigCitiesRepository)
+        public WWOApiService(IConfiguration config)
         {
             // Catch the configuration section for this API from configuration
             mConfigurationSection = config.GetSection("WWOAPI").GetSection("Config");

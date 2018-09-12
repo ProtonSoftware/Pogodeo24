@@ -9,45 +9,8 @@ namespace Pogodeo.Tests
     /// <summary>
     /// The unit tests for repository classes
     /// </summary>
-    public class RepositoryTests : IDisposable
+    public class RepositoryTests : BaseDatabaseTests
     {
-        #region Setup
-
-        /// <summary>
-        /// The database that is used in the application
-        /// </summary>
-        protected PogodeoAppDataContext DatabaseContext { get; set; }
-
-        /// <summary>
-        /// Default constructor
-        /// </summary>
-        public RepositoryTests()
-        {
-            // Options for the database to use
-            var options = new DbContextOptionsBuilder<PogodeoAppDataContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()).Options;
-
-            // Create the database
-            DatabaseContext = new PogodeoAppDataContext(options);
-
-            // Make sure its created properly
-            DatabaseContext.Database.EnsureCreated();
-        }
-
-        /// <summary>
-        /// Dispose after every test
-        /// </summary>
-        public void Dispose()
-        {
-            // Make sure database is deleted
-            DatabaseContext.Database.EnsureDeleted();
-
-            // Dispose the database
-            DatabaseContext.Dispose();
-        }
-
-        #endregion
-
         [Fact]
         public void BigCitiesRepository_ShouldGetLocalizationKeyForKnownCity()
         {

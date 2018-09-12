@@ -6884,3 +6884,118 @@ LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWea
 [2018-09-11 01:01:40] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
 [2018-09-11 01:01:40] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 73247.6714ms
 [2018-09-11 01:01:40] Request finished in 73317.8274ms 200 text/html; charset=utf-8
+[2018-09-12 08:38:07] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-12 08:38:10] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-12 08:38:10] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-12 08:38:10] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-12 08:38:10] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-12 08:38:10] No migrations were applied. The database is already up to date.
+[2018-09-12 08:38:11] Request starting HTTP/1.1 DEBUG http://localhost:53052/  0
+[2018-09-12 08:38:11] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-12 08:38:11] Request finished in 223.9675ms 200 
+[2018-09-12 08:38:12] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-12 08:38:17] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-12 08:38:17] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5883.4077ms
+[2018-09-12 08:38:17] Request starting HTTP/1.1 GET http://localhost:53052/js/_Components/WeatherTile.js?v=l5Cy8vdvtiYwqtV5sWcL4opCjsNchZVaPfqFRx6-R8w  
+[2018-09-12 08:38:18] Request finished in 6566.9811ms 200 text/html; charset=utf-8
+[2018-09-12 08:38:18] The file /js/_Components/WeatherTile.js was not modified
+[2018-09-12 08:38:18] Request finished in 108.3524ms 304 application/javascript
+[2018-09-12 08:44:06] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryXp5avAeWTuH9cEug 415
+[2018-09-12 08:44:06] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-12 08:44:06] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 10
+[2018-09-12 08:44:07] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Warszawa) - ModelState is Valid
+[2018-09-12 08:44:07] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-12 08:44:08] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-12 08:44:08] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-12 08:44:08] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-12 08:44:08] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-12 08:44:08] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-12 08:44:09] Executed DbCommand (135ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-12 08:44:59] User profile is available. Using 'C:\Users\minor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2018-09-12 08:45:01] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-12 08:45:02] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-12 08:45:02] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+[2018-09-12 08:45:02] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+[2018-09-12 08:45:02] No migrations were applied. The database is already up to date.
+[2018-09-12 08:45:02] Request starting HTTP/1.1 DEBUG http://localhost:53052/  0
+[2018-09-12 08:45:02] Request starting HTTP/1.1 GET http://localhost:53052/  
+[2018-09-12 08:45:02] Request finished in 174.1363ms 200 
+[2018-09-12 08:45:03] Executing action method Pogodeo.ProvideDataController.Index (Pogodeo) with arguments ((null)) - ModelState is Valid
+[2018-09-12 08:45:07] Executing ViewResult, running view at path /Views/ProvideData/Index.cshtml.
+[2018-09-12 08:45:08] Executed action Pogodeo.ProvideDataController.Index (Pogodeo) in 5109.9191ms
+[2018-09-12 08:45:08] Request finished in 5669.2258ms 200 text/html; charset=utf-8
+[2018-09-12 08:45:14] Request starting HTTP/1.1 POST http://localhost:53052/ShowWeather multipart/form-data; boundary=----WebKitFormBoundaryRQHHGlfMIadPwWac 415
+[2018-09-12 08:45:14] Executing action method Pogodeo.ShowWeatherController.Index (Pogodeo) with arguments (Pogodeo.ProvideDataViewModel) - ModelState is Valid
+[2018-09-12 08:45:14] Request starting HTTP/1.1 POST http://localhost:53052/api/GetWeatherFor application/json 10
+[2018-09-12 08:45:15] Executing action method Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) with arguments (Warszawa) - ModelState is Valid
+[2018-09-12 08:45:15] Entity Framework Core 2.1.2-rtm-30932 initialized 'PogodeoAppDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+[2018-09-12 08:45:15] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:15] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:16] Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-12 08:45:16] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __city_0)' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:16] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:16] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-12 08:45:26] The LINQ expression 'where value(Pogodeo.Services.BigCitiesRepository).InsensitiveStringComparition([model].CityName, __context_CityName_0)' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:26] The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
+[2018-09-12 08:45:26] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId]
+FROM [BigCitiesData] AS [model]
+[2018-09-12 08:45:26] Executed DbCommand (45ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AccuWeatherWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AccuWeatherWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-12 08:45:26] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AerisWeatherWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AerisWeatherWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-12 08:45:27] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [WWOWeather] ([LastUpdateDate], [WeatherDayData], [WeatherHourData])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [WWOWeather]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+[2018-09-12 08:45:27] Executed DbCommand (7ms) [Parameters=[@p6='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [BigCitiesData] SET [AccuWeatherWeatherId] = @p3, [AerisWeatherWeatherId] = @p4, [WWOWeatherId] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+[2018-09-12 08:45:27] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [model].[Id], [model].[AccuWeatherLocalizationKey], [model].[AccuWeatherWeatherId], [model].[AerisWeatherWeatherId], [model].[CityName], [model].[Latitude], [model].[Longitude], [model].[WWOWeatherId], [model.AerisWeatherWeather].[Id], [model.AerisWeatherWeather].[LastUpdateDate], [model.AerisWeatherWeather].[WeatherDayData], [model.AerisWeatherWeather].[WeatherHourData], [model.AccuWeatherWeather].[Id], [model.AccuWeatherWeather].[LastUpdateDate], [model.AccuWeatherWeather].[WeatherDayData], [model.AccuWeatherWeather].[WeatherHourData]
+FROM [BigCitiesData] AS [model]
+LEFT JOIN [AerisWeatherWeather] AS [model.AerisWeatherWeather] ON [model].[AerisWeatherWeatherId] = [model.AerisWeatherWeather].[Id]
+LEFT JOIN [AccuWeatherWeather] AS [model.AccuWeatherWeather] ON [model].[AccuWeatherWeatherId] = [model.AccuWeatherWeather].[Id]
+[2018-09-12 08:46:21] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+[2018-09-12 08:46:21] Executed action Pogodeo.WeatherAPIController.GetWeatherForCity (Pogodeo) in 67051.962ms
+[2018-09-12 08:46:21] Request finished in 67138.2182ms 200 application/json; charset=utf-8
+[2018-09-12 08:46:22] Executing ViewResult, running view at path /Views/ShowWeather/Index.cshtml.
+[2018-09-12 08:46:22] Executed action Pogodeo.ShowWeatherController.Index (Pogodeo) in 68071.8894ms
+[2018-09-12 08:46:22] Request finished in 68272.4569ms 200 text/html; charset=utf-8

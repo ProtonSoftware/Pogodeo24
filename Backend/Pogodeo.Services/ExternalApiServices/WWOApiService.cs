@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 
 namespace Pogodeo.Services
 {
@@ -158,21 +159,35 @@ namespace Pogodeo.Services
                 NextDaysWeatherTruncatedData = new Dictionary<DateTime, CardDayDataAPIModel>()
             };
 
+            // Prepare container for web responses
+            var weatherResponseText = default(string);
+
             #region API Request
 
-            // Build an url for api request
-            var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"?q={city}, pl&format=json&", ApiKeyName, ApiKeyValue);
+            // Convert city to normalized version - This API works only with english letters
+            city = city.ToNormalizedString();
 
-            // Catch the response from external api
-            var weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            // Build an url for api request
+            var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"?q={city}&format=json&", ApiKeyName, ApiKeyValue);
+
+            try
+            {
+                // Catch the response from external api
+                weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            }
+            catch (Exception ex)
+            {
+                // Something went wrong, return error
+                return new OperationResult<WeatherInformationAPIModel>(ex.Message);
+            }
 
             // Deserialize to json object
             var jsonObject = JsonConvert.DeserializeObject<RootJsonObject>(weatherResponseText);
 
             // If we didn't get any data
-            if (jsonObject.data == null)
-                // Return failure
-                return new OperationResult<WeatherInformationAPIModel>(false);
+            if (jsonObject == null || jsonObject.data == null || jsonObject.data.weather == null)
+                // Return error
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
 
             #endregion
 

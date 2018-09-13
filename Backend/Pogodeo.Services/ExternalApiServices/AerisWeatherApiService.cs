@@ -191,21 +191,32 @@ namespace Pogodeo.Services
                 NextDaysWeatherTruncatedData = new Dictionary<DateTime, CardDayDataAPIModel>()
             };
 
+            // Prepare container for web responses
+            var weatherResponseText = default(string);
+
             #region Today's Data
 
             // Build an url for api request
             var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"{city},pl?filter=1hr&limit=24&client_id={ClientID}&", ApiKeyName, ApiKeyValue);
 
-            // Catch the response from external api
-            var weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            try
+            {
+                // Catch the response from external api
+                weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            }
+            catch (Exception ex)
+            {
+                // Something went wrong, return error
+                return new OperationResult<WeatherInformationAPIModel>(ex.Message);
+            }
 
             // Deserialize to json object
             var jsonHourObject = JsonConvert.DeserializeObject<RootJsonObject>(weatherResponseText);
 
             // If we didn't get any data
-            if (!jsonHourObject.success)
-                // Return failure
-                return new OperationResult<WeatherInformationAPIModel>(jsonHourObject.success);
+            if (!jsonHourObject.success || jsonHourObject == null || jsonHourObject.response == null)
+                // Return error
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
 
             // Collect every weather data
             foreach (var weather in jsonHourObject.response[0].periods)
@@ -227,16 +238,24 @@ namespace Pogodeo.Services
             // Build an url for api request
             weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherPath, $"{city},pl?filter=daynight&limit=28&client_id={ClientID}&", ApiKeyName, ApiKeyValue);
 
-            // Catch the response from external api
-            weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            try
+            {
+                // Catch the response from external api
+                weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            }
+            catch (Exception ex)
+            {
+                // Something went wrong, return error
+                return new OperationResult<WeatherInformationAPIModel>(ex.Message);
+            }
 
             // Deserialize to json object
             var jsonDayObject = JsonConvert.DeserializeObject<RootJsonObject>(weatherResponseText);
 
             // If we didn't get any data
-            if (!jsonDayObject.success)
-                // Return failure
-                return new OperationResult<WeatherInformationAPIModel>(jsonDayObject.success);
+            if (!jsonHourObject.success || jsonHourObject == null || jsonHourObject.response.Count < 1)
+                // Return error
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
 
             // Collect every weather data
             var weatherObject = new CardDayDataAPIModel();

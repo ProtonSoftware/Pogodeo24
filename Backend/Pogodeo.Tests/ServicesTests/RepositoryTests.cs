@@ -59,12 +59,12 @@ namespace Pogodeo.Tests
             // Get the first city
             var cityResult = repository.GetByName("Przemyœl");
 
-            // Get the 78th city, as there should be at least that amount
-            var idResult = repository.GetById(78);
+            // Check if database is ok
+            var dbResult = DatabaseContext.CheckInitialDatabaseState();
             
             // Check
             Assert.NotNull(cityResult);
-            Assert.NotNull(idResult);
+            Assert.False(dbResult);
         }
 
         [Fact]

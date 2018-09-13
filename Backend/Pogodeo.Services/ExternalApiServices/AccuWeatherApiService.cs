@@ -205,13 +205,28 @@ namespace Pogodeo.Services
                 // Get one from API
                 localizationKey = GetLocalizationKeyFromApi(city);
 
+            // If API failed, return error
+            if (localizationKey == null)
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
+
+            // Prepare container for web responses
+            var weatherResponseText = default(string);
+
             #region Today's Data
 
             // Build an url for api request based on localization key
             var weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherHourPath, $"{localizationKey}?details=true&", ApiKeyName, ApiKeyValue);
 
-            // Catch the response from external api
-            var weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            try
+            {
+                // Catch the response from external api
+                weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            }
+            catch (Exception ex)
+            {
+                // Something went wrong, return error
+                return new OperationResult<WeatherInformationAPIModel>(ex.Message);
+            }
 
             // Deserialize to json object
             var jsonHourObject = JsonConvert.DeserializeObject<List<RootJsonHourObject>>(weatherResponseText);
@@ -219,7 +234,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (jsonHourObject == null)
                 // Return failure
-                return new OperationResult<WeatherInformationAPIModel>(false);
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
 
             // Collect every weather data
             foreach (var weather in jsonHourObject)
@@ -241,8 +256,16 @@ namespace Pogodeo.Services
             // Build an url for api request based on localization key
             weatherUrl = ExternalApiServiceHelpers.BuildUrl(Host, WeatherDayPath, $"{localizationKey}?", ApiKeyName, ApiKeyValue);
 
-            // Catch the response from external api
-            weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            try
+            {
+                // Catch the response from external api
+                weatherResponseText = ExternalApiServiceHelpers.SendAPIRequest(weatherUrl);
+            }
+            catch (Exception ex)
+            {
+                // Something went wrong, return error
+                return new OperationResult<WeatherInformationAPIModel>(ex.Message);
+            }
 
             // Deserialize to json object
             var jsonDayObject = JsonConvert.DeserializeObject<RootJsonDayObject>(weatherResponseText);
@@ -250,7 +273,7 @@ namespace Pogodeo.Services
             // If we didn't get any data
             if (jsonDayObject == null)
                 // Return failure
-                return new OperationResult<WeatherInformationAPIModel>(false);
+                return new OperationResult<WeatherInformationAPIModel>("No data in response.");
 
             // Collect every weather data
             foreach (var weather in jsonDayObject.DailyForecasts)
@@ -284,11 +307,27 @@ namespace Pogodeo.Services
             // Build an url for api request
             var localizationUrl = ExternalApiServiceHelpers.BuildUrl(Host, LocalizationKeyPath, $"?q={city}&", ApiKeyName, ApiKeyValue);
 
-            // Send that request and catch json response
-            var localizationResponseText = ExternalApiServiceHelpers.SendAPIRequest(localizationUrl);
+            // Prepare container for web response
+            var localizationResponseText = default(string);
+
+            try
+            {
+                // Catch the response from external api
+                localizationResponseText = ExternalApiServiceHelpers.SendAPIRequest(localizationUrl);
+            }
+            catch
+            {
+                // Something went wrong, return null key
+                return null;
+            }
 
             // The response is always a json array, parse it as that
             var jsonArray = JArray.Parse(localizationResponseText);
+
+            // If we didn't get proper response
+            if (jsonArray == null || jsonArray.Count < 1)
+                // Return null key
+                return null;
 
             // Deserialize the first array object, we don't care about duplicates
             var localizationKeyObject = jsonArray[0].ToObject<AccuWeatherLocalizationKeyModel>();

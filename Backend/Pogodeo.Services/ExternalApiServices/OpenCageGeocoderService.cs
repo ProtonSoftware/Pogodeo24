@@ -111,7 +111,7 @@ namespace Pogodeo.Services
             var jsonObject = JsonConvert.DeserializeObject<RootJsonObject>(apiResponseText);
 
             // If we didn't get any data
-            if (jsonObject.status.code != 200)
+            if (jsonObject.status.code != 200 || jsonObject.results.Count < 1)
                 // Return failure
                 return new OperationResult<OpenCageGeocoderCityModel>(false);
 

@@ -63,6 +63,99 @@ namespace Pogodeo.Tests
         }
 
         [Fact]
+        public void CityFacade_ShouldGetNewWeatherForBigCity()
+        {
+            // Arrange
+            var mockConfiguration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("testappsettings.json").Build();
+
+            var mapper = new CityMapper();
+            var bigRepository = new BigCitiesRepository(DatabaseContext, mapper);
+            var smallRepository = new SmallCitiesRepository(DatabaseContext, mapper);
+            var openCageService = new OpenCageGeocoderService(mockConfiguration);
+            var accuWeatherService = new AccuWeatherApiService(mockConfiguration, bigRepository);
+            var aerisWeatherService = new AerisWeatherApiService(mockConfiguration);
+            var wwoService = new WWOApiService(mockConfiguration);
+
+            var facade = new CityFacade(mapper, mockConfiguration, openCageService, bigRepository, smallRepository, accuWeatherService, aerisWeatherService, wwoService);
+
+            // Update the city based on name
+            var cityResult = facade.UpdateWeatherIfNecessery("Przemyśl");
+
+            // Get the weather
+            var weatherResult = facade.GetWeatherCity("Przemyśl");
+
+            // Check
+            Assert.True(cityResult.Success);
+            Assert.NotNull(weatherResult.AccuWeatherContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AccuWeatherContext.TodayWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AerisWeatherContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AerisWeatherContext.TodayWeatherTruncatedData);
+            Assert.NotNull(weatherResult.WWOContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.WWOContext.TodayWeatherTruncatedData);
+        }
+
+        [Fact]
+        public void CityFacade_ShouldGetNewWeatherForSmallCity()
+        {
+            // Arrange
+            var mockConfiguration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("testappsettings.json").Build();
+
+            var mapper = new CityMapper();
+            var bigRepository = new BigCitiesRepository(DatabaseContext, mapper);
+            var smallRepository = new SmallCitiesRepository(DatabaseContext, mapper);
+            var openCageService = new OpenCageGeocoderService(mockConfiguration);
+            var accuWeatherService = new AccuWeatherApiService(mockConfiguration, bigRepository);
+            var aerisWeatherService = new AerisWeatherApiService(mockConfiguration);
+            var wwoService = new WWOApiService(mockConfiguration);
+
+            var facade = new CityFacade(mapper, mockConfiguration, openCageService, bigRepository, smallRepository, accuWeatherService, aerisWeatherService, wwoService);
+
+            // Update the city based on name
+            var cityResult = facade.UpdateWeatherIfNecessery("Jarosław");
+
+            // Get the weather
+            var weatherResult = facade.GetWeatherCity("Jarosław");
+
+            // Check
+            Assert.True(cityResult.Success);
+            Assert.NotNull(weatherResult.AccuWeatherContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AccuWeatherContext.TodayWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AerisWeatherContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.AerisWeatherContext.TodayWeatherTruncatedData);
+            Assert.NotNull(weatherResult.WWOContext.NextDaysWeatherTruncatedData);
+            Assert.NotNull(weatherResult.WWOContext.TodayWeatherTruncatedData);
+        }
+
+        [Fact]
+        public void CityFacade_ShouldNotGetWeatherForRandomCity()
+        {
+            // Arrange
+            var mockConfiguration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("testappsettings.json").Build();
+
+            var mapper = new CityMapper();
+            var bigRepository = new BigCitiesRepository(DatabaseContext, mapper);
+            var smallRepository = new SmallCitiesRepository(DatabaseContext, mapper);
+            var openCageService = new OpenCageGeocoderService(mockConfiguration);
+            var accuWeatherService = new AccuWeatherApiService(mockConfiguration, bigRepository);
+            var aerisWeatherService = new AerisWeatherApiService(mockConfiguration);
+            var wwoService = new WWOApiService(mockConfiguration);
+
+            var facade = new CityFacade(mapper, mockConfiguration, openCageService, bigRepository, smallRepository, accuWeatherService, aerisWeatherService, wwoService);
+
+            // Update the city based on name
+            var result = facade.UpdateWeatherIfNecessery("DSADSADSADSA");
+
+            // Check
+            Assert.False(result.Success);
+        }
+
+        [Fact]
         public void CityFacade_ShouldGetUpdateForOutdatedDate()
         {
             // Arrange

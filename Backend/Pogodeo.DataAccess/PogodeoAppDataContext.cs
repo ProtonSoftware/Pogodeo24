@@ -44,9 +44,9 @@ namespace Pogodeo.DataAccess
         /// </summary>
         public PogodeoAppDataContext(DbContextOptions<PogodeoAppDataContext> options) : base(options)
         {
-            // If there are no elements in big cities database
-            if (!BigCitiesData.Any()) // TODO: A bit more logic
-                // Load them
+            // If database is not ready for weather usage
+            if (CheckInitialDatabaseState()) 
+                // Load big cities them
                 LoadInitialDatabaseBigCitiesData();
         }
 
@@ -55,10 +55,36 @@ namespace Pogodeo.DataAccess
         #region Public Methods
 
         /// <summary>
+        /// Checks if current database is in usable state
+        /// </summary>
+        /// <returns>True if we need new database loading or false if case not</returns>
+        public bool CheckInitialDatabaseState()
+        {
+            // If there are no records
+            if (!BigCitiesData.Any()) return true;
+
+            // If there are too few
+            if (BigCitiesData.Count() < 78) return true;
+
+            // If there are too many
+            if (BigCitiesData.Count() > 78) return true;
+
+            // If there are not enough city names if we select them
+            if (BigCitiesData.Select(x => x.CityName).ToList().Count != 78) return true;
+
+            // Otherwise, database is in good state
+            return false;
+        }
+
+        /// <summary>
         /// Loads the database with initial big cities data that is required to work
         /// </summary>
         public void LoadInitialDatabaseBigCitiesData()
         {
+            // Delete any previous entities
+            BigCitiesData.RemoveRange(BigCitiesData.ToList());
+
+            // Add our initial database state
             BigCitiesData.Add(new BigCity
             {
                 CityName = "Przemyśl",

@@ -4,16 +4,12 @@
              x:Class="Pogodeo.Mobile.App">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
 
-            <!--Global Styles-->
-            <Color x:Key="WhitePure">#FFFFFF</Color>
-            <Color x:Key="RedPrimary">#FF1507</Color>
-            <Color x:Key="BluePrimary">#3C0EFF</Color>
-            <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#3F51B5" />
-                <Setter Property="BarTextColor" Value="{StaticResource WhitePure}" />
-            </Style>
-            
+                <ResourceDictionary Source="Styles/Colors.xaml" />
+                <ResourceDictionary Source="Styles/Fonts.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

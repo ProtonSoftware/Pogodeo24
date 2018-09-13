@@ -26,7 +26,10 @@
                            TextColor="{StaticResource RedPrimary}" />
 
                     <StackLayout Orientation="Horizontal">
-                        <Image Source="sun" HeightRequest="64" Scale="2.5" />
+                        <Label Text="{StaticResource FontWeatherSunIcon}" 
+                               Style="{StaticResource WeatherIconStyle}" 
+                               TextColor="Yellow" 
+                               FontSize="50" />
                         <Label Text="{Binding ValueTemperature, StringFormat='{0}*C'}" FontSize="40" />
                     </StackLayout>
 
@@ -46,28 +49,25 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Image Source="cloud_rain"
-                           HeightRequest="30"
-                           Scale="2" />
+                    <Label Text="{StaticResource FontWeatherRainIcon}" 
+                           Style="{StaticResource WeatherIconStyle}" />
                     <Label Grid.Column="1" 
                            Text="{Binding ValueRain, StringFormat='{0}mm'}"
                            VerticalTextAlignment="Center"
                            TextColor="{StaticResource WhitePure}" />
-
-                    <Image Grid.Row="1" 
-                           Source="cloud_rain_alt" 
-                           HeightRequest="30" 
-                           Scale="2" />
+                    
+                    <Label Grid.Row="1"
+                           Text="{StaticResource FontWeatherTearIcon}" 
+                           Style="{StaticResource WeatherIconStyle}" />
                     <Label Grid.Column="1"
                            Grid.Row="1"
                            Text="{Binding ValueHumidity, StringFormat='{0}%'}"
                            VerticalTextAlignment="Center"
                            TextColor="{StaticResource WhitePure}" />
-                    
-                    <Image Grid.Row="2"
-                           Source="wind" 
-                           HeightRequest="30" 
-                           Scale="2" />
+
+                    <Label Grid.Row="2"
+                           Text="{StaticResource FontWeatherWindIcon}" 
+                           Style="{StaticResource WeatherIconStyle}" />
                     <Label Grid.Column="1"
                            Grid.Row="2"
                            Text="{Binding ValueWind, StringFormat='{0}km/h'}"

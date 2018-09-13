@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:Pogodeo.Mobile">
+    
+    <OnPlatform x:TypeArguments="x:String" x:Key="WeatherIcon">
+        <On Platform="Android" Value="Fonts/WeatherIcons/weathericons-regular-webfont.ttf#Weather Icons Regular" />
+    </OnPlatform>
+
+    <x:String x:Key="FontWeatherSunIcon">&#xf00d;</x:String>
+    <x:String x:Key="FontWeatherRainIcon">&#xf019;</x:String>
+    <x:String x:Key="FontWeatherTearIcon">&#xf078;</x:String>
+    <x:String x:Key="FontWeatherWindIcon">&#xf050;</x:String>
+
+    <Style x:Key="WeatherIconStyle" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="{StaticResource WeatherIcon}" />
+        <Setter Property="FontSize" Value="30" />
+    </Style>
+
+</ResourceDictionary>

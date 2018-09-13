@@ -32,5 +32,11 @@ namespace Pogodeo.Mobile
 		}
 
         #endregion
+
+        private async void Menu_Clicked(object sender, System.EventArgs e)
+        {
+            var page = new AboutPage();
+            await Navigation.PushModalAsync(page, true);
+        }
     }
 }

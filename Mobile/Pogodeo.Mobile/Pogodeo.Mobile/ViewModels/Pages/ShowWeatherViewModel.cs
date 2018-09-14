@@ -79,11 +79,6 @@ namespace Pogodeo.Mobile
         public bool IsSwitchToggledInverted => !mIsSwitchToggled;
 
         /// <summary>
-        /// The response from API that should be shown in this page
-        /// </summary>
-        public APIWeatherResponse APIResponse { get; set; }
-
-        /// <summary>
         /// The view model for date control that is displayed on this page
         /// </summary>
         public DateTitleViewModel DateViewModel { get; set; } = new DateTitleViewModel();
@@ -107,9 +102,11 @@ namespace Pogodeo.Mobile
 
             // Set page's title
             Title = string.Format(LocalizationResources.ShowWeatherTitle, CityName);
-
-            // Send an API request
-            Task.Run(GetAPIData);
+            
+            // Get weather data
+            Task.Run(GetWeatherData)
+                // And update the view afterwards
+                .ContinueWith((s) => UpdateWeatherCards());
 
             Items.Add(new WeatherCardViewModel("Onet", new CardHourDataAPIModel { ValueTemperature = 27, ValueHumidity = 65, ValueRain = 23, ValueWind = 9, WeatherIcon = WeatherIconType.Sun }));
             Items.Add(new WeatherCardViewModel("Interia", new CardHourDataAPIModel { ValueTemperature = 23, ValueHumidity = 55, ValueRain = 22, ValueWind = 11, WeatherIcon = WeatherIconType.Rain }));
@@ -121,21 +118,46 @@ namespace Pogodeo.Mobile
         #region Private Helpers
 
         /// <summary>
-        /// Sends an API request and collects the data
+        /// Tries to get weather data from database
+        /// Sends an API request and collects the data if not found
         /// </summary>
-        private async Task GetAPIData()
+        private async Task GetWeatherData()
         {
-            // Send an API request
-            var apiResult = await WebRequests.PostAsync<APIWeatherResponse>(GetAPIRoute(), CityName);
+            // Get our saved data
+            var savedData = DI.CityWeatherRepository.GetCityWeather(CityName);
+
+            // If we have one...
+            if (savedData != null && savedData.Weather != null)
+            {
+                // Send an API request that checks if we have up-to-date data
+                var apiDateResult = await WebRequests.PostAsync<bool>(GetAPIRoute(ApiRoutes.CheckIfWeatherRequiresUpdate), CityName);
+
+                // If we got a response...
+                if (apiDateResult != null && apiDateResult.Successful)
+                {
+                    // If we got true response, we have to update our data
+                    // Otherwise...
+                    if (!apiDateResult.ServerResponse)
+                        // Our data is up-to-date, don't request anything
+                        return;
+                }
+                // Otherwise...
+                else
+                    // TODO: Show that we got no data back
+                    return;
+            }
+
+            // Send an API request that gets us weather data
+            var apiWeatherResult = await WebRequests.PostAsync<APIWeatherResponse>(GetAPIRoute(ApiRoutes.GetWeatherForCity), CityName);
 
             // If we got a data back...
-            if (apiResult != null && apiResult.Successful && apiResult.ServerResponse != null)
+            if (apiWeatherResult != null && apiWeatherResult.Successful && apiWeatherResult.ServerResponse != null)
             {
-                // Deserialize json to suitable view model
-                APIResponse = apiResult.ServerResponse;
+                // Deserialize json to suitable model
+                var apiResponse = apiWeatherResult.ServerResponse;
 
-                // Update cards with that data
-                UpdateWeatherCards();
+                // Cache the data to database
+                DI.CityWeatherRepository.SaveWeatherForCity(CityName, apiResponse.WeatherResponses);                
             }
             // Otherwise...
             else
@@ -146,8 +168,9 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Gets the url for API call
         /// </summary>
+        /// <param name="path">The additional path that is added to the host</param>
         /// <returns>URL</returns>
-        private string GetAPIRoute() => "http://pogodeo24.pl" + ApiRoutes.GetWeatherForCity;
+        private string GetAPIRoute(string path) => "http://pogodeo24.pl" + path;
 
         /// <summary>
         /// Fired when date has changed and weather info needs an update
@@ -158,13 +181,13 @@ namespace Pogodeo.Mobile
             var currentDate = new DateTime(2018, 11, 20, 15, 00, 00, 00);
 
             // TODO: Logic
-            var currentWeatherData = APIResponse.WeatherResponses[APIProviderType.AccuWeather].TodayWeatherTruncatedData.TryGetValue(currentDate, out var weatherInfo);
+            //var currentWeatherData = APIResponse.WeatherResponses[APIProviderType.AccuWeather].TodayWeatherTruncatedData.TryGetValue(currentDate, out var weatherInfo);
 
             // Update every card
             foreach (var card in Items)
             {
                 // Update the card with current external API info
-                card.UpdateData(weatherInfo);
+                //card.UpdateData(weatherInfo);
             }
         }
 

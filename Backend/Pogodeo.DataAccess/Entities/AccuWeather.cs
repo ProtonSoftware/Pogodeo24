@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Pogodeo.Core;
+using System;
 
 namespace Pogodeo.DataAccess
 {
     /// <summary>
-    /// The entity for WWO (WorldWeatherOnline) cached weather
+    /// The entity for AccuWeather cached weather
     /// </summary>
-    public class WWO : BaseObject<int>
+    public class AccuWeather : BaseObject<int>
     {
         #region Public Properties
 

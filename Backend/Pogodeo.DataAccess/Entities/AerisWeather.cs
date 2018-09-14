@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Pogodeo.Core;
+using System;
 
 namespace Pogodeo.DataAccess
 {
     /// <summary>
-    /// The entity for AccuWeather cached weather
+    /// The entity for AerisWeather cached weather
     /// </summary>
-    public class AccuWeather : BaseObject<int>
+    public class AerisWeather : BaseObject<int>
     {
         #region Public Properties
 

@@ -14,6 +14,16 @@ namespace Pogodeo.Mobile
         /// </summary>
         public static ApplicationViewModel Application => Framework.Service<ApplicationViewModel>();
 
+        /// <summary>
+        /// A shortcut to access the current implementation of <see cref="ICityWeatherRepository"/>
+        /// </summary>
+        public static ICityWeatherRepository CityWeatherRepository => Framework.Service<ICityWeatherRepository>();
+
+        /// <summary>
+        /// A shortcut to access the <see cref="CityMapper"/>
+        /// </summary>
+        public static CityMapper CityMapper => Framework.Service<CityMapper>();
+
         #endregion
 
         #region Public Methods
@@ -24,6 +34,7 @@ namespace Pogodeo.Mobile
         public static void InitialSetup() => Framework.Construct<DefaultFrameworkConstruction>()
                                                       .AddFileLogger()
                                                       .AddPogodeoViewModels()
+                                                      .AddDbContext()
                                                       .Build();
 
         #endregion

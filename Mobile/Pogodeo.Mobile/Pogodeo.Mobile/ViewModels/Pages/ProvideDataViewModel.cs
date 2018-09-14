@@ -1,4 +1,5 @@
-﻿using Pogodeo.Core.Localization;
+﻿using Dna;
+using Pogodeo.Core.Localization;
 using System.Windows.Input;
 
 namespace Pogodeo.Mobile

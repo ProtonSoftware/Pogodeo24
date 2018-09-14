@@ -1,4 +1,5 @@
-﻿using Pogodeo.DataAccess;
+﻿using Pogodeo.Core;
+using Pogodeo.DataAccess;
 
 namespace Pogodeo.Services
 {

@@ -6,7 +6,6 @@
              Title="{Binding Title}">
 
     <local:BasePage.ToolbarItems>
-        <ToolbarItem Name="ProvideData" Clicked="Menu_Clicked" Order="Secondary" />
         <ToolbarItem Name="Settings" Clicked="Menu_Clicked" Order="Secondary" />
         <ToolbarItem Name="About" Clicked="Menu_Clicked" Order="Secondary" />
     </local:BasePage.ToolbarItems>

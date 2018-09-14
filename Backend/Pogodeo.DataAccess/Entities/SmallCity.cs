@@ -1,4 +1,6 @@
-﻿namespace Pogodeo.DataAccess
+﻿using Pogodeo.Core;
+
+namespace Pogodeo.DataAccess
 {
     /// <summary>
     /// The entity for small city

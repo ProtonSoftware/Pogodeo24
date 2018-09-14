@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Pogodeo.Core;
+using System.Collections.Generic;
 
 namespace Pogodeo.DataAccess
 {

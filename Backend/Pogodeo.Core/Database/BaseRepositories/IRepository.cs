@@ -1,11 +1,10 @@
-﻿using Pogodeo.Core;
-using Pogodeo.DataAccess;
-using System.Linq;
+﻿using System.Linq;
 
-namespace Pogodeo.Services
+namespace Pogodeo.Core
 {
     /// <summary>
-    /// 
+    /// The base repository interface to implement by every repository in the application
+    /// Contains some basic functionalities to work with the database
     /// </summary>
     public interface IRepository<T, K> where T : IBaseObject<K>, new()
     {

@@ -1,21 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pogodeo.Core;
-using Pogodeo.DataAccess;
 using System;
 using System.Linq;
 
-namespace Pogodeo.Services
+namespace Pogodeo.Mobile
 {
     /// <summary>
     /// Base repository class to derive from by every repository in the application
     /// </summary>
     public abstract class BaseRepository<T, K> : IRepository<T, K> where T : class, IBaseObject<K>, new()
     {
-        protected PogodeoAppDataContext Db { get; set; }
+        protected PogodeoMobileDbContext Db { get; set; }
          
         protected abstract DbSet<T> DbSet { get; }
 
-        public BaseRepository(PogodeoAppDataContext db)
+        public BaseRepository(PogodeoMobileDbContext db)
         {
             Db = db;
         }

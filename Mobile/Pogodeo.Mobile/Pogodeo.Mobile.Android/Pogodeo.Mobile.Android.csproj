@@ -95,6 +95,8 @@
     <AndroidAsset Include="Assets\Fonts\WeatherIcons\weathericons-regular-webfont.ttf" />
     <AndroidAsset Include="Assets\Fonts\WeatherIcons\weathericons-regular-webfont.woff" />
     <AndroidAsset Include="Assets\Fonts\WeatherIcons\weathericons-regular-webfont.woff2" />
+    <AndroidAsset Include="Assets\Fonts\MaterialIcons\MaterialIcons.woff2" />
+    <AndroidAsset Include="Assets\Fonts\MaterialIcons\MaterialIcons-Regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

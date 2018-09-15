@@ -7,6 +7,10 @@
         <On Platform="Android" Value="Fonts/WeatherIcons/weathericons-regular-webfont.ttf#Weather Icons Regular" />
     </OnPlatform>
 
+    <OnPlatform x:TypeArguments="x:String" x:Key="MaterialIcon">
+        <On Platform="Android" Value="Fonts/WeatherIcons/MaterialIcons-Regular.ttf#Material Icons" />
+    </OnPlatform>
+
     <x:String x:Key="FontWeatherSunIcon">&#xf00d;</x:String>
     <x:String x:Key="FontWeatherRainIcon">&#xf019;</x:String>
     <x:String x:Key="FontWeatherTearIcon">&#xf078;</x:String>
@@ -14,6 +18,11 @@
 
     <Style x:Key="WeatherIconStyle" TargetType="{x:Type Label}">
         <Setter Property="FontFamily" Value="{StaticResource WeatherIcon}" />
+        <Setter Property="FontSize" Value="30" />
+    </Style>
+
+    <Style x:Key="MaterialIconStyle" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialIcon}" />
         <Setter Property="FontSize" Value="30" />
     </Style>
 

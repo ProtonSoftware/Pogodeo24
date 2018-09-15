@@ -20,6 +20,11 @@ namespace Pogodeo.Mobile
         /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// The icon of this item
+        /// </summary>
+        public ApplicationIconType Icon { get; set; }
+
         #endregion
 
         #region Commands
@@ -36,11 +41,24 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Default constructor
         /// </summary>
-        /// <param name="action">The required action to run whenever this item is selected</param>
-        public MenuItemViewModel(Action action)
+        public MenuItemViewModel()
         {
             // Create commands
-            MenuItemSelectCommand = new RelayCommand(action);
+            MenuItemSelectCommand = new RelayCommand(ChangePage);
+        }
+
+        #endregion
+
+        #region Command Methods
+
+        /// <summary>
+        /// Fired when this item is clicked
+        /// Changes the page to the one that is associated with this item
+        /// </summary>
+        private void ChangePage()
+        {
+            // Simply change the page
+            DI.Application.GoToPage(Page);
         }
 
         #endregion

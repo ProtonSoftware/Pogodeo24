@@ -1,19 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Pogodeo.Mobile"
              x:Class="Pogodeo.Mobile.MenuPage"
              Title="Menu">
     <StackLayout VerticalOptions="FillAndExpand">
-        <ListView ItemsSource="{Binding Items}"
+        <Label Text="Pogodeo"
+               HorizontalOptions="Center"
+               Margin="12"
+               FontSize="40" />
+        <BoxView BackgroundColor="Black"
+                 HeightRequest="1" />
+        <Label Text="Twoje Miejsca" />
+        <ListView ItemsSource="{Binding CityItems}"
+                  HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding MenuItemSelectCommand}" />
+                            </Grid.GestureRecognizers>
+                            <!--<Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
+                            --><Label Grid.Column="1"
+                                   Text="{Binding Title}" 
+                                   FontSize="20"  />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <BoxView BackgroundColor="Black"
+                 HeightRequest="1" />
+        <Label Text="Aplikacja" />
+        <ListView ItemsSource="{Binding ApplicationItems}"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding MenuItemSelectCommand}" />
                             </Grid.GestureRecognizers>
-                            <Label Text="{Binding Title}" FontSize="20"  />
+                            <!--<Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
+                            --><Label Grid.Column="1"
+                                   Text="{Binding Title}" 
+                                   FontSize="20"  />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

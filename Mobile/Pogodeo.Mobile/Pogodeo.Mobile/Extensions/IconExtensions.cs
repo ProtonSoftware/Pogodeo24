@@ -1,4 +1,5 @@
 ﻿using Pogodeo.Core;
+using System.Text;
 
 namespace Pogodeo.Mobile
 {
@@ -50,6 +51,18 @@ namespace Pogodeo.Mobile
 
                 case ApplicationIconType.About:
                     return "\ue88e";
+
+                case ApplicationIconType.Help:
+                    return "\ue887";
+
+                case ApplicationIconType.Cash:
+                    return "\ue53e";
+
+                case ApplicationIconType.Place:
+                    return "\ue55f";
+
+                case ApplicationIconType.AddPlace:
+                    return "\ue567";
 
                 // If none found, return null
                 default:

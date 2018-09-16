@@ -8,7 +8,7 @@
     </OnPlatform>
 
     <OnPlatform x:TypeArguments="x:String" x:Key="MaterialIcon">
-        <On Platform="Android" Value="Fonts/WeatherIcons/MaterialIcons-Regular.ttf#Material Icons" />
+        <On Platform="Android" Value="Fonts/MaterialIcons/MaterialIcons-Regular.ttf#Material Icons" />
     </OnPlatform>
 
     <x:String x:Key="FontWeatherSunIcon">&#xf00d;</x:String>

@@ -25,8 +25,8 @@
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding MenuItemSelectCommand}" />
                             </Grid.GestureRecognizers>
-                            <!--<Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
-                            --><Label Grid.Column="1"
+                            <Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
+                            <Label Grid.Column="1"
                                    Text="{Binding Title}" 
                                    FontSize="20"  />
                         </Grid>
@@ -50,8 +50,8 @@
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding MenuItemSelectCommand}" />
                             </Grid.GestureRecognizers>
-                            <!--<Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
-                            --><Label Grid.Column="1"
+                            <Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
+                            <Label Grid.Column="1"
                                    Text="{Binding Title}" 
                                    FontSize="20"  />
                         </Grid>

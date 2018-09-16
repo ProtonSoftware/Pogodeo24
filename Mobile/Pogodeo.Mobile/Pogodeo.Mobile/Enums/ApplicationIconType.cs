@@ -13,6 +13,26 @@
         /// <summary>
         /// About icon (i)
         /// </summary>
-        About
+        About,
+
+        /// <summary>
+        /// Help icon (?)
+        /// </summary>
+        Help,
+
+        /// <summary>
+        /// Cash icon ($)
+        /// </summary>
+        Cash,
+
+        /// <summary>
+        /// Place icon (google maps indicator)
+        /// </summary>
+        Place,
+
+        /// <summary>
+        /// Add place icon (place icon with +)
+        /// </summary>
+        AddPlace
     }
 }

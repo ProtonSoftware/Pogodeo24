@@ -16,7 +16,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <local:ProvideDataPage />
+                <local:ShowWeatherPage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

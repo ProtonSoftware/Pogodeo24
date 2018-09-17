@@ -46,7 +46,7 @@ namespace Pogodeo.Mobile
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.Split;
+            MasterBehavior = MasterBehavior.Popover;
         }
 
         #endregion

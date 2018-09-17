@@ -10,7 +10,19 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Default constructor
         /// </summary>
-        /// <param name="viewModel">The required view model with data for this page</param>
+        public ShowWeatherPage()
+        {
+            // Do default things
+            InitializeComponent();
+
+            // Set specified view model
+            BindingContext = new ShowWeatherViewModel(null);
+        }
+
+        /// <summary>
+        /// Constructor with additional view model to setup at the start
+        /// </summary>
+        /// <param name="viewModel">The view model with data for this page</param>
         public ShowWeatherPage(ShowWeatherViewModel viewModel)
 		{
             // Do default things

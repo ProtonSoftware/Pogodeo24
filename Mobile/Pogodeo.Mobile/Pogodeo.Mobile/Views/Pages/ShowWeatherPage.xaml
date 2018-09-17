@@ -5,6 +5,10 @@
              x:Class="Pogodeo.Mobile.ShowWeatherPage"
              Title="{Binding Title}">
 
+    <local:BasePage.ToolbarItems>
+        <ToolbarItem Icon="icon_add" Command="{Binding AddNewPlaceCommand}" />
+    </local:BasePage.ToolbarItems>
+
     <Grid BackgroundColor="Beige">
 
         <Grid.RowDefinitions>

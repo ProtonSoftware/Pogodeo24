@@ -5,13 +5,16 @@
              x:Class="Pogodeo.Mobile.MenuPage"
              Title="Menu">
     <StackLayout VerticalOptions="FillAndExpand">
+        
         <Label Text="Pogodeo"
                HorizontalOptions="Center"
                Margin="12"
                FontSize="40" />
+        
         <BoxView BackgroundColor="Black"
                  HeightRequest="1" />
         <Label Text="Twoje Miejsca" />
+        
         <ListView ItemsSource="{Binding CityItems}"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
@@ -27,16 +30,18 @@
                             </Grid.GestureRecognizers>
                             <Label Text="{Binding Icon, Converter={local:ApplicationIconTypeToFontAwesomeConverter}}" Style="{StaticResource MaterialIconStyle}"  />
                             <Label Grid.Column="1"
-                                   Text="{Binding Title}" 
+                                   Text="{Binding City}" 
                                    FontSize="20"  />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
         <BoxView BackgroundColor="Black"
                  HeightRequest="1" />
         <Label Text="Aplikacja" />
+        
         <ListView ItemsSource="{Binding ApplicationItems}"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
@@ -59,5 +64,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
     </StackLayout>
 </ContentPage>

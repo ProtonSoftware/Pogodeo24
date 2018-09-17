@@ -1,12 +1,11 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace Pogodeo.Mobile
 {
     /// <summary>
-    /// The view model for single menu item
+    /// The view model for single menu item that leads to the specified page
     /// </summary>
-    public class MenuItemViewModel
+    public class MenuPageItemViewModel : BaseViewModel
     {
         #region Public Properties
 
@@ -41,7 +40,7 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Default constructor
         /// </summary>
-        public MenuItemViewModel()
+        public MenuPageItemViewModel()
         {
             // Create commands
             MenuItemSelectCommand = new RelayCommand(ChangePage);

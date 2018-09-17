@@ -4,6 +4,8 @@ using Pogodeo.Core.Localization;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Pogodeo.Mobile
 {
@@ -90,6 +92,15 @@ namespace Pogodeo.Mobile
 
         #endregion
 
+        #region Commands
+        
+        /// <summary>
+        /// The command to show a page where user can add new place
+        /// </summary>
+        public ICommand AddNewPlaceCommand { get; private set; }
+
+        #endregion
+
         #region Constructor
 
         /// <summary>
@@ -97,6 +108,9 @@ namespace Pogodeo.Mobile
         /// </summary>
         public ShowWeatherViewModel(string city)
         {
+            // Create commands
+            AddNewPlaceCommand = new RelayCommand(async () => await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ProvideDataPage()), true));
+
             // Get name from previous page
             CityName = city;
 

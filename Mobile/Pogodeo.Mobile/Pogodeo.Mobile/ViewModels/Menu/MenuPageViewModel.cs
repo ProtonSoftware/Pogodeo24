@@ -12,12 +12,12 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// List of weather places menu items in this page - saved user's cities
         /// </summary>
-        public List<MenuItemViewModel> CityItems { get; set; }
+        public List<MenuPlaceItemViewModel> CityItems { get; set; }
 
         /// <summary>
         /// List of application menu items in this page such as settings/about etc.
         /// </summary>
-        public List<MenuItemViewModel> ApplicationItems { get; set; }
+        public List<MenuPageItemViewModel> ApplicationItems { get; set; }
 
         #endregion
 
@@ -29,20 +29,20 @@ namespace Pogodeo.Mobile
         public MenuPageViewModel()
         {
             // Initialize the list with fields
-            CityItems = new List<MenuItemViewModel>
+            CityItems = new List<MenuPlaceItemViewModel>
             {
-                new MenuItemViewModel { Page = ApplicationPage.ProvideData, Title = "Warszawa", Icon = ApplicationIconType.Place },
-                new MenuItemViewModel { Page = ApplicationPage.ProvideData, Title = "Kraków", Icon = ApplicationIconType.Place },
-                new MenuItemViewModel { Page = ApplicationPage.Settings, Title = "Przemyśl", Icon = ApplicationIconType.Place },
-                new MenuItemViewModel { Page = ApplicationPage.About, Title = "Dodaj miejsce", Icon = ApplicationIconType.AddPlace  }
+                new MenuPlaceItemViewModel { City = "Warszawa" },
+                new MenuPlaceItemViewModel { City = "Kraków" },
+                new MenuPlaceItemViewModel { City = "Przemyśl" },
+                new MenuPlaceItemViewModel { City = "Dodaj miejsce", Icon = ApplicationIconType.AddPlace  }
             };
 
-            ApplicationItems = new List<MenuItemViewModel>
+            ApplicationItems = new List<MenuPageItemViewModel>
             {
-                new MenuItemViewModel { Page = ApplicationPage.ProvideData, Title = "Wesprzyj nas", Icon = ApplicationIconType.Cash },
-                new MenuItemViewModel { Page = ApplicationPage.ProvideData, Title = "Jak to dziala?", Icon = ApplicationIconType.Help },
-                new MenuItemViewModel { Page = ApplicationPage.Settings, Title = "Ustawienia", Icon = ApplicationIconType.Settings },
-                new MenuItemViewModel { Page = ApplicationPage.About, Title = "O nas", Icon = ApplicationIconType.About  }
+                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = "Wesprzyj nas", Icon = ApplicationIconType.Cash },
+                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = "Jak to dziala?", Icon = ApplicationIconType.Help },
+                new MenuPageItemViewModel { Page = ApplicationPage.Settings, Title = "Ustawienia", Icon = ApplicationIconType.Settings },
+                new MenuPageItemViewModel { Page = ApplicationPage.About, Title = "O nas", Icon = ApplicationIconType.About  }
             };
         }
 

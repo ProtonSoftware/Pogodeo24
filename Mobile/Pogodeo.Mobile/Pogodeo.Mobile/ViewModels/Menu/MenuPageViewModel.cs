@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Pogodeo.Mobile
 {
@@ -21,6 +23,15 @@ namespace Pogodeo.Mobile
 
         #endregion
 
+        #region Commands
+
+        /// <summary>
+        /// The command to show a page where user can add new place
+        /// </summary>
+        public ICommand AddNewPlaceCommand { get; private set; }
+
+        #endregion
+
         #region Constructor
 
         /// <summary>
@@ -28,13 +39,15 @@ namespace Pogodeo.Mobile
         /// </summary>
         public MenuPageViewModel()
         {
+            // Create commands
+            AddNewPlaceCommand = new RelayCommand(async () => await DI.UI.ShowModalOnCurrentNavigation(new ProvideDataPage()));
+
             // Initialize the list with fields
             CityItems = new List<MenuPlaceItemViewModel>
             {
                 new MenuPlaceItemViewModel { City = "Warszawa" },
                 new MenuPlaceItemViewModel { City = "Kraków" },
-                new MenuPlaceItemViewModel { City = "Przemyśl" },
-                new MenuPlaceItemViewModel { City = "Dodaj miejsce", Icon = ApplicationIconType.AddPlace  }
+                new MenuPlaceItemViewModel { City = "Przemyśl" }
             };
 
             ApplicationItems = new List<MenuPageItemViewModel>

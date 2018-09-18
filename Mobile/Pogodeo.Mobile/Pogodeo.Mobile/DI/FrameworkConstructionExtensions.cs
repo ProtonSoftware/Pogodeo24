@@ -25,6 +25,9 @@ namespace Pogodeo.Mobile
             // Bind to a single instance of City mapper
             construction.Services.AddSingleton<CityMapper>();
 
+            // Bind to a single instance of UIManager
+            construction.Services.AddSingleton<IUIManager, UIManager>();
+
             // Return the construction for chaining
             return construction;
         }
@@ -35,17 +38,21 @@ namespace Pogodeo.Mobile
         /// <param name="construction">Framework's construction</param>
         public static FrameworkConstruction AddDbContext(this FrameworkConstruction construction)
         {
+            // Use Sqlite library
             construction.Services.AddEntityFrameworkSqlite();
 
             // Bind a db context to access in this application
             construction.Services.AddDbContext<PogodeoMobileDbContext>();
 
+            // Get the service provider
             var serviceProvider = construction.Services.BuildServiceProvider();
-
             using (var scope = serviceProvider.CreateScope())
             {
+                // Get the db service
                 var db = scope.ServiceProvider.GetRequiredService<PogodeoMobileDbContext>();
+                // Make sure its created properly
                 db.Database.EnsureCreated();
+                // Do migrations
                 db.Database.Migrate();
             }
 

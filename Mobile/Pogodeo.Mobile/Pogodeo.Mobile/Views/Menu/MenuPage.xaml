@@ -8,7 +8,7 @@
         
         <Label Text="Pogodeo"
                HorizontalOptions="Center"
-               Margin="12"
+               Margin="15"
                FontSize="40" />
         
         <BoxView BackgroundColor="Black"
@@ -36,6 +36,23 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.Footer>
+                <Grid Padding="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding AddNewPlaceCommand}" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="{StaticResource FontMaterialPlaceAddIcon}" Style="{StaticResource MaterialIconStyle}"  />
+                    <Label Grid.Column="1"
+                           Text="Dodaj miejsce"
+                           FontAttributes="Bold"
+                           FontSize="20"  />
+
+                </Grid>
+            </ListView.Footer>
         </ListView>
         
         <BoxView BackgroundColor="Black"

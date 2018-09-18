@@ -109,7 +109,7 @@ namespace Pogodeo.Mobile
         public ShowWeatherViewModel(string city)
         {
             // Create commands
-            AddNewPlaceCommand = new RelayCommand(async () => await Application.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ProvideDataPage()), true));
+            AddNewPlaceCommand = new RelayCommand(async () => await DI.UI.ShowModalOnCurrentNavigation(new ProvideDataPage()));
 
             // Get name from previous page
             CityName = city;

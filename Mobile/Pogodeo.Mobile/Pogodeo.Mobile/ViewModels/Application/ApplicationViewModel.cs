@@ -3,7 +3,7 @@
     /// <summary>
     /// The view model for main application state
     /// </summary>
-    public class ApplicationViewModel
+    public class ApplicationViewModel : BaseViewModel
     {
         #region Public Properties
 

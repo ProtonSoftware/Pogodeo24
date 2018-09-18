@@ -54,8 +54,7 @@ namespace Pogodeo.Mobile
         private void ChangeCity()
         {
             // Simply change the page with this city passed in
-            App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ProvideDataPage()));
-            //DI.Application.GoToPage(ApplicationPage.ShowWeather, new ShowWeatherViewModel(City));
+            DI.Application.GoToPage(ApplicationPage.ShowWeather, new ShowWeatherViewModel(City));
         }
 
         #endregion

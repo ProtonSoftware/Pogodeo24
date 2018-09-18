@@ -24,6 +24,11 @@ namespace Pogodeo.Mobile
         /// </summary>
         public static CityMapper CityMapper => Framework.Service<CityMapper>();
 
+        /// <summary>
+        /// A shortcut to access the <see cref="UIManager"/>
+        /// </summary>
+        public static IUIManager UI => Framework.Service<IUIManager>();
+
         #endregion
 
         #region Public Methods

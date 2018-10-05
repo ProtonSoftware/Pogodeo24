@@ -9,50 +9,17 @@
         <ToolbarItem Icon="icon_add" Command="{Binding AddNewPlaceCommand}" />
     </local:BasePage.ToolbarItems>
 
-    <Grid BackgroundColor="Beige">
+    <Grid>
+        
+        <Frame IsVisible="{Binding CityProvided, Converter={local:BooleanInvertConverter}}">
+            <Label Text="Wybierz miasto dla którego chcesz sprawdzić pogodę" />
+        </Frame>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="6*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <FlexLayout Direction="Row" 
-                    Margin="8"
-                    JustifyContent="SpaceBetween"
-                    VerticalOptions="Center">
-
-            <local:DateTitleControl BindingContext="{Binding DateViewModel}" />
-
-            <Switch IsToggled="{Binding IsSwitchToggled}" />
-
+        <FlexLayout IsVisible="{Binding CityProvided}"
+                    x:Name="WeatherContainer">
+            
         </FlexLayout>
-
-        <FlexLayout x:Name="ListContainer"
-                    Grid.Row="1"
-                    Direction="Column"
-                    AlignItems="Center"
-                    JustifyContent="SpaceEvenly">
-
-        </FlexLayout>
-
-        <Slider Grid.Row="2"
-                Margin="8"
-                Value="{Binding SliderValue}"
-                Minimum="0"
-                Maximum="20"
-                IsVisible="{Binding IsSwitchToggledInverted}"
-                ThumbColor="{StaticResource RedPrimary}" />
-
-        <Slider Grid.Row="2"
-                Margin="8"
-                Value="{Binding SliderValue}"
-                Minimum="0"
-                Maximum="23"
-                IsVisible="{Binding IsSwitchToggled}"
-                ThumbColor="{StaticResource BluePrimary}" />
 
     </Grid>
-
 
 </local:BasePage>

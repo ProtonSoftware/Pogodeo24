@@ -24,26 +24,22 @@ namespace Pogodeo.Mobile
         /// </summary>
         /// <param name="viewModel">The view model with data for this page</param>
         public ShowWeatherPage(ShowWeatherViewModel viewModel)
-		{
+        {
             // Do default things
-			InitializeComponent();
+            InitializeComponent();
 
             // Set specified view model
             BindingContext = viewModel;
 
-            // Foreach item in the view model
-            foreach (var item in viewModel.Items)
-            {
-                // Create new card control
-                var viewItem = new WeatherCardControl();
+            // Create view model or city weather control
+            var weatherViewModel = new CityWeatherMainViewModel(viewModel.CityName);
 
-                // Set the binding for control
-                viewItem.BindingContext = item;
+            // Create control to host weather informations
+            var control = new CityWeatherMainControl(weatherViewModel);
 
-                // Add it to the list
-                ListContainer.Children.Add(viewItem);
-            }
-		}
+            // Add this control to the container
+            WeatherContainer.Children.Add(control);
+        }
 
         #endregion
     }

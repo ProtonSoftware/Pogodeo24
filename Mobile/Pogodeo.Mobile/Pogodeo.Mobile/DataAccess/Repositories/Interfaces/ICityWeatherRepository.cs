@@ -7,5 +7,6 @@ namespace Pogodeo.Mobile
     {
         void SaveWeatherForCity(string city, Dictionary<APIProviderType, WeatherInformationAPIModel> weather);
         CityWeatherContext GetCityWeather(string city);
+        List<string> GetListOfSavedCities();
     }
 }

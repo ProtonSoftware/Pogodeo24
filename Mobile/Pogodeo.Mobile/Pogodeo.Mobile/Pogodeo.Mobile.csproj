@@ -48,6 +48,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Controls\CityWeatherMainControl.xaml.cs">
+      <DependentUpon>CityWeatherMainControl.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Controls\DateTitleControl.xaml.cs">
       <DependentUpon>DateTitleControl.xaml</DependentUpon>
     </Compile>

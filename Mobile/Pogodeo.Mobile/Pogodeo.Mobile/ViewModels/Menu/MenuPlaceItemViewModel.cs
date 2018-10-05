@@ -37,10 +37,14 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Default constructor
         /// </summary>
-        public MenuPlaceItemViewModel()
+        /// <param name="city">The name of a city for this menu item</param>
+        public MenuPlaceItemViewModel(string city)
         {
             // Create commands
             MenuItemSelectCommand = new RelayCommand(ChangeCity);
+
+            // Set the city's name
+            City = city;
         }
 
         #endregion

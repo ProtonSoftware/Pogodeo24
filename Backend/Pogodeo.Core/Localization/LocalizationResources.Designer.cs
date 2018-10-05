@@ -61,11 +61,29 @@ namespace Pogodeo.Core.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informacje.
+        ///   Looks up a localized string similar to O nas.
         /// </summary>
         public static string About {
             get {
                 return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wesprzyj nas.
+        /// </summary>
+        public static string HelpUs {
+            get {
+                return ResourceManager.GetString("HelpUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jak to działa ?.
+        /// </summary>
+        public static string HowItWorks {
+            get {
+                return ResourceManager.GetString("HowItWorks", resourceCulture);
             }
         }
         

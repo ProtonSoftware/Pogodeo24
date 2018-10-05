@@ -79,6 +79,29 @@ namespace Pogodeo.Mobile
             return DI.CityMapper.Map(entity);
         }
 
+        /// <summary>
+        /// Gets a list of every saved city in the application
+        /// </summary>
+        /// <returns>List of strings with city names</returns>
+        public List<string> GetListOfSavedCities()
+        {
+            // Prepare the list to return
+            var cityList = new List<string>();
+
+            // Get every city entity that are in database
+            var cities = DbSet.Where(x => x.CityName != null);
+
+            // For every of them...
+            foreach (var city in cities)
+                // If there are no multiplicates
+                if (!cityList.Contains(city.CityName))
+                    // Add city's name to the list
+                    cityList.Add(city.CityName);
+
+            // Return collected list
+            return cityList;
+        }
+
         #endregion
 
         #region Private Helpers
@@ -86,7 +109,7 @@ namespace Pogodeo.Mobile
         /// <summary>
         /// Gets the entity by city's name
         /// </summary>
-        public CityWeather GetByName(string city)
+        private CityWeather GetByName(string city)
         {
             // Try to find the entity
             var result = DbSet.Where(x => InsensitiveStringComparition(x.CityName, city)).FirstOrDefault();

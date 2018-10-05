@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Pogodeo.Core.Localization;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -42,21 +43,38 @@ namespace Pogodeo.Mobile
             // Create commands
             AddNewPlaceCommand = new RelayCommand(async () => await DI.UI.ShowModalOnCurrentNavigation(new ProvideDataPage()));
 
-            // Initialize the list with fields
-            CityItems = new List<MenuPlaceItemViewModel>
-            {
-                new MenuPlaceItemViewModel { City = "Warszawa" },
-                new MenuPlaceItemViewModel { City = "Kraków" },
-                new MenuPlaceItemViewModel { City = "Przemyśl" }
-            };
+            // Initialize the list with city fields
+            InitializeCityNamesFields();
 
+            // TODO: Maybe something different here
             ApplicationItems = new List<MenuPageItemViewModel>
             {
-                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = "Wesprzyj nas", Icon = ApplicationIconType.Cash },
-                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = "Jak to dziala?", Icon = ApplicationIconType.Help },
-                new MenuPageItemViewModel { Page = ApplicationPage.Settings, Title = "Ustawienia", Icon = ApplicationIconType.Settings },
-                new MenuPageItemViewModel { Page = ApplicationPage.About, Title = "O nas", Icon = ApplicationIconType.About  }
+                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = LocalizationResources.HelpUs, Icon = ApplicationIconType.Cash },
+                new MenuPageItemViewModel { Page = ApplicationPage.ProvideData, Title = LocalizationResources.HowItWorks, Icon = ApplicationIconType.Help },
+                new MenuPageItemViewModel { Page = ApplicationPage.Settings, Title = LocalizationResources.Settings, Icon = ApplicationIconType.Settings },
+                new MenuPageItemViewModel { Page = ApplicationPage.About, Title = LocalizationResources.About, Icon = ApplicationIconType.About  }
             };
+        }
+
+        #endregion
+
+        #region Private Helpers
+
+        /// <summary>
+        /// Initializes the city names fields for menu list by requesting them from database
+        /// </summary>
+        private void InitializeCityNamesFields()
+        {
+            // Get every saved city name from database
+            var cityNames = DI.CityWeatherRepository.GetListOfSavedCities();
+
+            // Initialize the list
+            CityItems = new List<MenuPlaceItemViewModel>();
+
+            // For every city name...
+            foreach (var name in cityNames)
+                // Add new menu item
+                CityItems.Add(new MenuPlaceItemViewModel(name));
         }
 
         #endregion
